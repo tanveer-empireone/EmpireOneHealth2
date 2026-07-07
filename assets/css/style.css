@@ -46,12 +46,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 :root {
-  --color-primary: #615EFC;
+  --color-primary: #082A96;
   --color-secondary: #1F1F25;
   --color-body: #6B6B6B;
   --color-heading-1: #111032;
   --color-white: #fff;
-  --color-border: #DDD8F9;
+  --color-border: #C9EAF7;
   --border-width: 1px;
   --radius: 10px;
   --color-success: #3EB75E;
@@ -12142,13 +12142,13 @@ Copyright (c) 2015 Daniel Eden
 .title-area-center .pre {
   border-radius: 30px;
   padding: 5px 16px;
-  color: #615EFC;
+  color: #082A96;
   margin-bottom: 30px;
   text-align: center;
   display: block;
   max-width: max-content;
   margin: auto;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
 }
 .title-area-center .title {
   margin-top: 14px;
@@ -12167,7 +12167,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .header-top-area-2 {
-  border-bottom: 1px solid rgba(97, 94, 252, 0.2);
+  border-bottom: 1px solid rgba(8, 42, 150, 0.2);
 }
 
 .header-top-two {
@@ -12210,7 +12210,7 @@ Copyright (c) 2015 Daniel Eden
   top: 50%;
   transform: translateY(-50%);
   width: 1px;
-  background: rgba(97, 94, 252, 0.2);
+  background: rgba(8, 42, 150, 0.2);
 }
 @media only screen and (max-width: 1199px) {
   .header-top-two .rightarea .single-contact-area::after {
@@ -12927,7 +12927,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   justify-content: center;
   height: 40px;
   min-width: 40px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -13048,7 +13048,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   background: #fff;
   border-radius: 40px;
   padding: 10px 20px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
 }
 @media only screen and (max-width: 575px) {
   .person-image .single-tag {
@@ -13493,7 +13493,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 }
 .banner-content-four .search-your-doctor-form {
   padding: 65px 45px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   border-radius: 10px;
   background: #fff;
   margin: auto;
@@ -13518,7 +13518,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 .banner-content-four .search-your-doctor-form form input {
   height: 50px;
   border-radius: 33px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   width: 362px;
   padding-left: 45px;
 }
@@ -13537,7 +13537,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   width: 362px !important;
   height: 50px;
   border-radius: 33px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   width: 362px;
   padding-left: 45px;
   display: flex;
@@ -13586,7 +13586,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   padding: 20px 10px 20px 10px;
   background: #fff;
   border-radius: 10px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
 }
 .single-banner-feature .icon {
   margin-bottom: 20px;
@@ -14210,7 +14210,7 @@ header .rts-btn {
   height: 56px;
   display: flex;
   align-items: center;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   justify-content: space-between;
   max-width: 520px;
 }
@@ -14380,7 +14380,7 @@ header .rts-btn {
   align-items: flex-start;
   padding: 30px 20px;
   border-radius: 10px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
 }
 .single-short-service .title {
   margin-bottom: 0;
@@ -14407,7 +14407,7 @@ header .rts-btn {
 .single-service-area {
   padding: 30px 25px;
   border-radius: 10px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   height: 100%;
   transition: 0.3s;
   background: #fff;
@@ -14493,7 +14493,7 @@ header .rts-btn {
 
 .single-service-area.style-bg-light {
   background: #F1F1FF;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
 }
 .single-service-area.style-bg-light:hover {
   border: 1px solid var(--color-primary);
@@ -14640,7 +14640,7 @@ header .rts-btn {
 
 .single-procedure.style-six {
   padding: 15px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   border-radius: 10px;
 }
 
@@ -14669,7 +14669,7 @@ header .rts-btn {
   gap: 20px;
   padding: 15px 17px;
   border-radius: 0 0 10px 10px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   width: 465px;
   transition: 0.3s;
 }
@@ -14743,10 +14743,10 @@ header .rts-btn {
   align-items: center;
   justify-content: space-between;
   padding: 6px 15px;
-  border-top: 1px solid rgba(97, 94, 252, 0.2);
+  border-top: 1px solid rgba(8, 42, 150, 0.2);
 }
 .service-and-price-table .service-price-single.body:last-child {
-  border-bottom: 1px solid rgba(97, 94, 252, 0.2);
+  border-bottom: 1px solid rgba(8, 42, 150, 0.2);
 }
 .service-and-price-table .service-price-single.body p {
   margin: 0;
@@ -14767,7 +14767,7 @@ header .rts-btn {
   height: calc(100% - 47px);
   top: 47px;
   width: 1px;
-  background: rgba(97, 94, 252, 0.2);
+  background: rgba(8, 42, 150, 0.2);
 }
 @media only screen and (max-width: 1199px) {
   .service-and-price-table::after {
@@ -14828,7 +14828,7 @@ header .rts-btn {
   justify-content: space-between;
   padding: 14px 16px;
   border-radius: 10px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   margin-bottom: 10px;
   transition: 0.3s;
 }
@@ -14895,7 +14895,7 @@ header .rts-btn {
   align-items: center;
   justify-content: space-between;
   padding: 12px 0;
-  border-bottom: 1px solid rgba(97, 94, 252, 0.2);
+  border-bottom: 1px solid rgba(8, 42, 150, 0.2);
 }
 
 .thumbnail-image-right-cardio {
@@ -14920,7 +14920,7 @@ header .rts-btn {
 }
 
 .meet-doctor-area-sd .single-team-area-start .thumbnail img {
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   display: block;
   border-radius: 10px;
 }
@@ -14942,7 +14942,7 @@ header .rts-btn {
 
 .rts-single-blog .rts-btn.btn-primary.border.bg-transparent {
   padding: 11px 26px;
-  border: 1px solid rgba(97, 94, 252, 0.2) !important;
+  border: 1px solid rgba(8, 42, 150, 0.2) !important;
   color: #111032;
 }
 
@@ -15120,11 +15120,11 @@ header .rts-btn {
 .title-wrapper-left .pre {
   border-radius: 30px;
   padding: 5px 16px;
-  color: #615EFC;
+  color: #082A96;
   margin-bottom: 21px;
   display: block;
   max-width: max-content;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
 }
 .title-wrapper-left .title {
   text-align: left;
@@ -15180,7 +15180,7 @@ header .rts-btn {
 .button-wrapper .signature img.one {
   border-radius: 50%;
   padding: 4px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
 }
 .button-wrapper .signature img.sign {
   max-width: 105px;
@@ -15204,7 +15204,7 @@ header .rts-btn {
   margin-bottom: 20px;
   padding: 22px 20px;
   border-radius: 20px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   display: flex;
   align-items: center;
   gap: 20px;
@@ -15366,7 +15366,7 @@ header .rts-btn {
   flex-direction: column;
 }
 .about-four-content-4 .small-image-right-side .counbter-about {
-  background: #615EFC;
+  background: #082A96;
   border-radius: 10px;
   padding: 10px 15px;
   margin-bottom: 15px;
@@ -15425,7 +15425,7 @@ header .rts-btn {
   display: flex;
   align-items: center;
   padding: 10px 0;
-  border-bottom: 1px solid rgba(97, 94, 252, 0.2);
+  border-bottom: 1px solid rgba(8, 42, 150, 0.2);
 }
 .about-four-content .short-service-area .single-short-service-area p {
   margin: 0;
@@ -15516,7 +15516,7 @@ header .rts-btn {
 .about-seven-left-content .pre {
   padding: 6px 15px;
   border-radius: 33px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   margin-bottom: 70px;
   color: var(--color-primary);
   display: block;
@@ -15572,7 +15572,7 @@ header .rts-btn {
   position: absolute;
   left: -60px;
   bottom: -40px;
-  background: #615EFC;
+  background: #082A96;
   border-radius: 10px;
   padding: 19px 25px;
   width: 170px;
@@ -16190,7 +16190,7 @@ header .rts-btn {
   margin-top: 40px;
 }
 .single-pricing-area.active {
-  background: #615EFC;
+  background: #082A96;
 }
 .single-pricing-area.active h2,
 .single-pricing-area.active p,
@@ -16389,7 +16389,7 @@ header .rts-btn {
 .single-details-content-info .inner {
   padding: 18px 13px;
   border-radius: 10px;
-  background: #F0F0FF;
+  background: #eef8ff;
 }
 .single-details-content-info .inner p {
   margin-bottom: 0px;
@@ -16404,7 +16404,7 @@ header .rts-btn {
 .swiper-container-h1-team-8 .team-radious-style .thumbnail {
   height: 207px;
   width: 207px;
-  border-color: rgba(97, 94, 252, 0.2);
+  border-color: rgba(8, 42, 150, 0.2);
   transition: 0.3s;
 }
 .swiper-container-h1-team-8 .team-radious-style .thumbnail:hover {
@@ -16450,7 +16450,7 @@ header .rts-btn {
   margin-top: 15px;
   display: block;
   padding-bottom: 28px;
-  border-bottom: 1px solid rgba(97, 94, 252, 0.2);
+  border-bottom: 1px solid rgba(8, 42, 150, 0.2);
   margin-bottom: 28px;
 }
 .rts-single-blog a.button-wrapper .title {
@@ -16481,7 +16481,7 @@ header .rts-btn {
 }
 .single-blog-list-area .inner-content-area {
   padding: 40px 50px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   border-radius: 0 0 10px 10px;
 }
 @media only screen and (max-width: 767px) {
@@ -16540,7 +16540,7 @@ header .rts-btn {
 .single-sidebar-wized {
   padding: 35px 30px;
   border-radius: 10px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   margin-bottom: 40px;
 }
 @media only screen and (max-width: 575px) {
@@ -16557,7 +16557,7 @@ header .rts-btn {
 .single-sidebar-wized .search input {
   height: 50px;
   border-radius: 10px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   color: #7D7D7D;
 }
 .single-sidebar-wized .search input:focus {
@@ -16581,7 +16581,7 @@ header .rts-btn {
   align-items: center;
   justify-content: space-between;
   border-radius: 10px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   padding: 15px 20px;
   transition: 0.3s;
   margin-bottom: 10px;
@@ -16653,7 +16653,7 @@ header .rts-btn {
 }
 .tag-wrapper-small .single-tag {
   padding: 6px 15px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   border-radius: 6px;
   font-size: 14px;
   color: #74787C;
@@ -16662,7 +16662,7 @@ header .rts-btn {
   font-weight: 500;
 }
 .tag-wrapper-small .single-tag:hover {
-  background: #615EFC;
+  background: #082A96;
   color: #fff;
 }
 
@@ -16690,7 +16690,7 @@ header .rts-btn {
 }
 .blog-details-main-wrapper .inner-content {
   padding: 40px 50px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
 }
 @media only screen and (max-width: 767px) {
   .blog-details-main-wrapper .inner-content {
@@ -16715,7 +16715,7 @@ header .rts-btn {
 .blog-details-main-wrapper .inner-content .quote-area {
   padding: 25px 40px;
   border-radius: 10px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   margin-bottom: 35px;
 }
 @media only screen and (max-width: 575px) {
@@ -16794,7 +16794,7 @@ header .rts-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #F0F0FF;
+  background: #eef8ff;
   transition: 0.3s;
 }
 .tag-share-wrapper-blog-details .social-area ul li a i {
@@ -16860,7 +16860,7 @@ header .rts-btn {
 }
 .comment-form-details textarea {
   height: 140px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   padding: 13px;
 }
 .comment-form-details textarea:focus {
@@ -16885,7 +16885,7 @@ header .rts-btn {
   align-items: center;
   justify-content: space-between;
   padding: 35px 0;
-  border-bottom: 1px solid rgba(97, 94, 252, 0.2);
+  border-bottom: 1px solid rgba(8, 42, 150, 0.2);
 }
 .single-awards-area .title {
   margin: 0;
@@ -17032,7 +17032,7 @@ header .rts-btn {
   align-items: center;
   gap: 12px;
   padding-top: 24px;
-  border-top: 1px solid rgba(97, 94, 252, 0.2);
+  border-top: 1px solid rgba(8, 42, 150, 0.2);
   margin-top: 25px;
   justify-content: space-between;
 }
@@ -17110,7 +17110,7 @@ header .rts-btn {
   height: 50px;
   width: 50px;
   background: transparent;
-  border: 1px solid #615EFC;
+  border: 1px solid #082A96;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -17121,7 +17121,7 @@ header .rts-btn {
 }
 .swiper-next-prev-controller .swiper-button-next i,
 .swiper-next-prev-controller .swiper-button-prev i {
-  color: #615EFC;
+  color: #082A96;
 }
 .swiper-next-prev-controller .swiper-button-next:hover,
 .swiper-next-prev-controller .swiper-button-prev:hover {
@@ -17144,7 +17144,7 @@ header .rts-btn {
   height: 50px;
   width: 50px;
   background: transparent;
-  border: 1px solid #615EFC;
+  border: 1px solid #082A96;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -17163,7 +17163,7 @@ header .rts-btn {
 }
 .button-dental-bwtween-area .swiper-button-next i,
 .button-dental-bwtween-area .swiper-button-prev i {
-  color: #615EFC;
+  color: #082A96;
   transition: 0.3s;
 }
 .button-dental-bwtween-area .swiper-button-next:hover,
@@ -17369,7 +17369,7 @@ li.has-dropdown:hover .submenu {
   margin-right: 16px;
   padding: 10px;
   max-width: max-content;
-  background: #F0F0FF;
+  background: #eef8ff;
   border-radius: 4px;
 }
 .mega-menu-item li a .info p {
@@ -17419,7 +17419,7 @@ li.has-dropdown:hover .submenu {
 .appoinment-area-main.contact-page {
   border-radius: 10px;
   background: #F9F8FF;
-  border: 1px solid #DDD8F9;
+  border: 1px solid #C9EAF7;
   background-image: none;
 }
 .appoinment-area-main.contact-page input,
@@ -17460,7 +17460,7 @@ li.has-dropdown:hover .submenu {
   color: #333;
   font-weight: 400;
   font-size: 16px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   border-radius: 10px;
   text-transform: capitalize;
 }
@@ -17556,7 +17556,7 @@ li.has-dropdown:hover .submenu {
   height: 100%;
   top: 0;
   width: 1px;
-  background: rgba(97, 94, 252, 0.2);
+  background: rgba(8, 42, 150, 0.2);
 }
 @media only screen and (max-width: 991px) {
   .counter-area-main-wrapper .single-counter::after {
@@ -18044,7 +18044,7 @@ li.has-dropdown:hover .submenu {
 .single-testimonials-style.two .quote-tag-wrapper .tag-top span {
   padding: 10px 21px;
   border-radius: 33px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   font-weight: 400;
   font-size: 16px;
   color: var(--color-primary);
@@ -18117,7 +18117,7 @@ li.has-dropdown:hover .submenu {
 }
 @media only screen and (max-width: 1199px) {
   .single--testimonials-2 {
-    background-color: #615EFC;
+    background-color: #082A96;
     background-image: none;
   }
 }
@@ -18201,7 +18201,7 @@ li.has-dropdown:hover .submenu {
   height: 50px;
   width: 50px;
   background: transparent;
-  border: 1px solid #615EFC;
+  border: 1px solid #082A96;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -18220,7 +18220,7 @@ li.has-dropdown:hover .submenu {
 }
 .rts-testimonials-area .title-between-area .swiper-button-next i,
 .rts-testimonials-area .title-between-area .swiper-button-prev i {
-  color: #615EFC;
+  color: #082A96;
   transition: 0.3s;
 }
 .rts-testimonials-area .title-between-area .swiper-button-next:hover,
@@ -18278,8 +18278,8 @@ li.has-dropdown:hover .submenu {
 .rts-hospital-branch .nav li button {
   padding: 9px 26px;
   border-radius: 33px;
-  border: 1px solid rgba(97, 94, 252, 0.2) !important;
-  border-color: rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2) !important;
+  border-color: rgba(8, 42, 150, 0.2);
 }
 .rts-hospital-branch .nav li button.active {
   background: var(--color-primary) !important;
@@ -18420,7 +18420,7 @@ li.has-dropdown:hover .submenu {
 }
 .container-wrapper-faq .accordion .accordion-item {
   margin-bottom: 10px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   border-radius: 10px;
   padding: 16px 30px;
 }
@@ -18497,7 +18497,7 @@ li.has-dropdown:hover .submenu {
   align-items: center;
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   gap: 14px;
   margin-bottom: 30px;
 }
@@ -18672,7 +18672,7 @@ li.has-dropdown:hover .submenu {
   align-items: center;
   justify-content: space-between;
   padding: 12px 0;
-  border-bottom: 1px solid rgba(97, 94, 252, 0.2);
+  border-bottom: 1px solid rgba(8, 42, 150, 0.2);
 }
 .large-doctor-details-area-left .bottom-doctor-details .inner .single-shedule p {
   margin: 0;
@@ -18682,7 +18682,7 @@ li.has-dropdown:hover .submenu {
   color: var(--color-primary);
   padding: 5px 12px;
   border-radius: 33px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   margin-bottom: 20px;
   display: block;
   max-width: max-content;
@@ -18831,7 +18831,7 @@ li.has-dropdown:hover .submenu {
   height: 56px;
   width: 418px;
   border-radius: 100px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   color: #fff;
 }
 @media only screen and (max-width: 575px) {
@@ -18988,7 +18988,7 @@ li.has-dropdown:hover .submenu {
   color: var(--color-primary);
 }
 .footer-two .footer-wrapper-style-between {
-  border-color: rgba(97, 94, 252, 0.2);
+  border-color: rgba(8, 42, 150, 0.2);
 }
 
 .copyright-area.two {
@@ -19015,7 +19015,7 @@ li.has-dropdown:hover .submenu {
 .health-package-single-wrapper {
   padding: 30px;
   border-radius: 10px;
-  border: 1px solid rgba(97, 94, 252, 0.12);
+  border: 1px solid rgba(8, 42, 150, 0.12);
   background: #F9F8FF;
 }
 .health-package-single-wrapper .inner-content {
@@ -19130,7 +19130,7 @@ li.has-dropdown:hover .submenu {
   border: none !important;
   padding: 10px;
   border-radius: 10px !important;
-  border: 1px solid rgba(97, 94, 252, 0.2) !important;
+  border: 1px solid rgba(8, 42, 150, 0.2) !important;
   color: #111032;
   display: flex;
   align-items: center;
@@ -19205,7 +19205,7 @@ li.has-dropdown:hover .submenu {
 .international-form .input-half-wrapper .single input,
 .international-form .input-half-wrapper .single .nice-select {
   height: 45px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
 }
 .international-form .input-half-wrapper .single input:focus,
 .international-form .input-half-wrapper .single .nice-select:focus {
@@ -19225,7 +19225,7 @@ li.has-dropdown:hover .submenu {
 }
 .international-form textarea {
   height: 120px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   margin-bottom: 25px;
 }
 .international-form textarea:focus {
@@ -19237,7 +19237,7 @@ li.has-dropdown:hover .submenu {
 
 .single-contact-information-card {
   background: #F9F8FF;
-  border: 1px solid #DDD8F9;
+  border: 1px solid #C9EAF7;
   padding: 55px;
   border-radius: 10px;
   text-align: center;
@@ -19887,7 +19887,7 @@ li.has-dropdown:hover .submenu {
   border: 1px solid rgba(255, 255, 255, 0.95);
   border-radius: 999px;
   background: #fff;
-  color: #615EFC;
+  color: #082A96;
   font-weight: 700;
   box-shadow: 0 12px 30px rgba(17, 16, 50, 0.12);
   transition: all 0.2s ease;
@@ -20041,7 +20041,7 @@ li.has-dropdown:hover .submenu {
   width: 100%;
   min-height: 305px;
   padding: 34px;
-  border: 1px solid rgba(97, 94, 252, 0.2);
+  border: 1px solid rgba(8, 42, 150, 0.2);
   border-radius: 8px;
   background: #fff;
   display: flex;
@@ -20050,13 +20050,13 @@ li.has-dropdown:hover .submenu {
 }
 
 .provider-service-card:hover {
-  border-color: #615EFC;
+  border-color: #082A96;
   transform: translateY(-3px);
   box-shadow: 0 18px 38px rgba(17, 16, 50, 0.08);
 }
 
 .provider-service-card .card-number {
-  color: #615EFC;
+  color: #082A96;
   font-weight: 700;
   margin-bottom: 22px;
 }
@@ -20081,13 +20081,13 @@ li.has-dropdown:hover .submenu {
 }
 
 .provider-service-card a i {
-  color: #615EFC;
+  color: #082A96;
   margin-left: 6px;
 }
 
 .provider-service-card-accent {
-  background: #615EFC;
-  border-color: #615EFC;
+  background: #082A96;
+  border-color: #082A96;
 }
 
 .provider-service-card-accent .card-number,
@@ -20115,7 +20115,7 @@ li.has-dropdown:hover .submenu {
   align-items: center;
   gap: 12px;
   padding: 18px 20px;
-  border: 1px solid rgba(97, 94, 252, 0.18);
+  border: 1px solid rgba(8, 42, 150, 0.18);
   border-radius: 8px;
   background: #fff;
   color: #111032;
@@ -20123,7 +20123,7 @@ li.has-dropdown:hover .submenu {
 }
 
 .provider-checks .single i {
-  color: #615EFC;
+  color: #082A96;
 }
 
 .provider-cta {
@@ -20201,9 +20201,9 @@ li.has-dropdown:hover .submenu {
 .empire-contact-card {
   height: 100%;
   padding: 34px;
-  border: 1px solid rgba(97, 94, 252, 0.18);
+  border: 1px solid rgba(8, 42, 150, 0.18);
   border-radius: 8px;
-  background: #f0f0ff;
+  background: #eef8ff;
   box-shadow: 0 18px 45px rgba(17, 16, 50, 0.06);
 }
 
@@ -20211,7 +20211,7 @@ li.has-dropdown:hover .submenu {
   display: inline-flex;
   align-items: center;
   margin-bottom: 14px;
-  color: #615EFC;
+  color: #082A96;
   font-weight: 700;
 }
 
@@ -20235,7 +20235,7 @@ li.has-dropdown:hover .submenu {
 }
 
 .empire-contact-card a {
-  color: #615EFC;
+  color: #082A96;
   font-weight: 700;
 }
 
@@ -20287,7 +20287,7 @@ li.has-dropdown:hover .submenu {
 }
 
 .provider-service-detail-page .provider-hero-card {
-  border: 1px solid rgba(97, 94, 252, 0.18);
+  border: 1px solid rgba(8, 42, 150, 0.18);
 }
 
 .provider-detail-stats {
@@ -20297,7 +20297,7 @@ li.has-dropdown:hover .submenu {
 .provider-detail-stat {
   height: 100%;
   padding: 30px;
-  border: 1px solid rgba(97, 94, 252, 0.18);
+  border: 1px solid rgba(8, 42, 150, 0.18);
   border-radius: 8px;
   background: #fff;
   box-shadow: 0 14px 32px rgba(17, 16, 50, 0.05);
@@ -20311,8 +20311,8 @@ li.has-dropdown:hover .submenu {
   height: 42px;
   margin-bottom: 18px;
   border-radius: 50%;
-  background: #f0f0ff;
-  color: #615EFC;
+  background: #eef8ff;
+  color: #082A96;
   font-weight: 800;
 }
 
@@ -20380,3 +20380,91 @@ li.has-dropdown:hover .submenu {
   cursor: not-allowed;
   opacity: 0.72;
 }
+/* EmpireOne logo palette overrides */
+:root {
+  --color-primary: #082A96;
+  --color-border: #C9EAF7;
+  --empire-dark-blue: #082A96;
+  --empire-light-blue: #22C7E8;
+  --empire-logo-gradient: linear-gradient(135deg, #082A96 0%, #082A96 70%, #22C7E8 100%);
+  --empire-logo-gradient-soft: linear-gradient(135deg, rgba(8, 42, 150, 0.1) 0%, rgba(8, 42, 150, 0.1) 70%, rgba(34, 199, 232, 0.18) 100%);
+}
+
+.rts-btn.btn-primary,
+.btn-primary,
+.header-one .button-area a,
+.provider-service-card-accent,
+.provider-cta .request-appoinemnt-area-main-wrapper,
+.appoinment-area-main,
+.book-your-consulting .appoinment-area-main,
+.request-appoinemnt-area-main-wrapper,
+.single--testimonials-2,
+.backto-top > div,
+#anywhere-home .rts-btn.btn-primary {
+  background: var(--empire-logo-gradient) !important;
+  border-color: var(--empire-dark-blue) !important;
+}
+
+.rts-btn.btn-primary:hover,
+.btn-primary:hover,
+.header-one .button-area a:hover,
+.legacy-page.home .compact-lead-card .lead-submit:hover {
+  background: linear-gradient(135deg, #061f73 0%, #061f73 70%, #1db9d8 100%) !important;
+  border-color: #061f73 !important;
+}
+
+.legacy-page.home .compact-lead-card .lead-submit {
+  color: var(--empire-dark-blue) !important;
+}
+
+.pre,
+.mainmenu li a:hover,
+.mainmenu li a.active,
+.provider-service-card .card-number,
+.provider-service-card a i,
+.provider-checks .single i,
+.empire-contact-card span,
+.empire-contact-card a,
+.single-service-area-start .title:hover,
+.rts-breadcrumb-area .nav-bread-crumb a.current,
+a:hover {
+  color: var(--empire-dark-blue) !important;
+}
+
+.provider-service-card:hover,
+.provider-detail-stat,
+.provider-service-detail-page .provider-hero-card,
+.empire-contact-card,
+.calendly-booking-section .calendly-inline-widget,
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: rgba(8, 42, 150, 0.28) !important;
+}
+
+.provider-service-card-accent .card-number,
+.provider-service-card-accent h3,
+.provider-service-card-accent p,
+.provider-service-card-accent a,
+.provider-service-card-accent a i {
+  color: #fff !important;
+}
+
+.provider-detail-stat span,
+.empire-contact-card,
+.rts-breadcrumb-area,
+.provider-services-page .provider-hero,
+.provider-service-detail-page .provider-hero {
+  background: var(--empire-logo-gradient-soft) !important;
+}
+
+.footer-bg,
+.rts-footer-area.footer-bg {
+  background-color: #061f73 !important;
+}
+
+::selection {
+  background: var(--empire-light-blue);
+  color: #fff;
+}
+/* End EmpireOne logo palette overrides */

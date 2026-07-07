@@ -122,7 +122,7 @@ function buildAdminEmail(data) {
     <tr><td align="center">
       <table width="620" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:10px;overflow:hidden;">
         <tr>
-          <td style="padding:22px;text-align:center;background:linear-gradient(90deg,#615EFC 0%,#22C7E8 100%);color:#ffffff;">
+          <td style="padding:22px;text-align:center;background:linear-gradient(135deg,#082A96 0%,#082A96 70%,#22C7E8 100%);color:#ffffff;">
             <h2 style="margin:0;">New EmpireOne Health Form Submission</h2>
           </td>
         </tr>
@@ -148,7 +148,7 @@ function buildUserEmail(fullName) {
     <tr><td align="center">
       <table width="620" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:10px;overflow:hidden;">
         <tr>
-          <td style="padding:22px;text-align:center;background:linear-gradient(90deg,#615EFC 0%,#22C7E8 100%);color:#ffffff;">
+          <td style="padding:22px;text-align:center;background:linear-gradient(135deg,#082A96 0%,#082A96 70%,#22C7E8 100%);color:#ffffff;">
             <h2 style="margin:0;">Thank You for Reaching Out</h2>
           </td>
         </tr>
