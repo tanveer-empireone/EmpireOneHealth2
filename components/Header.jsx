@@ -1,6 +1,25 @@
 export default function Header() {
   return (
     <header className="header-one header--sticky">
+      <div className="header-top-area">
+        <div className="container-full-header">
+          <div className="col-lg-12">
+            <div className="header-top">
+              <div className="left">
+                <div className="map-area">
+                  <a href="/">EmpireOne Health BPO &amp; RCM Support</a>
+                </div>
+              </div>
+              <div className="right">
+                <div className="map-area">
+                  <i className="fa-regular fa-e-mail" />
+                  <a href="mailto:info@empireonehealth.com">info@empireonehealth.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="container-full-header">
         <div className="row">
           <div className="col-lg-12">

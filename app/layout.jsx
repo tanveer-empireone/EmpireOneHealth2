@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="/assets/css/plugins/magnifying-popup.css" />
         <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css" />
         <link rel="stylesheet" href="/assets/css/style.css" />
+        <link rel="stylesheet" href="/assets/css/ai-chatbot.css" />
       </head>
       <body suppressHydrationWarning>
         {children}
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
         <Script src="/assets/js/plugins/magnifying-popup.js" strategy="afterInteractive" />
         <Script src="/assets/js/vendor/bootstrap.min.js" strategy="afterInteractive" />
         <Script src="/assets/js/main.js" strategy="afterInteractive" />
+        <Script src="/assets/js/ai-chatbot.js" strategy="afterInteractive" />
       </body>
     </html>
   );

@@ -10,3 +10,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+data/ai-chat-logs/*.jsonl
+data/ai-unanswered-questions/*.jsonl
+data/ai-feedback/*.jsonl
+data/ai-chat-leads/*.jsonl

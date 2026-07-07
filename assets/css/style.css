@@ -20579,3 +20579,17 @@ a.rts-btn:hover * {
   color: #fff !important;
 }
 /* End restore original lead form styling */
+
+/* Restore purple top header bar */
+.header-one .header-top-area {
+  background: #615EFC !important;
+}
+
+.header-one .header-top-area a,
+.header-one .header-top-area span,
+.header-one .header-top-area i,
+.header-one .header-top-area a:hover,
+.header-one .header-top-area a:hover i {
+  color: #fff !important;
+}
+/* End restore purple top header bar */
