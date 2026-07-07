@@ -6,6 +6,10 @@ const leadToEmail = process.env.LEAD_TO_EMAIL || "info@empireonehealth.com";
 const smtpUser = process.env.SMTP_USER || "info@empireonehealth.com";
 const fromName = process.env.MAIL_FROM_NAME || "EmpireOne Health";
 
+function createRequestId() {
+  return `lead-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+}
+
 function clean(value) {
   return String(value ?? "").trim();
 }
@@ -164,6 +168,8 @@ function buildUserEmail(fullName) {
 }
 
 export async function POST(request) {
+  const requestId = createRequestId();
+
   try {
     const payload = await request.json();
     const fullName = clean(payload.full_name);
@@ -179,7 +185,7 @@ export async function POST(request) {
     const website = clean(payload.website);
 
     if (website) {
-      return Response.json({ status: "success", message: "Thank you! We will contact you soon." });
+      return Response.json({ status: "success", message: "Thank you! We will contact you soon.", requestId });
     }
 
     if (!fullName || !email || !verifyEmail) {
@@ -193,6 +199,16 @@ export async function POST(request) {
     if (!privacyConsent) {
       return Response.json({ status: "error", message: "Please confirm the privacy policy checkbox." }, { status: 400 });
     }
+
+    console.info("Lead form submission started", {
+      requestId,
+      smtpHost: process.env.SMTP_HOST || "smtp.hostinger.com",
+      smtpPort: process.env.SMTP_PORT || "465",
+      smtpUser,
+      leadToEmail,
+      hasSmtpPassword: Boolean(process.env.SMTP_PASS),
+      hasSalesforceOid: Boolean(process.env.SALESFORCE_WEB_TO_LEAD_OID)
+    });
 
     const transporter = createTransporter();
     const data = { fullName, companyName, email, contactNumber, source, workflow, message, pageUrl };
@@ -215,12 +231,13 @@ export async function POST(request) {
       html: buildUserEmail(fullName)
     });
 
-    return Response.json({ status: "success", message: "Thank you! We will contact you soon." });
+    return Response.json({ status: "success", message: "Thank you! We will contact you soon.", requestId });
   } catch (error) {
-    console.error("Lead form submission failed", error);
+    console.error("Lead form submission failed", { requestId, error });
     return Response.json(
-      { status: "error", message: "We could not send your request right now. Please try again later." },
+      { status: "error", message: `We could not send your request right now. Reference: ${requestId}`, requestId },
       { status: 500 }
     );
   }
 }
+
