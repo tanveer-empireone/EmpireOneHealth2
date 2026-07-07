@@ -20170,11 +20170,11 @@ li.has-dropdown:hover .submenu {
 .payer-services-page .provider-service-card .card-number,
 .payer-services-page .provider-service-card a i,
 .payer-services-page .provider-checks .single i {
-  color: #22C7E8;
+  color: #082A96;
 }
 
 .payer-services-page .provider-service-card:hover {
-  border-color: #22C7E8;
+  border-color: #082A96;
 }
 
 .payer-services-page .payer-hero-card {
@@ -20385,9 +20385,9 @@ li.has-dropdown:hover .submenu {
   --color-primary: #082A96;
   --color-border: #C9EAF7;
   --empire-dark-blue: #082A96;
-  --empire-light-blue: #22C7E8;
-  --empire-logo-gradient: linear-gradient(135deg, #082A96 0%, #082A96 70%, #22C7E8 100%);
-  --empire-logo-gradient-soft: linear-gradient(135deg, rgba(8, 42, 150, 0.1) 0%, rgba(8, 42, 150, 0.1) 70%, rgba(34, 199, 232, 0.18) 100%);
+  --empire-light-blue: #082A96;
+  --empire-logo-gradient: #082A96;
+  --empire-logo-gradient-soft: rgba(8, 42, 150, 0.1);
 }
 
 .rts-btn.btn-primary,
@@ -20409,7 +20409,7 @@ li.has-dropdown:hover .submenu {
 .btn-primary:hover,
 .header-one .button-area a:hover,
 .legacy-page.home .compact-lead-card .lead-submit:hover {
-  background: linear-gradient(135deg, #061f73 0%, #061f73 70%, #1db9d8 100%) !important;
+  background: #061f73 !important;
   border-color: #061f73 !important;
 }
 
@@ -20468,3 +20468,58 @@ select:focus {
   color: #fff;
 }
 /* End EmpireOne logo palette overrides */
+/* EmpireOne single-color hover cleanup */
+.rts-btn.btn-primary,
+.rts-btn.btn-primary *,
+.btn-primary,
+.btn-primary *,
+.header-one .button-area a,
+.header-one .button-area a *,
+.provider-service-card-accent,
+.provider-service-card-accent *,
+.appoinment-area-main .rts-btn,
+.appoinment-area-main .rts-btn *,
+.request-appoinemnt-area-main-wrapper .rts-btn,
+.request-appoinemnt-area-main-wrapper .rts-btn *,
+#anywhere-home .rts-btn.btn-primary,
+#anywhere-home .rts-btn.btn-primary * {
+  color: #fff !important;
+}
+
+.rts-btn.btn-primary:hover,
+.rts-btn.btn-primary:hover *,
+.btn-primary:hover,
+.btn-primary:hover *,
+.header-one .button-area a:hover,
+.header-one .button-area a:hover *,
+.legacy-page.home .compact-lead-card .lead-submit:hover,
+.legacy-page.home .compact-lead-card .lead-submit:hover *,
+a.rts-btn:hover,
+a.rts-btn:hover * {
+  color: #fff !important;
+}
+
+.legacy-page.home .compact-lead-card .lead-submit {
+  background: #fff !important;
+  color: var(--empire-dark-blue) !important;
+  border-color: #fff !important;
+}
+
+.legacy-page.home .compact-lead-card .lead-submit:hover {
+  background: var(--empire-dark-blue) !important;
+  color: #fff !important;
+  border-color: var(--empire-dark-blue) !important;
+}
+
+.mainmenu li a:hover,
+.mainmenu li a.active {
+  color: var(--empire-dark-blue) !important;
+}
+
+.footer-bg a:hover,
+.rts-footer-area.footer-bg a:hover,
+.footer-bg a:hover *,
+.rts-footer-area.footer-bg a:hover * {
+  color: #fff !important;
+}
+/* End EmpireOne single-color hover cleanup */
