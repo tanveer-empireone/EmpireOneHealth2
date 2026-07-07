@@ -30,20 +30,19 @@ function renderLegacyBody(body) {
 }
 
 export function generateStaticParams() {
-  const params = listLegacyHtmlPages().map((fileName) => ({
-    slug: fileName === "index.html" ? [] : [fileName === "contactus.html" ? "contact" : fileName.replace(/\.html$/i, "")]
-  }));
+  return listLegacyHtmlPages().map((fileName) => {
+    if (fileName === "index.html") {
+      return { slug: [] };
+    }
 
-  params.push({ slug: ["provider-services", "benefits-verification-eligibility"] });
-  params.push({ slug: ["provider-services", "prior-authorization-management"] });
-  params.push({ slug: ["provider-services", "appointment-scheduling-referral-management"] });
-  params.push({ slug: ["provider-services", "patient-self-pay-collections"] });
-  params.push({ slug: ["provider-services", "denial-management"] });
-  params.push({ slug: ["payer-services", "member-services"] });
-  params.push({ slug: ["payer-services", "enrollment-support"] });
-  params.push({ slug: ["payer-services", "provider-data-management"] });
+    if (fileName === "contactus.html") {
+      return { slug: ["contact"] };
+    }
 
-  return params;
+    const routePath = fileName.replace(/\/index\.html$/i, "").replace(/\.html$/i, "");
+
+    return { slug: routePath.split("/") };
+  });
 }
 
 export async function generateMetadata({ params }) {
