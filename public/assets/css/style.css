@@ -20523,3 +20523,59 @@ a.rts-btn:hover * {
   color: #fff !important;
 }
 /* End EmpireOne single-color hover cleanup */
+/* Restore original lead form styling */
+.legacy-page.home .book-your-consulting .compact-lead-card,
+.book-your-consulting .compact-lead-card {
+  background: #615EFC url(../images/appoinment/01.jpg) center center / cover no-repeat !important;
+  border-color: #615EFC !important;
+}
+
+.legacy-page.home .compact-lead-card .title,
+.book-your-consulting .compact-lead-card .title,
+.legacy-page.home .compact-lead-card .empire-lead-form label,
+.book-your-consulting .compact-lead-card .empire-lead-form label,
+.legacy-page.home .compact-lead-card .lead-consent,
+.book-your-consulting .compact-lead-card .lead-consent,
+.legacy-page.home .compact-lead-card .lead-consent a,
+.book-your-consulting .compact-lead-card .lead-consent a {
+  color: #fff !important;
+}
+
+.legacy-page.home .compact-lead-card .empire-lead-form input,
+.legacy-page.home .compact-lead-card .empire-lead-form textarea,
+.book-your-consulting .compact-lead-card .empire-lead-form input,
+.book-your-consulting .compact-lead-card .empire-lead-form textarea {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: #fff !important;
+  color: #fff !important;
+}
+
+.legacy-page.home .compact-lead-card .empire-lead-form input::placeholder,
+.legacy-page.home .compact-lead-card .empire-lead-form textarea::placeholder,
+.book-your-consulting .compact-lead-card .empire-lead-form input::placeholder,
+.book-your-consulting .compact-lead-card .empire-lead-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.legacy-page.home .compact-lead-card .empire-lead-form select,
+.book-your-consulting .compact-lead-card .empire-lead-form select {
+  background-color: #fff !important;
+  border-color: #fff !important;
+  color: #5d6270 !important;
+}
+
+.legacy-page.home .compact-lead-card .lead-submit,
+.book-your-consulting .compact-lead-card .lead-submit {
+  background: #fff !important;
+  border-color: #fff !important;
+  color: #615EFC !important;
+  box-shadow: 0 12px 30px rgba(17, 16, 50, 0.12) !important;
+}
+
+.legacy-page.home .compact-lead-card .lead-submit:hover,
+.book-your-consulting .compact-lead-card .lead-submit:hover {
+  background: #111032 !important;
+  border-color: #111032 !important;
+  color: #fff !important;
+}
+/* End restore original lead form styling */
