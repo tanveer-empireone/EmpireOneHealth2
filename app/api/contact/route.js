@@ -235,9 +235,10 @@ export async function POST(request) {
   } catch (error) {
     console.error("Lead form submission failed", { requestId, error });
     return Response.json(
-      { status: "error", message: `We could not send your request right now. Reference: ${requestId}`, requestId },
+      { status: "error", message: "We could not send your request right now. Please try again later." },
       { status: 500 }
     );
   }
 }
+
 
