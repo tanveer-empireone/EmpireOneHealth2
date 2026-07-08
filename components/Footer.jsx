@@ -102,6 +102,9 @@ export default function Footer() {
                 </ul>
               </li>
               <li>
+                <a href="/case-study" className="main">Case Study</a>
+              </li>
+              <li>
                 <a href="/contact" className="main">Contact</a>
               </li>
             </ul>

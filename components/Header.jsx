@@ -48,6 +48,9 @@ export default function Header() {
                       </ul>
                     </li>
                     <li className="main-nav">
+                      <a href="/case-study">Case Study</a>
+                    </li>
+                    <li className="main-nav">
                       <a href="/contact">Contact</a>
                     </li>
                   </ul>

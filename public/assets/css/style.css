@@ -20593,3 +20593,136 @@ a.rts-btn:hover * {
   color: #fff !important;
 }
 /* End restore purple top header bar */
+/* Make CTA buttons visible on dark blue CTA sections */
+.request-appoinemnt-area-main-wrapper .rts-btn,
+.provider-cta .request-appoinemnt-area-main-wrapper .rts-btn {
+  background: #fff !important;
+  border-color: #fff !important;
+  color: var(--empire-dark-blue) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18) !important;
+}
+
+.request-appoinemnt-area-main-wrapper .rts-btn *,
+.provider-cta .request-appoinemnt-area-main-wrapper .rts-btn * {
+  color: var(--empire-dark-blue) !important;
+}
+
+.request-appoinemnt-area-main-wrapper .rts-btn:hover,
+.provider-cta .request-appoinemnt-area-main-wrapper .rts-btn:hover {
+  background: #22C8E8 !important;
+  border-color: #22C8E8 !important;
+  color: #fff !important;
+}
+
+.request-appoinemnt-area-main-wrapper .rts-btn:hover *,
+.provider-cta .request-appoinemnt-area-main-wrapper .rts-btn:hover * {
+  color: #fff !important;
+}
+/* Footer email field visibility */
+.rts-footer-area .subscribe-area-start .subscribe-area input {
+  background: #fff !important;
+  color: var(--empire-dark-blue) !important;
+  border-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.rts-footer-area .subscribe-area-start .subscribe-area input::placeholder {
+  color: rgba(8, 42, 150, 0.72) !important;
+  opacity: 1 !important;
+}
+/* Case study detail layout cleanup */
+.case-study-detail-page .case-study-text-section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.case-study-detail-page .case-study-copy-block {
+  margin-bottom: 42px;
+}
+
+.case-study-detail-page .case-study-copy-block:last-child {
+  margin-bottom: 0;
+}
+
+.case-study-detail-page .case-study-copy-block h2 {
+  font-size: 44px;
+  line-height: 1.18;
+  margin-bottom: 18px;
+  color: #060b3f;
+}
+
+.case-study-detail-page .case-study-copy-block p {
+  max-width: 1180px;
+  margin: 0;
+  color: #4f5874;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.case-study-detail-page .case-study-process .container {
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
+
+.case-study-detail-page .case-study-list-section .title-wrapper-left {
+  margin-bottom: 24px;
+}
+
+.case-study-detail-page .case-study-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: none;
+}
+
+.case-study-detail-page .case-study-list .single {
+  width: fit-content;
+  max-width: 100%;
+  min-height: 0;
+  padding: 16px 24px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.case-study-detail-page .case-study-list .single span {
+  white-space: nowrap;
+}
+
+.case-study-detail-page .provider-cta {
+  padding-top: 70px;
+}
+
+.case-study-detail-page .provider-cta .request-appoinemnt-area-main-wrapper .title {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 991px) {
+  .case-study-detail-page .case-study-copy-block h2 {
+    font-size: 34px;
+  }
+
+  .case-study-detail-page .case-study-list .single,
+  .case-study-detail-page .case-study-list .single span {
+    white-space: normal;
+  }
+}
+/* Header dropdown hover text visibility */
+.header-one li.has-dropdown .submenu li a:hover,
+.header-one li.has-dropdown .submenu li a:hover * {
+  color: #fff !important;
+}
+/* Keep scroll-to-top above Ask Ava chatbot */
+.progress-wrap {
+  right: 37px !important;
+  bottom: 128px !important;
+  z-index: 9997 !important;
+}
+
+@media (max-width: 575px) {
+  .progress-wrap {
+    right: 37px !important;
+    bottom: 124px !important;
+  }
+}
