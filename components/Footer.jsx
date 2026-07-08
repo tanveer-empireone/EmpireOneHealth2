@@ -54,7 +54,7 @@ export default function Footer() {
                   </div>
                 </div>
                 <div className="single-wized">
-                  <h6 className="title">Working Time</h6>
+                  <h6 className="title">Delivery Model</h6>
                   <div className="body">
                     <p className="location">Human-led, AI-assisted delivery</p>
                     <p className="location">HIPAA-conscious workflows</p>
