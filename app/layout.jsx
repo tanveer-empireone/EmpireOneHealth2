@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="shortcut icon" type="image/x-icon" href="/assets/images/fav.png" />
+        <link rel="icon" type="image/webp" href="/assets/images/favicon.webp" />
         <link rel="stylesheet" href="/assets/css/plugins/plugins.css" />
         <link rel="stylesheet" href="/assets/css/plugins/magnifying-popup.css" />
         <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css" />
@@ -41,3 +41,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
