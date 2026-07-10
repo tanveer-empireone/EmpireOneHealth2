@@ -153,9 +153,9 @@ function buildUserEmail(fullName) {
           </td>
         </tr>
         <tr><td style="padding:30px;color:#333;font-size:15px;line-height:1.6;">
-          <p>Hi ${escapeHtml(fullName)},</p>
-          <p>Thank you for contacting EmpireOne Health. We received your request and our team will get back to you shortly.</p>
-          <p>If your inquiry is urgent, you can contact us directly at <a href="mailto:info@empireonehealth.com">info@empireonehealth.com</a>.</p>
+          <p>Hello ${escapeHtml(fullName)},</p>
+          <p>Thank you for your interest in EmpireOne Health. This email confirms that we've received your inquiry. Our team is reviewing your request and will be in touch shortly.</p>
+          <p>We appreciate the opportunity to assist you..</p>
           <br>
           <p>Best regards,<br><strong>EmpireOne Health</strong></p>
         </td></tr>
