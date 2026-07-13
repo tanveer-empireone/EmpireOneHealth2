@@ -15077,6 +15077,28 @@ header .rts-btn {
   position: relative;
   margin-right: -30px;
 }
+/* Ensure image container clips corners and has transparent background */
+.about-image-left-wrapper .thumbnail-main {
+  overflow: hidden;
+  border-radius: 20px;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+/* make sure the img matches the container rounding and doesn't show a background */
+.about-image-left-wrapper .thumbnail-main img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
+  background: transparent !important;
+}
+/* Ensure wrapper and pseudo-elements are transparent */
+.about-image-left-wrapper,
+.about-image-left-wrapper::before,
+.about-image-left-wrapper::after {
+  background: transparent !important;
+  box-shadow: none !important;
+}
 .about-image-left-wrapper .review-area {
   position: absolute;
   right: 0;
