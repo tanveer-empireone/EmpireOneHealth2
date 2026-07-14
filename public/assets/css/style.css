@@ -12991,6 +12991,19 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 .banner-content-area {
   padding-left: 235px;
 }
+
+/* Banner content title sizing */
+.banner-content-area .title {
+  font-size: 38px;
+  line-height: 1.08;
+  max-width: 780px;
+}
+/* Stronger override for banner title to beat later definitions */
+.banner-area-one .banner-content-area .title {
+  font-size: 38px !important;
+  line-height: 1.08 !important;
+  max-width: 780px !important;
+}
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
   .banner-content-area {
     padding-left: 100px;
