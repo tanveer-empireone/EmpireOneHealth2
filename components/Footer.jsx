@@ -127,11 +127,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="loader-wrapper">
-        <div className="loader" />
-        <div className="loader-section section-left" />
-        <div className="loader-section section-right" />
-      </div>
+
       <div id="anywhere-home" />
       <div className="progress-wrap">
         <svg className="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
@@ -141,3 +137,4 @@ export default function Footer() {
     </>
   );
 }
+

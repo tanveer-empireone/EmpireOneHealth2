@@ -551,9 +551,13 @@
         });
       });
     },
-
     wowActive: function () {
-      new WOW().init();
+      if (window.__empireOneWowInitialized || typeof WOW === "undefined") {
+        return;
+      }
+
+      window.__empireOneWowInitialized = true;
+      new WOW({ live: false }).init();
     },
 
     stickyHeader: function (e) {
@@ -875,3 +879,78 @@
 
 
 
+
+
+
+
+// Landing page contact form submit handler for legacy HTML pages
+(function () {
+  function initLandingPageForms() {
+    document.querySelectorAll('form[data-contact-form="true"]').forEach(function (form) {
+      if (form.dataset.contactFormReady === 'true') return;
+      form.dataset.contactFormReady = 'true';
+
+      form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        var submitButton = form.querySelector('button[type="submit"]');
+        var status = form.querySelector('.lead-form-status');
+        var originalText = submitButton ? submitButton.textContent : '';
+
+        if (status) {
+          status.hidden = true;
+          status.textContent = '';
+          status.classList.remove('success', 'error');
+        }
+
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.textContent = 'Sending...';
+        }
+
+        var formData = new FormData(form);
+        var payload = Object.fromEntries(formData.entries());
+        payload.privacy_consent = formData.get('privacy_consent') === 'on';
+        payload.page_url = window.location.href;
+
+        try {
+          var response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          var result = await response.json();
+
+          if (!response.ok || result.status !== 'success') {
+            throw new Error(result.message || 'Please check the form and try again.');
+          }
+
+          form.reset();
+          if (status) {
+            status.textContent = result.message || 'Thank you! We will contact you soon.';
+            status.classList.add('success');
+            status.hidden = false;
+          }
+        } catch (error) {
+          console.error('Landing page form submit failed:', error);
+          if (status) {
+            status.textContent = 'We could not send your request right now. Please try again later.';
+            status.classList.add('error');
+            status.hidden = false;
+          }
+        } finally {
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = originalText;
+          }
+        }
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLandingPageForms);
+  } else {
+    initLandingPageForms();
+  }
+})();

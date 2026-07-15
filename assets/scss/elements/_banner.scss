@@ -25,7 +25,7 @@
     .person-image {
         position: absolute;
         bottom: 0;
-        right: 12%;
+        right: 18%;
         left: auto;
 
         @media #{$laptop-device} {
@@ -93,7 +93,7 @@
     }
 
     p.disc {
-        max-width: 580px;
+        max-width: 680px;
         color: #111032;
     }
 }

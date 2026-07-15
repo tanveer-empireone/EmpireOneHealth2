@@ -651,7 +651,7 @@ ol ul {
 }
 
 .rts-section-gapBottom {
-  padding-bottom: 120px;
+  padding-bottom: 10px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rts-section-gapBottom {
@@ -12116,10 +12116,11 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .text-clip {
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: #082a96;
   -webkit-text-stroke: 1px;
-  -webkit-text-stroke-color: #000;
+  -webkit-text-stroke-color: #082a96;
   font-family: var(--font-secondary);
+  text-align: center;
 }
 
 .header--sticky {
@@ -13050,7 +13051,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   }
 }
 .banner-content-area p.disc {
-  max-width: 580px;
+  max-width: 680px;
   color: #111032;
 }
 
@@ -15163,11 +15164,11 @@ header .rts-btn {
 }
 .title-wrapper-left .title {
   text-align: left;
-  font-size: 48px;
+  font-size: 38px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
   .title-wrapper-left .title {
-    font-size: 36px;
+    font-size: 33px;
   }
 }
 @media only screen and (max-width: 1199px) {
@@ -15225,7 +15226,7 @@ header .rts-btn {
 .about-content-wrapper-right p.disc {
   text-align: left;
   font-size: 16px;
-  max-width: 95%;
+  max-width: 100%;
 }
 
 .radious-0 {
@@ -15239,7 +15240,7 @@ header .rts-btn {
   margin-bottom: 20px;
   padding: 22px 20px;
   border-radius: 20px;
-  border: 1px solid rgba(8, 42, 150, 0.2);
+  border: px solid rgba(8, 42, 150, 0.2);
   display: flex;
   align-items: center;
   gap: 20px;
@@ -20015,7 +20016,7 @@ li.has-dropdown:hover .submenu {
   }
 
   .empire-about-operations .single-lab-test .title {
-    font-size: 22px;
+    font-size: 18px;
     white-space: normal;
   }
 }
@@ -20044,7 +20045,7 @@ li.has-dropdown:hover .submenu {
 }
 
 .provider-services-page .provider-hero .disc {
-  max-width: 620px;
+  max-width: 720px;
   font-size: 18px;
   line-height: 1.75;
 }
@@ -20150,7 +20151,7 @@ li.has-dropdown:hover .submenu {
   align-items: center;
   gap: 12px;
   padding: 18px 20px;
-  border: 1px solid rgba(8, 42, 150, 0.18);
+  border: px solid rgba(8, 42, 150, 0.18);
   border-radius: 8px;
   background: #fff;
   color: #111032;
@@ -20748,17 +20749,19 @@ a.rts-btn:hover * {
 .header-one li.has-dropdown .submenu li a:hover * {
   color: #fff !important;
 }
-/* Keep scroll-to-top above Ask Ava chatbot */
+/* Standard bottom-right scroll-to-top placement */
 .progress-wrap {
-  right: 37px !important;
-  bottom: 128px !important;
+  top: auto !important;
+  left: auto !important;
+  right: 24px !important;
+  bottom: 24px !important;
   z-index: 9997 !important;
 }
 
 @media (max-width: 575px) {
   .progress-wrap {
-    right: 37px !important;
-    bottom: 124px !important;
+    right: 18px !important;
+    bottom: 18px !important;
   }
 }
 /* Homepage foundation service icon sizing and purple tint */
@@ -20834,6 +20837,881 @@ a.rts-btn:hover * {
   object-fit: contain !important;
   filter: brightness(0) saturate(100%) invert(43%) sepia(95%) saturate(3907%) hue-rotate(231deg) brightness(103%) contrast(101%) !important;
 }
+/* Global H1 size */
+:root {
+  --h1: 38px !important;
+}
+
+h1,
+h1.title,
+.h1 {
+  font-size: 38px !important;
+}
+/* Global H2 size */
+:root {
+  --h2: 33px !important;
+}
+
+h2,
+h2.title,
+.h2 {
+  font-size: 33px !important;
+}
+/* Global H3 size */
+:root {
+  --h3: 28px;
+}
+
+h3,
+h3.title,
+.h3 {
+  font-size: 28px;
+}
+/* Global H4 size */
+:root {
+  --h4: 23px !important;
+}
+
+h4,
+h4.title,
+.h4 {
+  font-size: 23px !important;
+}
+/* Global H5 size */
+:root {
+  --h5: 18px !important;
+}
+
+h5,
+h5.title,
+.h5 {
+  font-size: 18px !important;
+}
+/* Prevent WOW animation flash before scripts initialize */
+.wow {
+  visibility: hidden;
+}
+
+.wow.animated {
+  visibility: visible;
+}
 
 
+/* Case study archive hero alignment */
+.case-study-page .provider-hero .case-study-hero-content {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+.case-study-page .provider-hero .case-study-hero-content .disc {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.case-study-page .provider-hero .case-study-hero-content .button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.case-study-page .provider-hero .case-study-hero-content .title {
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.case-study-page .provider-hero .case-study-hero-content .pre {
+  display: inline-flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Case study detail hero alignment */
+.case-study-detail-page .provider-hero .case-study-detail-hero-content {
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.case-study-detail-page .provider-hero .case-study-detail-hero-content .pre {
+  display: inline-flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.case-study-detail-page .provider-hero .case-study-detail-hero-content .title {
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero breadcrumbs */
+.empire-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+  color: #4f5a68;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.empire-breadcrumb a {
+  color: #0b3192;
+}
+
+.empire-breadcrumb a:hover {
+  color: #0b3192;
+  text-decoration: underline;
+}
+
+.empire-breadcrumb span:last-child {
+  color: #0a1230;
+}
+
+.case-study-page .provider-hero .empire-breadcrumb,
+.case-study-detail-page .provider-hero .empire-breadcrumb {
+  justify-content: center;
+}
+
+/* Light purple CTA band for service detail pages */
+.provider-service-detail-page:not(.case-study-detail-page) .provider-cta {
+  background: #f1f2ff;
+  padding: 80px 0;
+}
+
+.provider-service-detail-page:not(.case-study-detail-page) .provider-cta .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Remove bottom gap on Provider Services process section */
+.provider-services-page:not(.payer-services-page) .provider-process {
+  padding-bottom: 0 !important;
+}
+
+/* Tighten service detail hero text spacing */
+.provider-service-detail-page:not(.case-study-detail-page) .provider-hero .title {
+  margin-bottom: 14px;
+}
+
+.provider-service-detail-page:not(.case-study-detail-page) .provider-hero .disc {
+  margin-top: 0;
+  margin-bottom: 18px;
+  line-height: 1.55;
+}
+
+.provider-service-detail-page:not(.case-study-detail-page) .provider-hero .button-wrapper {
+  margin-top: 0 !important;
+}
+
+.provider-service-detail-page:not(.case-study-detail-page) .provider-hero .title-wrapper-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Landing page hero lead form */
+.landingpageform {
+  background: #615EFC url(../images/appoinment/01.jpg) center center / cover no-repeat !important;
+  border: 1px solid #615EFC !important;
+  border-radius: 8px;
+  padding: 34px 36px;
+  color: #fff;
+  overflow: hidden;
+  width: 100%;
+}
+
+.landingpageform .landingpageform-title {
+  color: #fff !important;
+  text-align: center;
+  margin-bottom: 22px;
+  line-height: 1.15;
+}
+
+.landingpageform .landingpageform-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.landingpageform .landingpageform-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 14px;
+}
+
+.landingpageform .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.landingpageform label,
+.landingpageform .lead-consent,
+.landingpageform .lead-consent a {
+  color: #fff !important;
+}
+
+.landingpageform label {
+  font-size: 13px;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.landingpageform input,
+.landingpageform textarea {
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.92) !important;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #fff !important;
+  font-size: 13px;
+  padding: 0 14px;
+  outline: none;
+}
+
+.landingpageform select {
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid #fff !important;
+  border-radius: 4px;
+  background-color: #fff !important;
+  color: #5d6270 !important;
+  font-size: 13px;
+  padding: 0 14px;
+  outline: none;
+  appearance: auto;
+}
+
+.landingpageform option {
+  color: #111032;
+}
+
+.landingpageform textarea {
+  min-height: 86px;
+  border-radius: 18px;
+  padding-top: 12px;
+  resize: vertical;
+}
+
+.landingpageform input::placeholder,
+.landingpageform textarea::placeholder {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.landingpageform .lead-hidden-field {
+  display: none !important;
+}
+
+.landingpageform .landingpageform-consent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px !important;
+  line-height: 1.3;
+}
+
+.landingpageform .landingpageform-consent input[type="checkbox"] {
+  width: 13px;
+  min-width: 13px;
+  flex-basis: 13px;
+  height: 13px;
+  min-height: 13px;
+  padding: 0;
+  margin: 0;
+}
+
+.landingpageform .lead-form-status {
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.landingpageform .lead-form-status.success {
+  background: rgba(255, 255, 255, 0.95);
+  color: #061f73;
+}
+
+.landingpageform .lead-form-status.error {
+  background: #f8d7da;
+  color: #842029;
+}
+
+.landingpageform .landingpageform-submit {
+  align-self: center;
+  min-width: 300px;
+  min-height: 46px;
+  justify-content: center;
+  background: #fff !important;
+  border-color: #fff !important;
+  color: #615EFC !important;
+  padding: 13px 22px;
+}
+
+.landingpageform .landingpageform-submit:hover {
+  background: #111032 !important;
+  border-color: #111032 !important;
+  color: #fff !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .landingpageform {
+    padding: 30px 22px;
+  }
+
+  .landingpageform .landingpageform-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .landingpageform .landingpageform-submit {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* Benefits Verification hero form alignment */
+.provider-service-detail-page .provider-hero .provider-hero-form {
+  width: 100%;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform {
+  padding: 24px 26px;
+  box-shadow: 0 18px 45px rgba(6, 31, 115, 0.12);
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform-title {
+  font-size: 28px;
+  margin-bottom: 16px;
+  white-space: normal;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform-fields {
+  gap: 9px;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform-grid {
+  gap: 9px 10px;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform label {
+  font-size: 12px;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform input,
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform select {
+  min-height: 36px;
+  font-size: 12px;
+  padding: 0 12px;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform textarea {
+  min-height: 62px;
+  font-size: 12px;
+  padding: 10px 12px;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform-consent {
+  font-size: 11px !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform-submit {
+  min-height: 40px;
+  min-width: 260px;
+  padding: 10px 18px;
+  font-size: 13px;
+}
+
+@media only screen and (min-width: 992px) {
+  .provider-service-detail-page .provider-hero .row {
+    align-items: center !important;
+  }
+}
+
+/* Compact landing form inside service hero */
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform {
+  max-width: 520px;
+  margin-left: auto;
+  padding: 18px 20px !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform-title {
+  font-size: 22px !important;
+  line-height: 1.15 !important;
+  margin-bottom: 12px !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform-fields {
+  gap: 7px !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform-grid {
+  gap: 7px 8px !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform .form-field {
+  gap: 4px !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform label {
+  font-size: 11px !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform input,
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform select {
+  min-height: 31px !important;
+  height: 31px !important;
+  font-size: 11px !important;
+  padding: 0 10px !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform textarea {
+  min-height: 44px !important;
+  height: 44px !important;
+  font-size: 11px !important;
+  padding: 8px 10px !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform-consent {
+  font-size: 10px !important;
+  gap: 6px !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform-consent input[type="checkbox"] {
+  width: 11px !important;
+  min-width: 11px !important;
+  flex-basis: 11px !important;
+  height: 11px !important;
+  min-height: 11px !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform-submit {
+  min-height: 34px !important;
+  min-width: 230px !important;
+  padding: 8px 16px !important;
+  font-size: 12px !important;
+}
+
+/* Hero form label cleanup */
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform .form-field > label {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform select {
+  color: #5d6270 !important;
+  line-height: 31px !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform .form-field {
+  gap: 0 !important;
+}
+
+/* Match hero form dropdowns to transparent input fields */
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform select {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.92) !important;
+  border-radius: 999px !important;
+  color: #fff !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform select option {
+  color: #111032 !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform select:invalid,
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform select option[value=""] {
+  color: #fff !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform-fields {
+  gap: 5px !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform-grid {
+  gap: 5px 8px !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform .form-field {
+  margin-bottom: 0 !important;
+}
+
+/* Final compact hero form spacing and dropdown visuals */
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform input,
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform textarea {
+  margin-bottom: 0 !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform .nice-select {
+  width: 100% !important;
+  height: 31px !important;
+  min-height: 31px !important;
+  line-height: 31px !important;
+  padding: 0 28px 0 10px !important;
+  border: 1px solid rgba(255, 255, 255, 0.92) !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #fff !important;
+  font-size: 11px !important;
+  margin-bottom: 0 !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform .nice-select .current {
+  color: #fff !important;
+  line-height: 31px !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform .nice-select::after {
+  border-color: #fff !important;
+  right: 12px !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform .nice-select .list {
+  color: #111032 !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform .nice-select .option {
+  color: #111032 !important;
+}
+
+/* Scrollable compact hero form dropdown menus */
+.provider-service-detail-page .provider-hero .provider-hero-form,
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform,
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform .form-field {
+  overflow: visible !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform .nice-select.open {
+  z-index: 50 !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform .nice-select .list {
+  max-height: 132px !important;
+  overflow-y: auto !important;
+  overscroll-behavior: contain;
+  z-index: 60 !important;
+}
+
+.provider-service-detail-page .provider-hero .provider-hero-form .landingpageform .nice-select .option {
+  min-height: 34px !important;
+  line-height: 34px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Contact page hero image and tighter form spacing */
+.empire-contact-breadcrumb {
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(rgba(3, 15, 45, 0.66), rgba(3, 15, 45, 0.66)), url('/assets/images/contact-us.jpg') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  padding-top: 86px !important;
+  padding-bottom: 70px !important;
+  min-height: 330px;
+  display: flex;
+  align-items: center;
+}
+
+.empire-contact-breadcrumb .container {
+  position: relative;
+  z-index: 1;
+}
+
+.empire-contact-breadcrumb .container.ptb--40 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.empire-contact-breadcrumb .breadcrumb-area-wrapper {
+  text-align: center;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.empire-contact-breadcrumb .title,
+.empire-contact-breadcrumb h3,
+.empire-contact-breadcrumb p {
+  color: #fff !important;
+}
+
+.empire-contact-breadcrumb .title {
+  margin-bottom: 18px !important;
+}
+
+.empire-contact-breadcrumb h3 {
+  margin-bottom: 18px !important;
+}
+
+.empire-contact-breadcrumb p {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0 !important;
+}
+
+.empire-contact-breadcrumb + .book-your-consulting {
+  padding-top: 24px !important;
+}
+
+.empire-contact-breadcrumb + .book-your-consulting .compact-lead-card {
+  margin-top: 0 !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .empire-contact-breadcrumb {
+    padding-top: 70px !important;
+    padding-bottom: 56px !important;
+    min-height: 280px;
+  }
+
+  .empire-contact-breadcrumb + .book-your-consulting {
+    padding-top: 18px !important;
+  }
+}
+
+/* Contact page: keep form visible directly below hero */
+.legacy-page.home:has(.empire-contact-breadcrumb) .book-your-consulting.rts-section-gap {
+  padding-top: 24px !important;
+  padding-bottom: 70px !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .legacy-page.home:has(.empire-contact-breadcrumb) .book-your-consulting.rts-section-gap {
+    padding-top: 18px !important;
+    padding-bottom: 52px !important;
+  }
+}
+
+/* Contact page split hero */
+.empire-contact-hero-split {
+  background: #f1f2ff !important;
+  background-image: none !important;
+  border-radius: 0 0 8px 8px;
+  min-height: 390px;
+  padding-top: 58px !important;
+  padding-bottom: 58px !important;
+  display: flex;
+  align-items: center;
+}
+
+.empire-contact-hero-split .container.ptb--40 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.empire-contact-hero-content {
+  text-align: left !important;
+  max-width: 690px !important;
+  margin: 0 !important;
+}
+
+.empire-contact-hero-content .pre {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 7px 18px;
+  border: 1px solid rgba(8, 42, 150, 0.22);
+  border-radius: 999px;
+  color: #0b3192 !important;
+  background: rgba(255, 255, 255, 0.28);
+  margin-bottom: 24px;
+}
+
+.empire-contact-hero-split .title,
+.empire-contact-hero-split h3,
+.empire-contact-hero-split p {
+  color: #111032 !important;
+}
+
+.empire-contact-hero-split .title {
+  margin-bottom: 16px !important;
+}
+
+.empire-contact-hero-split h3 {
+  margin-bottom: 18px !important;
+}
+
+.empire-contact-hero-split p {
+  max-width: 680px;
+  margin: 0 !important;
+  color: #535a68 !important;
+}
+
+.empire-contact-hero-image {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 24px 55px rgba(8, 42, 150, 0.14);
+}
+
+.empire-contact-hero-image img {
+  display: block;
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+.legacy-page.home:has(.empire-contact-hero-split) .book-your-consulting.rts-section-gap {
+  padding-top: 22px !important;
+}
+
+@media only screen and (max-width: 991px) {
+  .empire-contact-hero-split {
+    padding-top: 46px !important;
+    padding-bottom: 46px !important;
+  }
+
+  .empire-contact-hero-content {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  .empire-contact-hero-split p {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .empire-contact-hero-image img {
+    height: 240px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .empire-contact-hero-split {
+    padding-top: 38px !important;
+    padding-bottom: 38px !important;
+  }
+
+  .empire-contact-hero-image img {
+    height: 210px;
+  }
+}
+
+/* Contact hero image desktop size */
+@media only screen and (min-width: 992px) {
+  .empire-contact-hero-image {
+    width: 600px;
+    max-width: 100%;
+    margin-left: auto;
+  }
+
+  .empire-contact-hero-image img {
+    width: 600px;
+    max-width: 100%;
+    height: 400px !important;
+  }
+
+  .empire-contact-hero-split {
+    min-height: 520px;
+  }
+}
+
+/* Contact hero image height aligned to text block */
+@media only screen and (min-width: 992px) {
+  .empire-contact-hero-image img {
+    height: 270px !important;
+  }
+
+  .empire-contact-hero-split {
+    min-height: 390px;
+  }
+}
+
+/* Contact hero image requested height */
+@media only screen and (min-width: 992px) {
+  .empire-contact-hero-image img {
+    height: 300px !important;
+  }
+}
+
+/* Contact hero 400px image and balanced left text spacing */
+@media only screen and (min-width: 992px) {
+  .empire-contact-hero-image img {
+    height: 400px !important;
+  }
+
+  .empire-contact-hero-split {
+    min-height: 520px;
+  }
+
+  .empire-contact-hero-content .pre {
+    margin-bottom: 34px !important;
+  }
+
+  .empire-contact-hero-split .title {
+    margin-bottom: 26px !important;
+  }
+
+  .empire-contact-hero-split h3 {
+    margin-bottom: 30px !important;
+  }
+
+  .empire-contact-hero-split p {
+    line-height: 1.75 !important;
+  }
+}
+
+/* Provider Services main hero image size */
+@media only screen and (min-width: 992px) {
+  .provider-services-page:not(.provider-service-detail-page):not(.payer-services-page) .provider-hero-card {
+    width: 600px;
+    max-width: 100%;
+    margin-left: auto;
+  }
+
+  .provider-services-page:not(.provider-service-detail-page):not(.payer-services-page) .provider-hero-card img {
+    width: 600px;
+    max-width: 100%;
+    height: 400px !important;
+    object-fit: cover;
+  }
+}
+
+/* Force Provider Services hero image to requested desktop width */
+@media only screen and (min-width: 1200px) {
+  .provider-services-page:not(.provider-service-detail-page):not(.payer-services-page) .provider-hero-card {
+    width: 600px !important;
+    max-width: none !important;
+  }
+
+  .provider-services-page:not(.provider-service-detail-page):not(.payer-services-page) .provider-hero-card img {
+    width: 600px !important;
+    max-width: none !important;
+    height: 400px !important;
+  }
+}
+
+/* Service detail process checks as a simple list */
+.provider-service-detail-page .provider-process .provider-checks {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+  margin-top: 24px !important;
+}
+
+.provider-service-detail-page .provider-process .provider-checks .single {
+  width: 100%;
+  border: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  align-items: flex-start !important;
+  box-shadow: none !important;
+}
+
+.provider-service-detail-page .provider-process .provider-checks .single i {
+  margin-top: 4px;
+  min-width: 18px;
+}
