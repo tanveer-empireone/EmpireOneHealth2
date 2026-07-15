@@ -21715,3 +21715,247 @@ h5.title,
   margin-top: 4px;
   min-width: 18px;
 }
+
+/* Align homepage service card Learn More links */
+.legacy-page.home .service-area .single-service-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.legacy-page.home .service-area .single-service-area .btn-transparent {
+  margin-top: auto;
+  align-self: flex-start;
+}
+/* Mobile About image full-width fix */
+@media only screen and (max-width: 767px) {
+  .legacy-page.home .rts-about-area .about-image-left-wrapper {
+    width: calc(100% + var(--bs-gutter-x, 24px)) !important;
+    margin-left: calc(var(--bs-gutter-x, 24px) * -0.5) !important;
+    margin-right: calc(var(--bs-gutter-x, 24px) * -0.5) !important;
+  }
+
+  .legacy-page.home .rts-about-area .about-image-left-wrapper .thumbnail-main,
+  .legacy-page.home .rts-about-area .about-image-left-wrapper .thumbnail-main img {
+    width: 100% !important;
+  }
+}
+/* Mobile footer layout cleanup */
+@media only screen and (max-width: 767px) {
+  .rts-footer-area.footer-bg {
+    padding-top: 42px !important;
+  }
+
+  .rts-footer-area .subscribe-area-start {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 22px !important;
+    padding-bottom: 28px !important;
+  }
+
+  .rts-footer-area .subscribe-area-start .logo img {
+    max-width: 180px !important;
+  }
+
+  .rts-footer-area .subscribe-area-start .subscribe-area {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .rts-footer-area .subscribe-area-start .subscribe-area input,
+  .rts-footer-area .subscribe-area-start .subscribe-area button {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .footer-wrapper-style-between {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+    padding-top: 30px !important;
+    padding-bottom: 34px !important;
+  }
+
+  .footer-wrapper-style-between .single-wized {
+    flex-basis: auto !important;
+    width: 100% !important;
+  }
+
+  .footer-wrapper-style-between .single-wized .title {
+    font-size: 20px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .footer-wrapper-style-between .single-wized .body {
+    padding-top: 14px !important;
+  }
+
+  .footer-wrapper-style-between .single-wized .body .location,
+  .footer-wrapper-style-between .single-wized .body a,
+  .footer-wrapper-style-between .single-wized .body .nav-bottom li {
+    font-size: 15px !important;
+    line-height: 1.45 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .copyright-area-inner {
+    text-align: center !important;
+    padding: 16px 12px 22px !important;
+    line-height: 1.4 !important;
+  }
+}
+/* Mobile footer subscribe button placement */
+@media only screen and (max-width: 767px) {
+  .rts-footer-area .subscribe-area-start .subscribe-area {
+    position: static !important;
+  }
+
+  .rts-footer-area .subscribe-area-start .subscribe-area button {
+    position: static !important;
+    transform: none !important;
+    right: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    height: 52px !important;
+    justify-content: center !important;
+    border-radius: 999px !important;
+    background: #fff !important;
+    color: #061f73 !important;
+  }
+
+  .rts-footer-area .subscribe-area-start .subscribe-area button:hover {
+    background: #19c6df !important;
+    color: #fff !important;
+  }
+}
+/* Homepage About section vertical alignment */
+@media only screen and (min-width: 768px) {
+  .legacy-page.home .rts-about-area .row {
+    align-items: center !important;
+  }
+
+  .legacy-page.home .rts-about-area .about-content-wrapper-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .legacy-page.home .rts-about-area .col-lg-6.mt--30 {
+    margin-top: 0 !important;
+  }
+}
+/* About page split hero */
+.about-hero-page .about-split-hero {
+  background: #f1f2ff !important;
+  padding: 96px 0 !important;
+}
+
+.about-hero-page .about-split-hero .row {
+  align-items: center !important;
+}
+
+.about-hero-page .about-hero-content .title {
+  margin-bottom: 18px !important;
+}
+
+.about-hero-page .about-hero-content .disc {
+  max-width: 680px;
+  margin-bottom: 34px !important;
+  line-height: 1.65;
+}
+
+.about-hero-page .about-hero-image {
+  width: 600px;
+  max-width: 100%;
+  margin-left: auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 24px 55px rgba(8, 42, 150, 0.14);
+}
+
+.about-hero-page .about-hero-image img {
+  width: 600px;
+  max-width: 100%;
+  height: 400px !important;
+  object-fit: cover;
+  display: block;
+}
+
+@media only screen and (max-width: 991px) {
+  .about-hero-page .about-split-hero {
+    padding: 70px 0 !important;
+  }
+
+  .about-hero-page .about-hero-content {
+    text-align: center;
+  }
+
+  .about-hero-page .about-hero-content .disc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-hero-page .about-hero-content .button-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-hero-page .about-hero-image {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .about-hero-page .about-split-hero {
+    padding: 50px 0 !important;
+  }
+
+  .about-hero-page .about-hero-image img {
+    height: 260px !important;
+  }
+}
+/* About hero pill spacing */
+.about-hero-page .about-hero-content .pre {
+  display: inline-flex;
+  margin-bottom: 24px !important;
+}
+/* About page counter centering */
+.legacy-page.about .counter-area-main-wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  align-items: stretch !important;
+}
+
+.legacy-page.about .counter-area-main-wrapper .single-counter {
+  width: 100% !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.legacy-page.about .counter-area-main-wrapper .single-counter .title,
+.legacy-page.about .counter-area-main-wrapper .single-counter p {
+  text-align: center !important;
+  width: 100% !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .legacy-page.about .counter-area-main-wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+/* Payer Services hero image should not show a white placeholder */
+.payer-services-page .payer-hero-card {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.payer-services-page .payer-hero-card img {
+  border-radius: 8px;
+}
