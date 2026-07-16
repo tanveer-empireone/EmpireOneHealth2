@@ -13002,7 +13002,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 .banner-area-one .banner-content-area .title {
   font-size: 38px !important;
   line-height: 1.08 !important;
-  max-width: 780px !important;
+  max-width: 980px !important;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
   .banner-content-area {
@@ -21957,4 +21957,119 @@ h5.title,
 
 .payer-services-page .payer-hero-card img {
   border-radius: 8px;
+}
+/* About hero image width adjustment */
+@media only screen and (min-width: 992px) {
+  .about-hero-page .about-split-hero .row > .col-lg-6:first-child {
+    flex: 0 0 55% !important;
+    max-width: 55% !important;
+  }
+
+  .about-hero-page .about-split-hero .row > .col-lg-6:last-child {
+    flex: 0 0 45% !important;
+    max-width: 45% !important;
+  }
+
+  .about-hero-page .about-hero-image {
+    width: 520px !important;
+  }
+
+  .about-hero-page .about-hero-image img {
+    width: 520px !important;
+  }
+}
+/* About page counter box alignment refinement */
+.legacy-page.about .counter-area-main-wrapper {
+  gap: 0 !important;
+}
+
+.legacy-page.about .counter-area-main-wrapper .single-counter {
+  min-height: 100px !important;
+  padding: 18px 24px !important;
+  justify-content: center !important;
+}
+
+.legacy-page.about .counter-area-main-wrapper .single-counter::after {
+  right: 0 !important;
+  top: 50% !important;
+  height: 72px !important;
+  transform: translateY(-50%) !important;
+}
+
+.legacy-page.about .counter-area-main-wrapper .single-counter .title {
+  margin: 0 0 12px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.legacy-page.about .counter-area-main-wrapper .single-counter p {
+  margin: 0 auto !important;
+}
+/* About counter exact content centering */
+.legacy-page.about .counter-area-main-wrapper .single-counter {
+  place-self: stretch !important;
+  justify-self: stretch !important;
+}
+
+.legacy-page.about .counter-area-main-wrapper .single-counter .title,
+.legacy-page.about .counter-area-main-wrapper .single-counter p {
+  max-width: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.legacy-page.about .counter-area-main-wrapper .single-counter .counter {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+/* Main Provider/Payer pages: How We Work list layout */
+.provider-services-page:not(.provider-service-detail-page) .provider-process .provider-checks {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  margin-top: 24px !important;
+}
+
+.provider-services-page:not(.provider-service-detail-page) .provider-process .provider-checks .single {
+  width: fit-content !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  gap: 12px !important;
+  font-weight: 700 !important;
+}
+/* Payer Services process image height match */
+@media only screen and (min-width: 992px) {
+  .payer-services-page .provider-process .provider-process-image img {
+    height: 420px !important;
+    object-fit: cover !important;
+  }
+}
+/* Case Study archive hero title width */
+.case-study-page .provider-hero .case-study-hero-content .title {
+  max-width: 980px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+/* Case Study measure section image/text balance */
+@media only screen and (min-width: 992px) {
+  .case-study-page .provider-process .provider-process-image {
+    max-width: 430px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .case-study-page .provider-process .provider-process-image img {
+    height: 420px !important;
+    object-fit: contain !important;
+    object-position: center bottom !important;
+  }
+
+  .case-study-page .provider-process .title-wrapper-left .title {
+    white-space: nowrap !important;
+  }
 }
