@@ -871,7 +871,7 @@
   }
 
   rtsJs.m();
-})(jQuery, window)
+})(jQuery, window);
 
 
 
@@ -885,72 +885,73 @@
 
 // Landing page contact form submit handler for legacy HTML pages
 (function () {
-  function initLandingPageForms() {
-    document.querySelectorAll('form[data-contact-form="true"]').forEach(function (form) {
-      if (form.dataset.contactFormReady === 'true') return;
-      form.dataset.contactFormReady = 'true';
+  async function submitLandingPageForm(form, event) {
+    event.preventDefault();
 
-      form.addEventListener('submit', async function (event) {
-        event.preventDefault();
+    if (form.dataset.contactFormSubmitting === 'true') return;
+    form.dataset.contactFormSubmitting = 'true';
 
-        var submitButton = form.querySelector('button[type="submit"]');
-        var status = form.querySelector('.lead-form-status');
-        var originalText = submitButton ? submitButton.textContent : '';
+    var submitButton = form.querySelector('button[type="submit"]');
+    var status = form.querySelector('.lead-form-status');
+    var originalText = submitButton ? submitButton.textContent : '';
 
-        if (status) {
-          status.hidden = true;
-          status.textContent = '';
-          status.classList.remove('success', 'error');
-        }
+    if (status) {
+      status.hidden = true;
+      status.textContent = '';
+      status.classList.remove('success', 'error');
+    }
 
-        if (submitButton) {
-          submitButton.disabled = true;
-          submitButton.textContent = 'Sending...';
-        }
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending...';
+    }
 
-        var formData = new FormData(form);
-        var payload = Object.fromEntries(formData.entries());
-        payload.privacy_consent = formData.get('privacy_consent') === 'on';
-        payload.page_url = window.location.href;
+    var formData = new FormData(form);
+    var payload = Object.fromEntries(formData.entries());
+    payload.privacy_consent = formData.get('privacy_consent') === 'on';
+    payload.page_url = window.location.href;
 
-        try {
-          var response = await fetch('/api/contact', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-          });
-          var result = await response.json();
-
-          if (!response.ok || result.status !== 'success') {
-            throw new Error(result.message || 'Please check the form and try again.');
-          }
-
-          form.reset();
-          if (status) {
-            status.textContent = result.message || 'Thank you! We will contact you soon.';
-            status.classList.add('success');
-            status.hidden = false;
-          }
-        } catch (error) {
-          console.error('Landing page form submit failed:', error);
-          if (status) {
-            status.textContent = 'We could not send your request right now. Please try again later.';
-            status.classList.add('error');
-            status.hidden = false;
-          }
-        } finally {
-          if (submitButton) {
-            submitButton.disabled = false;
-            submitButton.textContent = originalText;
-          }
-        }
+    try {
+      var response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
       });
-    });
+      var result = await response.json().catch(function () { return {}; });
+
+      if (!response.ok || result.status !== 'success') {
+        throw new Error(result.message || 'Lead form request failed.');
+      }
+
+      form.reset();
+      if (status) {
+        status.textContent = result.message || 'Thank you! We will contact you soon.';
+        status.classList.add('success');
+        status.hidden = false;
+      }
+    } catch (error) {
+      console.error('Landing page form submit failed:', error);
+      if (status) {
+        status.hidden = true;
+        status.textContent = '';
+        status.classList.remove('success', 'error');
+      }
+    } finally {
+      form.dataset.contactFormSubmitting = 'false';
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalText;
+      }
+    }
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initLandingPageForms);
-  } else {
-    initLandingPageForms();
+  if (!window.__empireLandingFormHandlerReady) {
+    window.__empireLandingFormHandlerReady = true;
+
+    document.addEventListener('submit', function (event) {
+      var form = event.target && event.target.closest ? event.target.closest('form[data-contact-form="true"]') : null;
+      if (!form) return;
+      submitLandingPageForm(form, event);
+    }, true);
   }
 })();

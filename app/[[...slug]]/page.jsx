@@ -1,6 +1,7 @@
-﻿import { notFound } from "next/navigation";
+import { notFound } from "next/navigation";
 import BookCallForm from "../../components/BookCallForm";
 import CalendlyWidget from "../../components/CalendlyWidget";
+import LandingPageForm from "../../components/landingpageform";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { listLegacyHtmlPages, readLegacyFullPage, readLegacyPage, resolveLegacyPage } from "../../lib/legacy-pages";
@@ -80,10 +81,13 @@ export default async function LegacyPage({ params }) {
     );
   }
 
+  const hasLandingPageForm = page.body.includes("data-landing-page-form");
+
   return (
     <div className="legacy-page home">
       <Header />
       {renderLegacyBody(page.body)}
+      {hasLandingPageForm ? <LandingPageForm /> : null}
       <Footer />
     </div>
   );
