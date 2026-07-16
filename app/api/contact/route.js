@@ -52,11 +52,16 @@ function createTransporter() {
   }
 
   const port = Number(process.env.SMTP_PORT || 465);
+  const secure = process.env.SMTP_SECURE !== undefined
+    ? process.env.SMTP_SECURE === "true"
+    : port === 465;
+  const requireTLS = process.env.SMTP_REQUIRE_TLS === "true" || process.env.SMTP_TLS === "true" || port === 587;
 
   return nodemailer.createTransport({
     host: process.env.SMTP_HOST || "smtp.hostinger.com",
     port,
-    secure: port === 465,
+    secure,
+    requireTLS,
     auth: {
       user: smtpUser,
       pass: smtpPassword
@@ -155,7 +160,7 @@ function buildUserEmail(fullName) {
         <tr><td style="padding:30px;color:#333;font-size:15px;line-height:1.6;">
           <p>Hello ${escapeHtml(fullName)},</p>
           <p>Thank you for your interest in EmpireOne Health. This email confirms that we've received your inquiry. Our team is reviewing your request and will be in touch shortly.</p>
-          <p>We appreciate the opportunity to assist you..</p>
+          <p>We appreciate the opportunity to assist you.</p>
           <br>
           <p>Best regards,<br><strong>EmpireOne Health</strong></p>
         </td></tr>
