@@ -651,7 +651,8 @@ ol ul {
 }
 
 .rts-section-gapBottom {
-  padding-bottom: 40px;
+  padding-bottom: 30px;
+  padding-top: 20px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rts-section-gapBottom {
@@ -13276,7 +13277,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 .rts-banner-area-three.style-five .pre-title {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   color: var(--color-primary);
   font-size: 18px;
 }
@@ -13921,7 +13922,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 .rts-banner-seven .rts-banner-content-seven .pre-title span {
   color: var(--color-primary);
@@ -15158,7 +15159,7 @@ header .rts-btn {
   border-radius: 30px;
   padding: 5px 16px;
   color: #082A96;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   display: block;
   max-width: max-content;
   border: 1px solid rgba(8, 42, 150, 0.2);
@@ -16394,7 +16395,7 @@ header .rts-btn {
 }
 
 .title-area-left .pre-title {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -21668,7 +21669,7 @@ h5.title,
 .provider-service-detail-page .provider-process .provider-checks {
   display: flex !important;
   flex-direction: column !important;
-  gap: 14px !important;
+  gap: 4px !important;
   margin-top: 24px !important;
 }
 
@@ -22036,9 +22037,8 @@ h5.title,
   }
 
   .case-study-page .provider-process .provider-process-image img {
-    height: 420px !important;
-    object-fit: contain !important;
-    object-position: center bottom !important;
+    height: 350px !important;
+    object-position: center !important;
   }
 
   .case-study-page .provider-process .title-wrapper-left .title {
@@ -22103,6 +22103,7 @@ h5.title,
   max-width: 100%;
   max-height: 560px;
   object-fit: contain;
+  border-radius: 8px;
 }
 
 .case-study-detail-page .case-study-split-process .case-study-list-section:last-child {
@@ -22436,4 +22437,43 @@ h5.title,
 .legacy-page.home:has(.empire-contact-breadcrumb) .book-your-consulting .compact-lead-card {
   border-radius: 8px !important;
   overflow: hidden !important;
+}
+
+/* About page: make the person image match the larger home page treatment */
+.about-who-we-are .right-whychoose-us-style-one .thumbnail-image {
+  max-width: 520px;
+  right: -58px;
+}
+
+.about-who-we-are .right-whychoose-us-style-one .thumbnail-image img {
+  width: 100%;
+  max-width: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .about-who-we-are .right-whychoose-us-style-one .thumbnail-image {
+    max-width: 438px;
+    right: 0;
+  }
+}
+
+/* Self-pay case study: separate measured outcomes from team strategy */
+.case-study-detail-page .case-study-split-process .case-study-list-section + .case-study-list-section {
+  margin-top: 32px;
+}
+
+/* Self-pay case study: match image height to the adjacent text block */
+.case-study-detail-page .case-study-split-process .case-study-process-image img {
+  width: 100%;
+  height: 420px;
+  max-height: none;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 991px) {
+  .case-study-detail-page .case-study-split-process .case-study-process-image img {
+    height: auto;
+    max-height: 420px;
+    object-fit: contain;
+  }
 }

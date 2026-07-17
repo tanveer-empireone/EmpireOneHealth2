@@ -79,7 +79,7 @@ export default function BookCallForm() {
                   <div className="form-field">
                     <label htmlFor="lead-source">Source</label>
                     <select id="lead-source" name="source" defaultValue="">
-                      <option value="">Where did you find us?</option>
+                      <option value="">How did you hear about us?</option>
                       <option value="google">Google</option>
                       <option value="chatgpt">ChatGPT</option>
                       <option value="referral">Referral</option>
