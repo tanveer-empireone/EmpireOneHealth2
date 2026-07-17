@@ -193,8 +193,8 @@ export async function POST(request) {
       return Response.json({ status: "success", message: "Thank you! We will contact you soon.", requestId });
     }
 
-    if (!fullName || !email || !verifyEmail) {
-      return Response.json({ status: "error", message: "Please complete the required name and email fields." }, { status: 400 });
+    if (!fullName || !email || !verifyEmail || !contactNumber) {
+      return Response.json({ status: "error", message: "Please complete the required name, email, and contact number fields." }, { status: 400 });
     }
 
     if (email !== verifyEmail) {

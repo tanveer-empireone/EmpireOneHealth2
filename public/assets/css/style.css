@@ -13001,7 +13001,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 }
 /* Stronger override for banner title to beat later definitions */
 .banner-area-one .banner-content-area .title {
-  font-size: 38px !important;
+  font-size: 33px !important;
   line-height: 1.08 !important;
   max-width: 980px !important;
 }
@@ -20691,7 +20691,7 @@ a.rts-btn:hover * {
   max-width: 1180px;
   margin: 0;
   color: #4f5874;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.7;
 }
 
@@ -20840,23 +20840,23 @@ a.rts-btn:hover * {
 }
 /* Global H1 size */
 :root {
-  --h1: 38px !important;
+  --h1: 33px !important;
 }
 
 h1,
 h1.title,
 .h1 {
-  font-size: 38px !important;
+  font-size: 33px !important;
 }
 /* Global H2 size */
 :root {
-  --h2: 33px !important;
+  --h2: 28px !important;
 }
 
 h2,
 h2.title,
 .h2 {
-  font-size: 33px !important;
+  font-size: 28px !important;
 }
 /* Global H3 size */
 :root {
@@ -21064,7 +21064,7 @@ h5.title,
 .landingpageform input,
 .landingpageform textarea {
   width: 100%;
-  min-height: 40px;
+  min-height: 80px;
   border: 1px solid rgba(255, 255, 255, 0.92) !important;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08) !important;
@@ -21270,8 +21270,8 @@ h5.title,
 }
 
 .provider-service-detail-page .provider-hero .provider-hero-form .landingpageform textarea {
-  min-height: 44px !important;
-  height: 44px !important;
+  min-height: 84px !important;
+  height: 84px !important;
   font-size: 11px !important;
   padding: 8px 10px !important;
 }
@@ -22171,6 +22171,11 @@ h5.title,
   margin-left: auto !important;
   margin-right: auto !important;
 }
+
+.required-mark {
+  color: inherit;
+  font-weight: 700;
+}
 /* Footer compliance logo strip */
 .footer-compliance-logos {
   display: flex;
@@ -22223,4 +22228,27 @@ h5.title,
     width: 48px;
     height: 48px;
   }
+}
+/* About counter divider alignment */
+.legacy-page.about .counter-area-main-wrapper .single-counter {
+  min-height: 92px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.legacy-page.about .counter-area-main-wrapper .single-counter::after {
+  top: 50% !important;
+  height: 58px !important;
+  transform: translateY(-50%) !important;
+}
+
+.legacy-page.about .counter-area-main-wrapper .single-counter .title {
+  margin-bottom: 10px !important;
+}
+
+.legacy-page.about .counter-area-main-wrapper .single-counter p {
+  line-height: 1.25 !important;
 }

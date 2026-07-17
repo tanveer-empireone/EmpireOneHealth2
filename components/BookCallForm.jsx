@@ -57,7 +57,7 @@ export default function BookCallForm() {
                 <input type="text" name="website" tabIndex="-1" autoComplete="off" className="lead-hidden-field" aria-hidden="true" />
                 <div className="lead-form-grid">
                   <div className="form-field">
-                    <label htmlFor="lead-full-name">Full Name</label>
+                    <label htmlFor="lead-full-name">Full Name <span className="required-mark">*</span></label>
                     <input id="lead-full-name" name="full_name" type="text" placeholder="Your Name" required />
                   </div>
                   <div className="form-field">
@@ -65,15 +65,15 @@ export default function BookCallForm() {
                     <input id="lead-company-name" name="company_name" type="text" placeholder="Enter company name" />
                   </div>
                   <div className="form-field">
-                    <label htmlFor="lead-email">Email Address</label>
+                    <label htmlFor="lead-email">Email Address <span className="required-mark">*</span></label>
                     <input id="lead-email" name="email" type="email" placeholder="name@company.com" required />
                   </div>
                   <div className="form-field">
-                    <label htmlFor="lead-contact-number">Contact Number</label>
-                    <input id="lead-contact-number" name="contact_number" type="tel" placeholder="800-233-1234" />
+                    <label htmlFor="lead-contact-number">Contact Number <span className="required-mark">*</span></label>
+                    <input id="lead-contact-number" name="contact_number" type="tel" placeholder="800-233-1234" required />
                   </div>
                   <div className="form-field">
-                    <label htmlFor="lead-verify-email">Verify Email</label>
+                    <label htmlFor="lead-verify-email">Verify Email <span className="required-mark">*</span></label>
                     <input id="lead-verify-email" name="verify_email" type="email" placeholder="Confirm email address" required />
                   </div>
                   <div className="form-field">
@@ -100,6 +100,7 @@ export default function BookCallForm() {
                     <option value="member-services">Member Services</option>
                     <option value="enrollment-support">Enrollment Support</option>
                     <option value="provider-data">Provider Data Management</option>
+                    <option value="other">Other</option>
                   </select>
                 </div>
                 <div className="form-field full-width">

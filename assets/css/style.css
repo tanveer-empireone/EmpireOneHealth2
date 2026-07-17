@@ -22168,6 +22168,11 @@ h5.title,
   margin-left: auto !important;
   margin-right: auto !important;
 }
+
+.required-mark {
+  color: inherit;
+  font-weight: 700;
+}
 /* Footer compliance logo strip */
 .footer-compliance-logos {
   display: flex;
@@ -22220,4 +22225,27 @@ h5.title,
     width: 48px;
     height: 48px;
   }
+}
+/* About counter divider alignment */
+.legacy-page.about .counter-area-main-wrapper .single-counter {
+  min-height: 92px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.legacy-page.about .counter-area-main-wrapper .single-counter::after {
+  top: 50% !important;
+  height: 58px !important;
+  transform: translateY(-50%) !important;
+}
+
+.legacy-page.about .counter-area-main-wrapper .single-counter .title {
+  margin-bottom: 10px !important;
+}
+
+.legacy-page.about .counter-area-main-wrapper .single-counter p {
+  line-height: 1.25 !important;
 }

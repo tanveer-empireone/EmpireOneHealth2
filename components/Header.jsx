@@ -3,17 +3,17 @@ export default function Header() {
     <header className="header-one header--sticky">
       <div className="header-top-area">
         <div className="container-full-header">
-          <div className="col-lg-12">
+          <div className="col-lg-11">
             <div className="header-top">
               <div className="left">
                 <div className="map-area">
-                  <a href="/">EmpireOne Health BPO &amp; RCM Support</a>
+                  <a href="mailto:info@empireonehealth.com">info@empireonehealth.com</a>
                 </div>
               </div>
               <div className="right">
                 <div className="map-area">
                   <i className="fa-regular fa-e-mail" />
-                  <a href="mailto:info@empireonehealth.com">info@empireonehealth.com</a>
+                  <a href="https://careers.empireonecx.com">Careers</a>
                 </div>
               </div>
             </div>
