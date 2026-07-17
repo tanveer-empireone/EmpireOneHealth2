@@ -13,7 +13,7 @@ export default function Header() {
               <div className="right">
                 <div className="map-area">
                   <i className="fa-regular fa-e-mail" />
-                  <a href="https://careers.empireonecx.com">Careers</a>
+                  <a href="https://careers.empireonecx.com" target="_blank" rel="noopener noreferrer">Careers</a>
                 </div>
               </div>
             </div>

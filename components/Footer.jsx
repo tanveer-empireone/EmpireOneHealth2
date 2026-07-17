@@ -114,22 +114,6 @@ export default function Footer() {
               </li>
             </ul>
           </nav>
-          <div className="rts-social-style-one pl--20 mt--50">
-            <ul>
-              <li>
-                <a href="#" aria-label="Facebook"><i className="fa-brands fa-facebook-f" /></a>
-              </li>
-              <li>
-                <a href="#" aria-label="Twitter"><i className="fa-brands fa-twitter" /></a>
-              </li>
-              <li>
-                <a href="#" aria-label="YouTube"><i className="fa-brands fa-youtube" /></a>
-              </li>
-              <li>
-                <a href="#" aria-label="LinkedIn"><i className="fa-brands fa-linkedin-in" /></a>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
 
