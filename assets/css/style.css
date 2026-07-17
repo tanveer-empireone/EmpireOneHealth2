@@ -21495,8 +21495,7 @@ h5.title,
 
 /* Contact page split hero */
 .empire-contact-hero-split {
-  background: #f1f2ff !important;
-  background-image: none !important;
+  background: url('/assets/images/contact-background.jpeg') center center / cover no-repeat !important;
   border-radius: 0 0 8px 8px;
   min-height: 390px;
   padding-top: 58px !important;
@@ -22111,4 +22110,61 @@ h5.title,
   .case-study-detail-page .case-study-split-process .case-study-process-image img {
     max-height: 420px;
   }
+}
+/* About operations card images border */
+.empire-about-operations .single-lab-test .thumbnail img {
+  border: 1px solid #5c45ff;
+  border-radius: 10px;
+}
+/* Match Provider Services process image height to text block */
+.provider-services-page:not(.payer-services-page) .provider-process .provider-process-image img {
+  height: 400px;
+  object-fit: cover;
+}
+
+@media (max-width: 991px) {
+  .provider-services-page:not(.payer-services-page) .provider-process .provider-process-image img {
+    height: auto;
+  }
+}
+/* Contact hero white background overlay */
+.empire-contact-hero-split {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.empire-contact-hero-split::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: rgba(255, 255, 255, 0.75);
+  pointer-events: none;
+}
+
+.empire-contact-hero-split > .container {
+  position: relative;
+  z-index: 1;
+}
+/* Center Contact hero text area */
+.empire-contact-hero-split .row {
+  justify-content: center;
+}
+
+.empire-contact-hero-split .col-lg-6:has(.empire-contact-hero-content) {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.empire-contact-hero-content {
+  text-align: center !important;
+  max-width: 860px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.empire-contact-hero-content p {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }

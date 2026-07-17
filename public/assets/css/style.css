@@ -86,7 +86,7 @@
   --font-secondary: "Rubik", sans-serif;
   --font-3: "fontawesome";
   --font-size-b1: 16px;
-  --font-size-b2: 16px;
+  --font-size-b2: 20px;
   --font-size-b3: 22px;
   --line-height-b1: 26px;
   --line-height-b2: 26px;
@@ -13053,6 +13053,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 .banner-content-area p.disc {
   max-width: 680px;
   color: #111032;
+  font-size: 20px;
 }
 
 .person-image .single-tag {
@@ -13875,7 +13876,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   margin-bottom: 5px;
 }
 .rts-banner-area-six .single-short-service p.disc {
-  font-size: 14px;
+  font-size: 20px;
   margin-bottom: 0;
 }
 
@@ -14434,7 +14435,7 @@ header .rts-btn {
   margin-bottom: 16px;
 }
 .single-service-area p.disc {
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 .single-service-area:hover {
@@ -14649,7 +14650,7 @@ header .rts-btn {
 }
 .single-service-six p.disc {
   color: #111032;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .single-procedure.style-six {
@@ -15028,7 +15029,7 @@ header .rts-btn {
 }
 
 .service-details-surgery-main h2.title {
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.3;
   margin-top: 40px;
 }
@@ -15157,7 +15158,7 @@ header .rts-btn {
   border-radius: 30px;
   padding: 5px 16px;
   color: #082A96;
-  margin-bottom: 21px;
+  margin-bottom: 5px;
   display: block;
   max-width: max-content;
   border: 1px solid rgba(8, 42, 150, 0.2);
@@ -15190,7 +15191,7 @@ header .rts-btn {
   }
 }
 .title-wrapper-left p.disc {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .button-wrapper {
@@ -15225,7 +15226,7 @@ header .rts-btn {
 
 .about-content-wrapper-right p.disc {
   text-align: left;
-  font-size: 16px;
+  font-size: 20px;
   max-width: 100%;
 }
 
@@ -15238,7 +15239,6 @@ header .rts-btn {
 }
 .why-choose-us-main-wrapper .single-choose-us {
   margin-bottom: 20px;
-  padding: 22px 20px;
   border-radius: 20px;
   border: px solid rgba(8, 42, 150, 0.2);
   display: flex;
@@ -15260,7 +15260,7 @@ header .rts-btn {
   margin-bottom: 8px;
 }
 .why-choose-us-main-wrapper .single-choose-us .info p {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .review-area.flex .stars-area {
@@ -15571,7 +15571,7 @@ header .rts-btn {
 }
 @media only screen and (max-width: 575px) {
   .about-seven-left-content p.disc-large {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.4;
   }
 }
@@ -15652,7 +15652,7 @@ header .rts-btn {
   }
 }
 .title-area-main-wrapper-left-nine p.disc {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .about-inner-conetent-right-nine {
@@ -15780,7 +15780,7 @@ header .rts-btn {
 }
 .appoinment-area-main .title {
   color: #fff;
-  font-size: 48px;
+  font-size: 28px;
 }
 @media only screen and (max-width: 575px) {
   .appoinment-area-main .title {
@@ -16056,7 +16056,7 @@ header .rts-btn {
   color: #fff;
 }
 .appoinment-area-wrapper-main-7 .appoinemnt-area-left p.disc {
-  font-size: 16px;
+  font-size: 20px;
   color: #fff;
   max-width: 426px;
 }
@@ -16128,6 +16128,7 @@ header .rts-btn {
   color: #fff;
 }
 .rts-find-application-area-inner p.disc {
+  font-size: 20px;
   max-width: 482px;
   color: #fff;
 }
@@ -18100,11 +18101,11 @@ li.has-dropdown:hover .submenu {
 }
 .single-testimonials-style p.disc {
   color: #111032;
-  font-size: 18px;
+  font-size: 20px;
 }
 @media only screen and (max-width: 479px) {
   .single-testimonials-style p.disc {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 .single-testimonials-style .author-area {
@@ -18383,10 +18384,10 @@ li.has-dropdown:hover .submenu {
   }
 }
 .single-lab-test.bg-pink {
-  background: #FFCFC4;
+  background: #b1a5fd6e;
 }
 .single-lab-test.bg-green {
-  background: #ABFFB8;
+  background: #95defd6e;
 }
 .single-lab-test.bg-light-card {
   background: #E8E8FF;
@@ -19512,7 +19513,7 @@ li.has-dropdown:hover .submenu {
 .title-between-area .title,
 .request-appoinemnt-area-main-wrapper .title,
 .appoinment-area-main .title {
-  font-size: 42px;
+  font-size: 28px;
   line-height: 1.18;
 }
 
@@ -19533,7 +19534,7 @@ li.has-dropdown:hover .submenu {
   .title-between-area .title,
   .request-appoinemnt-area-main-wrapper .title,
   .appoinment-area-main .title {
-    font-size: 36px;
+    font-size: 28px;
   }
 }
 
@@ -19547,7 +19548,7 @@ li.has-dropdown:hover .submenu {
   .title-between-area .title,
   .request-appoinemnt-area-main-wrapper .title,
   .appoinment-area-main .title {
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 
@@ -19570,7 +19571,7 @@ li.has-dropdown:hover .submenu {
 .legacy-page.home-copy .title-between-area .title,
 .legacy-page.home-copy .request-appoinemnt-area-main-wrapper .title,
 .legacy-page.home-copy .appoinment-area-main .title {
-  font-size: 48px;
+  font-size: 28px;
   line-height: 1.18;
 }
 
@@ -19595,7 +19596,7 @@ li.has-dropdown:hover .submenu {
   .legacy-page.home-copy .title-between-area .title,
   .legacy-page.home-copy .request-appoinemnt-area-main-wrapper .title,
   .legacy-page.home-copy .appoinment-area-main .title {
-    font-size: 32px;
+    font-size: 28px;
   }
 }
 
@@ -20046,7 +20047,7 @@ li.has-dropdown:hover .submenu {
 
 .provider-services-page .provider-hero .disc {
   max-width: 720px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.75;
 }
 
@@ -20230,7 +20231,7 @@ li.has-dropdown:hover .submenu {
 
 .empire-contact-intro .title-wrapper-left .disc {
   max-width: 680px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.75;
 }
 
@@ -20822,7 +20823,7 @@ a.rts-btn:hover * {
   height: 52px !important;
   display: flex !important;
   align-items: center !important;
-  justify-content: center !important;
+  justify-content: left !important;
   overflow: hidden !important;
 }
 
@@ -21496,8 +21497,7 @@ h5.title,
 
 /* Contact page split hero */
 .empire-contact-hero-split {
-  background: #f1f2ff !important;
-  background-image: none !important;
+  background: url('/assets/images/contact-background.jpeg') center center / cover no-repeat !important;
   border-radius: 0 0 8px 8px;
   min-height: 390px;
   padding-top: 58px !important;
@@ -21545,9 +21545,10 @@ h5.title,
 }
 
 .empire-contact-hero-split p {
-  max-width: 680px;
+  max-width: 780px;
   margin: 0 !important;
   color: #535a68 !important;
+  font-size: 20px;
 }
 
 .empire-contact-hero-image {
@@ -22112,4 +22113,61 @@ h5.title,
   .case-study-detail-page .case-study-split-process .case-study-process-image img {
     max-height: 420px;
   }
+}
+/* About operations card images border */
+.empire-about-operations .single-lab-test .thumbnail img {
+  border: 1px solid #5c45ff;
+  border-radius: 10px;
+}
+/* Match Provider Services process image height to text block */
+.provider-services-page:not(.payer-services-page) .provider-process .provider-process-image img {
+  height: 400px;
+  object-fit: cover;
+}
+
+@media (max-width: 991px) {
+  .provider-services-page:not(.payer-services-page) .provider-process .provider-process-image img {
+    height: auto;
+  }
+}
+/* Contact hero white background overlay */
+.empire-contact-hero-split {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.empire-contact-hero-split::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: rgba(255, 255, 255, 0.75);
+  pointer-events: none;
+}
+
+.empire-contact-hero-split > .container {
+  position: relative;
+  z-index: 1;
+}
+/* Center Contact hero text area */
+.empire-contact-hero-split .row {
+  justify-content: center;
+}
+
+.empire-contact-hero-split .col-lg-6:has(.empire-contact-hero-content) {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.empire-contact-hero-content {
+  text-align: center !important;
+  max-width: 860px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.empire-contact-hero-content p {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
