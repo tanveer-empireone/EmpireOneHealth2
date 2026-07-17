@@ -6,9 +6,14 @@ export default function Footer() {
           <div className="row">
             <div className="col-lg-12">
               <div className="subscribe-area-start pb--30">
-                <a href="/" className="logo">
-                  <img src="/assets/images/logo/empireone-health-logo.png" alt="EmpireOne Health" />
-                </a>
+                <div className="footer-compliance-logos footer-compliance-logos-main" aria-label="Compliance and trust badges">
+                  <img src="/assets/images/footerlogo1.webp" alt="SOC 2 Type 2" />
+                  <img src="/assets/images/footerlogo2.webp" alt="PCI DSS" />
+                  <img src="/assets/images/footerlogo3.webp" alt="HIPAA Compliant" />
+                  <img src="/assets/images/footerlogo4.webp" alt="GDPR" />
+                  <img src="/assets/images/footerlogo5.webp" alt="ISO 27001" />
+                  <img src="/assets/images/footerlogo6.webp" alt="BBB Accredited Business" />
+                </div>
                 <div className="subscribe-area">
                   <input type="text" placeholder="Enter your email" />
                   <button className="rts-btn btn-primary">Stay Updated</button>
@@ -41,7 +46,7 @@ export default function Footer() {
                   </div>
                 </div>
                 <div className="single-wized">
-                  <h6 className="title">Foundation Services</h6>
+                  <h6 className="title">Services</h6>
                   <div className="body">
                     <ul className="nav-bottom">
                       <li>

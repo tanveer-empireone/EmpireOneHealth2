@@ -22155,9 +22155,9 @@ h5.title,
   justify-content: center;
 }
 
-.empire-contact-hero-split .col-lg-6:has(.empire-contact-hero-content) {
+.empire-contact-hero-split .col-lg-7:has(.empire-contact-hero-content) {
   flex: 0 0 100%;
-  max-width: 100%;
+  max-width: 860px;
 }
 
 .empire-contact-hero-content {
@@ -22170,4 +22170,57 @@ h5.title,
 .empire-contact-hero-content p {
   margin-left: auto !important;
   margin-right: auto !important;
+}
+/* Footer compliance logo strip */
+.footer-compliance-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  padding: 8px 0 34px;
+}
+
+.footer-compliance-logos img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  display: block;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer-compliance-logos {
+    gap: 14px;
+    padding: 12px 0 28px;
+  }
+
+  .footer-compliance-logos img {
+    width: 52px;
+    height: 52px;
+  }
+}
+/* Footer compliance logos in logo position */
+.subscribe-area-start .footer-compliance-logos-main {
+  justify-content: flex-start;
+  padding: 0;
+  gap: 14px;
+  flex: 1 1 auto;
+}
+
+.subscribe-area-start .footer-compliance-logos-main img {
+  width: 56px;
+  height: 56px;
+}
+
+@media only screen and (max-width: 767px) {
+  .subscribe-area-start .footer-compliance-logos-main {
+    justify-content: center;
+    width: 100%;
+    padding: 0 0 14px;
+  }
+
+  .subscribe-area-start .footer-compliance-logos-main img {
+    width: 48px;
+    height: 48px;
+  }
 }
