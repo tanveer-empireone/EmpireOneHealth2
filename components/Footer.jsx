@@ -34,7 +34,7 @@ export default function Footer() {
                   <div className="body">
                     <ul className="nav-bottom">
                       <li>
-                        <a href="/about">About</a>
+                        <a href="/about-us">About Us</a>
                       </li>
                       <li>
                         <a href="/appointment">Book a Call</a>
@@ -93,7 +93,7 @@ export default function Footer() {
                 <a href="/" className="main mobile-menu-link">Home</a>
               </li>
               <li>
-                <a className="main mobile-menu-link" href="/about">About</a>
+                <a className="main mobile-menu-link" href="/about-us">About Us</a>
               </li>
               <li className="has-droupdown">
                 <a href="#" className="main">Service</a>

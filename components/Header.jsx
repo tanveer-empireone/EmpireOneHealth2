@@ -7,12 +7,12 @@ export default function Header() {
             <div className="header-top">
               <div className="left">
                 <div className="map-area">
+                  <i className="far fa-envelope" aria-hidden="true" style={{ fontSize: '12px', marginRight: '6px', lineHeight: 1 }} />
                   <a href="mailto:info@empireonehealth.com">info@empireonehealth.com</a>
                 </div>
               </div>
               <div className="right">
                 <div className="map-area">
-                  <i className="fa-regular fa-e-mail" />
                   <a href="https://careers.empireonecx.com" target="_blank" rel="noopener noreferrer">Careers</a>
                 </div>
               </div>
@@ -34,10 +34,10 @@ export default function Header() {
                       <a href="/">Home</a>
                     </li>
                     <li className="main-nav">
-                      <a href="/about">About</a>
+                      <a href="/about-us">About Us</a>
                     </li>
                     <li className="main-nav has-dropdown">
-                      <a href="#">Service</a>
+                      <a href="/provider-services">Service</a>
                       <ul className="submenu parent-nav">
                         <li>
                           <a href="/provider-services">Provider</a>
@@ -61,7 +61,7 @@ export default function Header() {
                   <input id="myInput" type="text" placeholder="Search..." />
                   <i className="fa-light fa-magnifying-glass" />
                 </div>
-                <a href="/appointment" className="rts-btn btn-primary">
+                <a href="#" className="rts-btn btn-primary book-call-popup-trigger" data-popup-form-trigger="book-call">
                   Book a Call
                   <img src="/assets/images/banner/icons/arrow--up-right.svg" alt="" />
                 </a>

@@ -12143,7 +12143,7 @@ Copyright (c) 2015 Daniel Eden
   border-radius: 30px;
   padding: 5px 16px;
   color: #082A96;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-align: center;
   display: block;
   max-width: max-content;
@@ -12990,6 +12990,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 
 .banner-content-area {
   padding-left: 235px;
+  font-size: 18px;
 }
 
 /* Banner content title sizing */
@@ -15156,7 +15157,7 @@ header .rts-btn {
   border-radius: 30px;
   padding: 5px 16px;
   color: #082A96;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
   display: block;
   max-width: max-content;
   border: 1px solid rgba(8, 42, 150, 0.2);
@@ -15552,7 +15553,7 @@ header .rts-btn {
   padding: 6px 15px;
   border-radius: 33px;
   border: 1px solid rgba(8, 42, 150, 0.2);
-  margin-bottom: 70px;
+  margin-bottom: 20px;
   color: var(--color-primary);
   display: block;
   max-width: max-content;
@@ -15838,7 +15839,7 @@ header .rts-btn {
   border-radius: 30px;
   padding: 5px 16px;
   color: #ffffff;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-align: center;
   display: block;
   max-width: max-content;
@@ -21525,7 +21526,7 @@ h5.title,
   border-radius: 999px;
   color: #0b3192 !important;
   background: rgba(255, 255, 255, 0.28);
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .empire-contact-hero-split .title,
@@ -21645,7 +21646,7 @@ h5.title,
   }
 
   .empire-contact-hero-content .pre {
-    margin-bottom: 34px !important;
+    margin-bottom: 20px !important;
   }
 
   .empire-contact-hero-split .title {
@@ -21816,11 +21817,19 @@ h5.title,
 }
 /* About page split hero */
 .about-hero-page .about-split-hero {
-  background: #f1f2ff !important;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-image: linear-gradient(90deg, rgba(241, 242, 255, 0.94) 0%, rgba(241, 242, 255, 0.86) 48%, rgba(241, 242, 255, 0.62) 100%), url("/assets/images/about-background.jpeg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
   padding: 96px 0 !important;
 }
 
 .about-hero-page .about-split-hero .row {
+  position: relative;
+  z-index: 1;
   align-items: center !important;
 }
 
@@ -21888,7 +21897,7 @@ h5.title,
 /* About hero pill spacing */
 .about-hero-page .about-hero-content .pre {
   display: inline-flex;
-  margin-bottom: 24px !important;
+  margin-bottom: 20px !important;
 }
 /* About page counter centering */
 .legacy-page.about .counter-area-main-wrapper {
@@ -22148,25 +22157,25 @@ h5.title,
   position: relative;
   z-index: 1;
 }
-/* Center Contact hero text area */
+/* Contact hero left text area */
 .empire-contact-hero-split .row {
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .empire-contact-hero-split .col-lg-7:has(.empire-contact-hero-content) {
-  flex: 0 0 100%;
-  max-width: 860px;
+  flex: 0 0 58.333333%;
+  max-width: 58.333333%;
 }
 
 .empire-contact-hero-content {
-  text-align: center !important;
-  max-width: 860px !important;
-  margin-left: auto !important;
+  text-align: left !important;
+  max-width: 690px !important;
+  margin-left: 0 !important;
   margin-right: auto !important;
 }
 
 .empire-contact-hero-content p {
-  margin-left: auto !important;
+  margin-left: 0 !important;
   margin-right: auto !important;
 }
 
@@ -22473,4 +22482,185 @@ h5.title,
     max-height: 420px;
     object-fit: contain;
   }
+}
+
+/* Book a Call popup form */
+.popup-form-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(8, 42, 150, 0.45);
+  backdrop-filter: blur(4px);
+}
+
+.popup-form-modal {
+  position: relative;
+  width: min(100%, 420px);
+  padding: 34px 32px 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 24px 70px rgba(8, 42, 150, 0.24);
+}
+
+.popup-form-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-size: 18px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-form-title {
+  color: #fff;
+  font-size: 28px;
+  line-height: 1.15;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.popup-form-fields {
+  display: grid;
+  gap: 14px;
+}
+
+.popup-form-field label {
+  display: block;
+  margin-bottom: 7px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.popup-form-field input {
+  width: 100%;
+  height: 52px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  padding: 0 18px;
+  font-size: 15px;
+  outline: none;
+}
+
+.popup-form-field input::placeholder {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.popup-form-submit {
+  width: 100%;
+  justify-content: center;
+  margin-top: 4px;
+  border-radius: 999px;
+  background: #fff !important;
+  color: #5c45ff !important;
+}
+
+.popup-form-submit:hover,
+.popup-form-submit:hover * {
+  color: #5c45ff !important;
+}
+
+.popup-form-modal .lead-form-status {
+  margin-top: 0;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 575px) {
+  .popup-form-overlay {
+    padding: 14px;
+  }
+
+  .popup-form-modal {
+    padding: 30px 22px 24px;
+  }
+
+  .popup-form-title {
+    font-size: 24px;
+  }
+}
+
+/* Popup form submit button white border */
+.popup-form-submit {
+  border: 1px solid #fff !important;
+}
+
+/* Popup form submit button: opt out of default rts button styling */
+.popup-form-modal .rts-btn.btn-primary.popup-form-submit {
+  width: 100% !important;
+  max-width: none !important;
+  height: 52px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent !important;
+  border: 1px solid #fff !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+.popup-form-modal .rts-btn.btn-primary.popup-form-submit:hover {
+  background: #fff !important;
+  border-color: #fff !important;
+  color: var(--empire-dark-blue) !important;
+}
+
+.popup-form-modal .rts-btn.btn-primary.popup-form-submit:hover * {
+  color: var(--empire-dark-blue) !important;
+}
+
+/* Case study archive background hero */
+.case-study-page .case-study-archive-hero {
+  position: relative;
+  background-image: linear-gradient(90deg, rgba(238, 240, 255, 0.95) 0%, rgba(238, 240, 255, 0.82) 46%, rgba(238, 240, 255, 0.45) 100%), url("/assets/images/case-studies.jpeg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.case-study-page .case-study-archive-hero .case-study-hero-content {
+  text-align: left !important;
+  max-width: 680px;
+  margin: 0 !important;
+}
+
+.case-study-page .case-study-archive-hero .case-study-hero-content .title,
+.case-study-page .case-study-archive-hero .case-study-hero-content .disc {
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.case-study-page .case-study-archive-hero .case-study-hero-content .pre {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.case-study-page .case-study-archive-hero .case-study-hero-content .button-wrapper {
+  justify-content: flex-start !important;
+}
+@media only screen and (max-width: 575px) {
+  .case-study-page .case-study-archive-hero .case-study-hero-content {
+    padding-left: 10px !important;
+  }
+}
+/* Contact hero H1 color */
+.empire-contact-hero-split .title {
+  color: #000 !important;
 }

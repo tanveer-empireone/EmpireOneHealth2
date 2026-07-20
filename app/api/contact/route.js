@@ -218,7 +218,7 @@ export async function POST(request) {
     const transporter = createTransporter();
     const data = { fullName, companyName, email, contactNumber, source, workflow, message, pageUrl };
 
-    await transporter.sendMail({
+    const adminEmailInfo = await transporter.sendMail({
       from: `"${fromName}" <${smtpUser}>`,
       to: leadToEmail,
       replyTo: `"${fullName}" <${email}>`,
@@ -226,15 +226,32 @@ export async function POST(request) {
       html: buildAdminEmail(data)
     });
 
-    await submitSalesforceLead(data);
+    console.info("Lead admin email sent", {
+      requestId,
+      accepted: adminEmailInfo.accepted,
+      rejected: adminEmailInfo.rejected
+    });
 
-    await transporter.sendMail({
+    const userEmailInfo = await transporter.sendMail({
       from: `"${fromName}" <${smtpUser}>`,
       to: email,
       replyTo: leadToEmail,
       subject: "Thank You for Contacting EmpireOne Health",
       html: buildUserEmail(fullName)
     });
+
+    console.info("Lead confirmation email sent", {
+      requestId,
+      accepted: userEmailInfo.accepted,
+      rejected: userEmailInfo.rejected
+    });
+
+    try {
+      await submitSalesforceLead(data);
+      console.info("Lead Salesforce submission completed", { requestId });
+    } catch (salesforceError) {
+      console.error("Lead Salesforce submission failed", { requestId, error: salesforceError });
+    }
 
     return Response.json({ status: "success", message: "Thank you! We will contact you soon.", requestId });
   } catch (error) {

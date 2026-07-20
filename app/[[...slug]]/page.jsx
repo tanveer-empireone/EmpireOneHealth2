@@ -4,6 +4,7 @@ import CalendlyWidget from "../../components/CalendlyWidget";
 import LandingPageForm from "../../components/landingpageform";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import PopupForm from "../../components/PopupForm";
 import { listLegacyHtmlPages, readLegacyFullPage, readLegacyPage, resolveLegacyPage } from "../../lib/legacy-pages";
 
 const componentPlaceholders = {
@@ -76,6 +77,7 @@ export default async function LegacyPage({ params }) {
       <div className="legacy-page home-copy">
         <Header />
         <div dangerouslySetInnerHTML={{ __html: page.body }} />
+        <PopupForm />
         <Footer />
       </div>
     );
@@ -88,6 +90,7 @@ export default async function LegacyPage({ params }) {
       <Header />
       {renderLegacyBody(page.body)}
       {hasLandingPageForm ? <LandingPageForm /> : null}
+      <PopupForm />
       <Footer />
     </div>
   );
