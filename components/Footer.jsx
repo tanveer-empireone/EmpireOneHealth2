@@ -7,7 +7,7 @@ export default function Footer() {
             <div className="col-lg-12">
               <div className="subscribe-area-start pb--30">
                 <div className="footer-compliance-logos footer-compliance-logos-main" aria-label="Compliance and trust badges">
-                  <img src="/assets/images/footerlogo1.webp" alt="SOC 2 Type 2" />
+                  <img src="/assets/images/footerlogo1.png" alt="SOC 2 Type 2" />
                   <img src="/assets/images/footerlogo2.webp" alt="PCI DSS" />
                   <img src="/assets/images/footerlogo3.webp" alt="HIPAA Compliant" />
                   <img src="/assets/images/footerlogo4.webp" alt="GDPR" />
