@@ -62,7 +62,7 @@ export default function Header() {
                   <i className="fa-light fa-magnifying-glass" />
                 </div>
                 <a href="#" className="rts-btn btn-primary book-call-popup-trigger" data-popup-form-trigger="book-call">
-                  Book a Call
+                  Get in touch
                   <img src="/assets/images/banner/icons/arrow--up-right.svg" alt="" />
                 </a>
                 <div className="menu-btn" id="menu-btn">
