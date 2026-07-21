@@ -22517,7 +22517,7 @@ h5.title,
 .popup-form-modal {
   position: relative;
   width: min(100%, 420px);
-  max-height: calc(70%);
+  max-height: calc(60%);
   padding: 28px 32px 26px;
   overflow-x: hidden;
   overflow-y: auto;
