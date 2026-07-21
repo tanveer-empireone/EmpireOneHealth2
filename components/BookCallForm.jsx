@@ -91,7 +91,8 @@ export default function BookCallForm() {
                 </div>
                 <div className="form-field full-width">
                   <label htmlFor="lead-workflow">What are you looking to build?</label>
-                  <select id="lead-workflow" name="workflow" defaultValue="benefits-verification">
+                  <select id="lead-workflow" name="workflow" defaultValue="">
+                    <option value="">Need Help With?</option>
                     <option value="benefits-verification">Benefits Verification & Eligibility</option>
                     <option value="prior-authorization">Prior Authorization Management</option>
                     <option value="appointment-scheduling">Appointment Scheduling & Referral Management</option>
@@ -124,7 +125,7 @@ export default function BookCallForm() {
                   </div>
                 ) : null}
                 <button type="submit" className="rts-btn btn-primary lead-submit" disabled={isSubmitting}>
-                  {isSubmitting ? "Sending..." : "Get My Healthcare Operations Plan"}
+                  {isSubmitting ? "Sending..." : "Send"}
                 </button>
               </form>
             </div>

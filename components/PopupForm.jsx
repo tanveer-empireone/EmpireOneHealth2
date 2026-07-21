@@ -83,7 +83,7 @@ export default function PopupForm() {
     payload.page_url = typeof window !== "undefined" ? window.location.href : "";
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("/api/contact/popup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -124,7 +124,15 @@ export default function PopupForm() {
         </button>
         <h2 id={`${formId}-title`} className="popup-form-title">Book a Call</h2>
         <form className="popup-form-fields" onSubmit={handleSubmit}>
-          <input type="text" name="website" tabIndex="-1" autoComplete="off" className="lead-hidden-field" aria-hidden="true" />
+          <input
+            type="text"
+            name="hp_website"
+            tabIndex="-1"
+            autoComplete="off"
+            className="lead-hidden-field"
+            aria-hidden="true"
+            value=""
+          />
           <div className="popup-form-field">
             <label htmlFor={`${formId}-name`}>Name</label>
             <input id={`${formId}-name`} name="full_name" type="text" placeholder="Your Name" required />
@@ -137,14 +145,18 @@ export default function PopupForm() {
             <label htmlFor={`${formId}-phone`}>Phone Number</label>
             <input id={`${formId}-phone`} name="contact_number" type="tel" placeholder="800-233-1234" required />
           </div>
+          <div className="popup-form-field">
+            <label htmlFor={`${formId}-notes`}>Notes</label>
+            <input id={`${formId}-notes`} name="message" type="text" placeholder="Additional Notes" />
+          </div>
+          <button type="submit" className="rts-btn btn-primary popup-form-submit" disabled={isSubmitting}>
+            {isSubmitting ? "Sending..." : "Submit"}
+          </button>
           {status.message ? (
             <div className={`lead-form-status ${status.type}`} role="status">
               {status.message}
             </div>
           ) : null}
-          <button type="submit" className="rts-btn btn-primary popup-form-submit" disabled={isSubmitting}>
-            {isSubmitting ? "Sending..." : "Submit"}
-          </button>
         </form>
       </div>
     </div>

@@ -14387,6 +14387,12 @@ header .rts-btn {
     padding: 0 15px;
   }
 }
+@media only screen and (max-width: 767px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 
 .single-short-service {
   display: flex;
@@ -15797,16 +15803,66 @@ header .rts-btn {
   border-radius: 10px 0 0 10px;
   height: 100%;
 }
-.appoinment-area-main form input {
+.appoinment-area-main form input,
+.appoinment-area-main form select,
+.appoinment-area-main form textarea,
+.appoinment-area-main form .nice-select {
   height: 50px;
   border-radius: 25px;
   margin-bottom: 20px;
   border: 1px solid #FFFFFF;
   color: #FFFFFF;
   font-size: 14px;
+  background: rgba(255, 255, 255, 0.08);
 }
-.appoinment-area-main form input:focus {
+.appoinment-area-main form input:focus,
+.appoinment-area-main form select:focus,
+.appoinment-area-main form textarea:focus,
+.appoinment-area-main form .nice-select:focus,
+.appoinment-area-main form .nice-select.open {
   border: 1px solid #fff;
+}
+.appoinment-area-main form textarea {
+  height: auto;
+  min-height: 120px;
+  border-radius: 18px;
+  padding: 14px 18px;
+}
+.appoinment-area-main form .nice-select {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding-left: 18px;
+  padding-right: 38px;
+  background: #fff;
+  border-color: rgba(8, 42, 150, 0.2);
+}
+.appoinment-area-main form .nice-select .current {
+  color: var(--color-primary);
+}
+.appoinment-area-main form .nice-select:after {
+  border-bottom: 2px solid var(--color-primary);
+  border-right: 2px solid var(--color-primary);
+}
+.appoinment-area-main form .nice-select.open {
+  z-index: 20;
+}
+.appoinment-area-main form .nice-select .list {
+  z-index: 30;
+  background: #fff;
+  border: 1px solid rgba(8, 42, 150, 0.2);
+  color: var(--color-primary);
+}
+.appoinment-area-main form .nice-select .option {
+  color: var(--color-primary);
+  background: transparent;
+}
+.appoinment-area-main form .nice-select .option:hover,
+.appoinment-area-main form .nice-select .option.focus,
+.appoinment-area-main form .nice-select .option.selected.focus {
+  background: rgba(8, 42, 150, 0.08);
+  color: var(--color-primary);
 }
 .appoinment-area-main form .half-input-wrapper {
   display: flex;
@@ -20443,8 +20499,8 @@ li.has-dropdown:hover .submenu {
 
 .request-appoinemnt-area-main-wrapper,
 .provider-cta .request-appoinemnt-area-main-wrapper {
-  background: #615efc !important;
-  border-color: #615efc !important;
+  background: url(../images/appoinment/03.jpg) center center / cover no-repeat !important;
+  border-color: transparent !important;
 }
 
 
@@ -20577,6 +20633,8 @@ a.rts-btn:hover * {
 .book-your-consulting .compact-lead-card {
   background: #615EFC url(../images/appoinment/01.jpg) center center / cover no-repeat !important;
   border-color: #615EFC !important;
+  border-radius: 8px !important;
+  overflow: visible !important;
 }
 
 .legacy-page.home .compact-lead-card .title,
@@ -20595,6 +20653,7 @@ a.rts-btn:hover * {
 .book-your-consulting .compact-lead-card .empire-lead-form input,
 .book-your-consulting .compact-lead-card .empire-lead-form textarea {
   background: rgba(255, 255, 255, 0.08) !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
   border-color: #fff !important;
   color: #fff !important;
 }
@@ -20608,9 +20667,20 @@ a.rts-btn:hover * {
 
 .legacy-page.home .compact-lead-card .empire-lead-form select,
 .book-your-consulting .compact-lead-card .empire-lead-form select {
-  background-color: #fff !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
   border-color: #fff !important;
-  color: #5d6270 !important;
+  color: #fff !important;
+}
+
+.legacy-page.home .compact-lead-card .empire-lead-form .nice-select.open,
+.book-your-consulting .compact-lead-card .empire-lead-form .nice-select.open {
+  z-index: 1000 !important;
+}
+
+.legacy-page.home .compact-lead-card .empire-lead-form .nice-select .list,
+.book-your-consulting .compact-lead-card .empire-lead-form .nice-select .list {
+  z-index: 1001 !important;
 }
 
 .legacy-page.home .compact-lead-card .lead-submit,
@@ -21460,11 +21530,11 @@ h5.title,
 }
 
 .empire-contact-breadcrumb .title {
-  margin-bottom: 18px !important;
+  margin-bottom: 14px !important;
 }
 
 .empire-contact-breadcrumb h3 {
-  margin-bottom: 18px !important;
+  margin-bottom: 14px !important;
 }
 
 .empire-contact-breadcrumb p {
@@ -21553,7 +21623,7 @@ h5.title,
 }
 
 .empire-contact-hero-split h3 {
-  margin-bottom: 18px !important;
+  margin-bottom: 14px !important;
 }
 
 .empire-contact-hero-split p {
@@ -21837,7 +21907,7 @@ h5.title,
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  padding: 96px 0 !important;
+  padding: 83px 0 !important;
 }
 
 .about-hero-page .about-split-hero .row {
@@ -21847,7 +21917,7 @@ h5.title,
 }
 
 .about-hero-page .about-hero-content .title {
-  margin-bottom: 18px !important;
+  margin-bottom: 14px !important;
 }
 
 .about-hero-page .about-hero-content .disc {
@@ -22419,15 +22489,118 @@ h5.title,
   background: transparent !important;
 }
 
+
+/* About page icon infographic strip */
+.about-infographic-wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  align-items: center !important;
+  justify-items: center !important;
+  gap: 0 !important;
+  width: 100% !important;
+  background: #fff !important;
+}
+
+.about-infographic-wrapper .about-infographic-item {
+  min-height: 210px !important;
+  padding: 24px 32px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  border-right: 1px solid var(--empire-dark-blue) !important;
+}
+
+.about-infographic-wrapper .about-infographic-item:last-child {
+  border-right: 0 !important;
+}
+
+.about-infographic-wrapper .about-infographic-item::before,
+.about-infographic-wrapper .about-infographic-item::after {
+  display: none !important;
+  content: none !important;
+}
+
+.about-infographic-wrapper img.about-infographic-icon {
+  width: 20px !important;
+  height: 20px !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 0 auto 16px !important;
+}
+
+.about-infographic-wrapper .about-infographic-item .title,
+.about-infographic-wrapper .about-infographic-item p {
+  color: var(--empire-dark-blue) !important;
+  font-size: 22px !important;
+  line-height: 1.28 !important;
+  font-weight: 700 !important;
+  width: 100% !important;
+  max-width: 270px !important;
+  margin: 0 auto !important;
+}
+
+@media only screen and (max-width: 991px) {
+  .about-infographic-wrapper {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .about-infographic-wrapper .about-infographic-item {
+    min-height: 210px !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--empire-dark-blue) !important;
+  }
+
+  .about-infographic-wrapper .about-infographic-item:nth-child(odd) {
+    border-right: 1px solid var(--empire-dark-blue) !important;
+  }
+
+  .about-infographic-wrapper .about-infographic-item:nth-last-child(-n+2) {
+    border-bottom: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .about-infographic-wrapper {
+    grid-template-columns: 1fr !important;
+  }
+
+  .about-infographic-wrapper .about-infographic-item,
+  .about-infographic-wrapper .about-infographic-item:nth-child(odd) {
+    min-height: auto !important;
+    padding: 34px 24px !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--empire-dark-blue) !important;
+  }
+
+  .about-infographic-wrapper .about-infographic-item:last-child {
+    border-bottom: 0 !important;
+  }
+
+  .about-infographic-wrapper img.about-infographic-icon {
+    width: 20px !important;
+    height: 20px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .about-infographic-wrapper .about-infographic-item .title,
+  .about-infographic-wrapper .about-infographic-item p {
+    font-size: 20px !important;
+  }
+}
 /* Contact page mobile form edge spacing */
 @media only screen and (max-width: 767px) {
+  .book-your-consulting .container,
   .legacy-page.home:has(.empire-contact-breadcrumb) .book-your-consulting .container {
     padding-left: 16px !important;
     padding-right: 16px !important;
   }
 
+  .book-your-consulting .compact-lead-card,
   .legacy-page.home:has(.empire-contact-breadcrumb) .book-your-consulting .compact-lead-card {
     width: 100% !important;
+    max-width: 100% !important;
     margin-left: auto !important;
     margin-right: auto !important;
     border-radius: 8px !important;
@@ -22455,7 +22628,7 @@ h5.title,
 /* Contact page desktop form radius */
 .legacy-page.home:has(.empire-contact-breadcrumb) .book-your-consulting .compact-lead-card {
   border-radius: 8px !important;
-  overflow: hidden !important;
+  overflow: visible !important;
 }
 
 /* About page: make the person image match the larger home page treatment */
@@ -22514,7 +22687,7 @@ h5.title,
 .popup-form-modal {
   position: relative;
   width: min(100%, 420px);
-  max-height: calc(100vh - 40px);
+  max-height: min(95vh, 760px);
   padding: 28px 32px 26px;
   overflow-x: hidden;
   overflow-y: auto;
@@ -22625,6 +22798,8 @@ h5.title,
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+  justify-self: center !important;
+  margin: 4px auto 0 !important;
   background: transparent !important;
   border: 1px solid #fff !important;
   color: #fff !important;
@@ -22720,3 +22895,31 @@ h5.title,
 .empire-contact-hero-split .title {
   color: #000 !important;
 }
+/* Self-pay case study hero background */
+.case-study-detail-page .self-pay-case-study-hero {
+  height: 566px !important;
+  min-height: 566px !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  background-image: url("/assets/images/about-background.jpeg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+}
+
+.case-study-detail-page .self-pay-case-study-hero::before,
+.case-study-detail-page .self-pay-case-study-hero::after {
+  display: none !important;
+  content: none !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .case-study-detail-page .self-pay-case-study-hero {
+    height: auto !important;
+    min-height: 566px !important;
+    padding: 60px 0 !important;
+  }
+}
+

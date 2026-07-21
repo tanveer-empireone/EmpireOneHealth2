@@ -3,7 +3,7 @@ export default function Header() {
     <header className="header-one header--sticky">
       <div className="header-top-area">
         <div className="container-full-header">
-          <div className="col-lg-11">
+          <div className="col-lg-12">
             <div className="header-top">
               <div className="left">
                 <div className="map-area">
@@ -13,6 +13,7 @@ export default function Header() {
               </div>
               <div className="right">
                 <div className="map-area">
+                  <i className="fas fa-user-graduate" aria-hidden="true" style={{ fontSize: '12px', marginRight: '6px', lineHeight: 1 }} />
                   <a href="https://careers.empireonecx.com" target="_blank" rel="noopener noreferrer">Careers</a>
                 </div>
               </div>

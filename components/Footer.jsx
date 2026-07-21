@@ -25,7 +25,7 @@ export default function Footer() {
                 <div className="single-wized">
                   <h6 className="title">Contact</h6>
                   <div className="body">
-                    <p className="location">Healthcare operations support for providers and payers.</p>
+                    <p className="location">Healthcare Operations Support For Providers And Payers.</p>
                     <a href="mailto:info@empireonehealth.com">info@empireonehealth.com</a>
                   </div>
                 </div>
@@ -37,10 +37,10 @@ export default function Footer() {
                         <a href="/about-us">About Us</a>
                       </li>
                       <li>
-                        <a href="/appointment">Book a Call</a>
+                        <a href="/appointment">Book A Call</a>
                       </li>
                       <li>
-                        <a href="/contact">Contact</a>
+                        <a href="https://careers.empireonecx.com/" target="_blank" rel="noopener noreferrer">Career</a>
                       </li>
                     </ul>
                   </div>
@@ -61,9 +61,9 @@ export default function Footer() {
                 <div className="single-wized">
                   <h6 className="title">Delivery Model</h6>
                   <div className="body">
-                    <p className="location">Human-led, AI-assisted delivery</p>
-                    <p className="location">HIPAA-conscious workflows</p>
-                    <p className="location">BAA-ready engagement</p>
+                    <p className="location">Human-Led, AI-Assisted Delivery</p>
+                    <p className="location">HIPAA-Conscious Workflows</p>
+                    <p className="location">BAA-Ready Engagement</p>
                   </div>
                 </div>
               </div>
