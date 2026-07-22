@@ -22941,3 +22941,37 @@ h5.title,
   }
 }
 
+
+.footer-subscribe-form-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer-subscribe-status {
+  display: block;
+  width: 100%;
+  margin: 10px 0 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.footer-subscribe-status.success {
+  color: #d7ffe4;
+}
+
+.footer-subscribe-status.error {
+  color: #ffd6d6;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer-subscribe-form-wrap {
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .footer-subscribe-status {
+    text-align: center;
+  }
+}

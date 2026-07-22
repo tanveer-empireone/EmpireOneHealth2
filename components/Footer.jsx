@@ -1,4 +1,50 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Footer() {
+  const [subscriberEmail, setSubscriberEmail] = useState("");
+  const [subscribeStatus, setSubscribeStatus] = useState({ type: "", message: "" });
+  const [isSubmittingSubscribe, setIsSubmittingSubscribe] = useState(false);
+
+  async function handleSubscribeSubmit(event) {
+    event.preventDefault();
+
+    if (!subscriberEmail.trim()) {
+      setSubscribeStatus({ type: "error", message: "Please enter your email address." });
+      return;
+    }
+
+    setIsSubmittingSubscribe(true);
+    setSubscribeStatus({ type: "", message: "" });
+
+    try {
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email: subscriberEmail,
+          page_url: typeof window !== "undefined" ? window.location.href : ""
+        })
+      });
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok || result.status !== "success") {
+        throw new Error(result.message || "Subscribe failed.");
+      }
+
+      setSubscriberEmail("");
+      setSubscribeStatus({ type: "success", message: "Thank you for subscribing." });
+    } catch (error) {
+      console.error("Footer subscribe failed", error);
+      setSubscribeStatus({ type: "error", message: "We could not subscribe you right now." });
+    } finally {
+      setIsSubmittingSubscribe(false);
+    }
+  }
+
   return (
     <>
       <div className="rts-footer-area footer-bg pt--105 pt_sm--50">
@@ -14,9 +60,24 @@ export default function Footer() {
                   <img src="/assets/images/footerlogo5.webp" alt="ISO 27001" />
                   <img src="/assets/images/footerlogo6.webp" alt="BBB Accredited Business" />
                 </div>
-                <div className="subscribe-area">
-                  <input type="text" placeholder="Enter your email" />
-                  <button className="rts-btn btn-primary">Stay Updated</button>
+                <div className="footer-subscribe-form-wrap">
+                  <form className="subscribe-area" onSubmit={handleSubscribeSubmit}>
+                    <input
+                      type="email"
+                      placeholder="Enter your email"
+                      value={subscriberEmail}
+                      onChange={(event) => setSubscriberEmail(event.target.value)}
+                      required
+                      disabled={isSubmittingSubscribe}
+                      aria-label="Email address"
+                    />
+                    <button className="rts-btn btn-primary" type="submit" disabled={isSubmittingSubscribe}>
+                      {isSubmittingSubscribe ? "Sending..." : "Stay Updated"}
+                    </button>
+                  </form>
+                  {subscribeStatus.message ? (
+                    <p className={`footer-subscribe-status ${subscribeStatus.type}`}>{subscribeStatus.message}</p>
+                  ) : null}
                 </div>
               </div>
             </div>
