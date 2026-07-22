@@ -15,21 +15,9 @@ export default function PopupForm() {
 
   useEffect(() => {
     function handleClick(event) {
-      const trigger = event.target.closest(
-        '.book-call-popup-trigger, [data-popup-form-trigger="book-call"], a[href="/appointment"], a[href="/appointment/"]'
-      );
+      const trigger = event.target.closest('[data-popup-form-trigger="book-call"]');
 
       if (!trigger) {
-        return;
-      }
-
-      const triggerText = trigger.textContent || "";
-      const isBookCallTrigger =
-        trigger.classList.contains("book-call-popup-trigger") ||
-        trigger.dataset.popupFormTrigger === "book-call" ||
-        /book\s+(a\s+)?(30\s+minute\s+)?call/i.test(triggerText);
-
-      if (!isBookCallTrigger) {
         return;
       }
 

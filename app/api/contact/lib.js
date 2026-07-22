@@ -42,8 +42,12 @@ function formatLabel(value) {
     .replace(/\b\w/g, (letter) => letter.toUpperCase());
 }
 
+function getSmtpPassword() {
+  return process.env.SMTP_PASS || process.env.SMTP_PASSWORD || process.env.EMAIL_PASSWORD || "";
+}
+
 function createTransporter() {
-  const smtpPassword = process.env.SMTP_PASS;
+  const smtpPassword = getSmtpPassword();
 
   if (!smtpPassword) {
     throw new Error("SMTP password is not configured.");
@@ -209,7 +213,7 @@ export async function handleContactPost(request, options = {}) {
       smtpPort: process.env.SMTP_PORT || "465",
       smtpUser,
       leadToEmail,
-      hasSmtpPassword: Boolean(process.env.SMTP_PASS),
+      hasSmtpPassword: Boolean(getSmtpPassword()),
       hasSalesforceOid: Boolean(process.env.SALESFORCE_WEB_TO_LEAD_OID)
     });
 
