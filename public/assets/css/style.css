@@ -12969,19 +12969,24 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 }
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
   .banner-area-one .person-image {
-    right: 0%;
+    right: 12%;
     max-width: 30%;
+    bottom: 0;
+
   }
 }
 @media only screen and (max-width: 1199px) {
   .banner-area-one .person-image {
     max-width: 30%;
+    right: 12%;
+    bottom: 0;
+
   }
 }
 @media only screen and (max-width: 991px) {
   .banner-area-one .person-image {
     position: relative;
-    right: auto;
+    right: 12%;
     max-width: 100%;
     display: flex;
     justify-content: center;
@@ -22678,7 +22683,7 @@ padding-bottom: 60px;
 
 .popup-form-modal {
   position: relative;
-  width: min(100%, 420px);
+  width: min(100%, 470px);
   max-height: min(90vh, 650px);
   padding: 28px 32px 26px;
   overflow-x: hidden;
@@ -22876,7 +22881,7 @@ padding-bottom: 60px;
 }
 
 .case-study-page .case-study-archive-hero .case-study-hero-content .button-wrapper {
-  justify-content: center !important;
+  justify-content: flex-start !important;
 }
 @media only screen and (max-width: 575px) {
   .case-study-page .case-study-archive-hero .case-study-hero-content {
