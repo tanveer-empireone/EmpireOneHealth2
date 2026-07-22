@@ -21564,6 +21564,24 @@ h5.title,
   }
 }
 
+/* Appointment page hero */
+.empire-appointment-breadcrumb {
+  min-height: 566px;
+  height: 566px;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  display: flex;
+  align-items: center;
+  background-image: url('/assets/images/about-background.jpeg') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+.empire-appointment-breadcrumb .container.ptb--40 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
 /* Contact page: keep form visible directly below hero */
 .legacy-page.home:has(.empire-contact-breadcrumb) .book-your-consulting.rts-section-gap {
   padding-top: 24px !important;
