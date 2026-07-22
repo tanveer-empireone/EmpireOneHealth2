@@ -42,8 +42,30 @@ function formatLabel(value) {
     .replace(/\b\w/g, (letter) => letter.toUpperCase());
 }
 
+function normalizeSecret(value) {
+  return String(value || "").trim().replace(/^['"]|['"]$/g, "");
+}
+
+function getSmtpPasswordDetails() {
+  const candidates = [
+    ["SMTP_PASSWORD", process.env.SMTP_PASSWORD],
+    ["SMTP_PASS", process.env.SMTP_PASS],
+    ["EMAIL_PASSWORD", process.env.EMAIL_PASSWORD]
+  ];
+  const configuredKeys = candidates.filter(([, value]) => normalizeSecret(value)).map(([key]) => key);
+  const [source = "", value = ""] = candidates.find(([, candidate]) => normalizeSecret(candidate)) || [];
+  const password = normalizeSecret(value);
+
+  return {
+    password,
+    source,
+    configuredKeys,
+    length: password.length
+  };
+}
+
 function getSmtpPassword() {
-  return process.env.SMTP_PASS || process.env.SMTP_PASSWORD || process.env.EMAIL_PASSWORD || "";
+  return getSmtpPasswordDetails().password;
 }
 
 function createTransporter() {
@@ -214,6 +236,9 @@ export async function handleContactPost(request, options = {}) {
       smtpUser,
       leadToEmail,
       hasSmtpPassword: Boolean(getSmtpPassword()),
+      smtpPasswordSource: getSmtpPasswordDetails().source,
+      smtpPasswordConfiguredKeys: getSmtpPasswordDetails().configuredKeys,
+      smtpPasswordLength: getSmtpPasswordDetails().length,
       hasSalesforceOid: Boolean(process.env.SALESFORCE_WEB_TO_LEAD_OID)
     });
 
