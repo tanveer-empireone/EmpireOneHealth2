@@ -1,8 +1,8 @@
-﻿const { createServer } = require("node:http");
+const { createServer } = require("node:http");
 const next = require("next");
 
 const dev = process.env.NODE_ENV !== "production";
-const hostname = process.env.HOSTNAME || process.env.HOST || "0.0.0.0";
+const hostname = process.env.HOST || "0.0.0.0";
 const port = parseInt(process.env.PORT || "3000", 10);
 
 if (Number.isNaN(port)) {
@@ -15,10 +15,12 @@ const handle = app.getRequestHandler();
 
 process.on("uncaughtException", (error) => {
   console.error("Uncaught exception during app runtime:", error);
+  process.exit(1);
 });
 
 process.on("unhandledRejection", (error) => {
   console.error("Unhandled rejection during app runtime:", error);
+  process.exit(1);
 });
 
 app
