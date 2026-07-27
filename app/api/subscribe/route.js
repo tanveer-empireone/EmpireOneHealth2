@@ -1,4 +1,5 @@
 import nodemailer from "nodemailer";
+import { checkRateLimit, rateLimitedJson } from "../../../lib/rate-limit";
 
 export const runtime = "nodejs";
 
@@ -6,8 +7,8 @@ const leadToEmail = process.env.LEAD_TO_EMAIL || "info@empireonehealth.com";
 const smtpUser = process.env.SMTP_USER || "info@empireonehealth.com";
 const fromName = process.env.MAIL_FROM_NAME || "EmpireOne Health";
 
-function clean(value) {
-  return String(value ?? "").trim();
+function clean(value, maxLength = 500) {
+  return String(value ?? "").trim().slice(0, maxLength);
 }
 
 function normalizeSecret(value) {
@@ -61,8 +62,23 @@ export async function POST(request) {
 
   try {
     const payload = await request.json();
-    const email = clean(payload.email).toLowerCase();
-    const pageUrl = clean(payload.page_url);
+
+    if (!payload || typeof payload !== "object") {
+      return Response.json({ status: "error", message: "Invalid subscribe request." }, { status: 400 });
+    }
+
+    const email = clean(payload.email, 254).toLowerCase();
+    const pageUrl = clean(payload.page_url, 500);
+
+    const limit = checkRateLimit(request, {
+      name: "subscribe",
+      windowMs: 15 * 60 * 1000,
+      max: Number(process.env.SUBSCRIBE_RATE_LIMIT || 10)
+    });
+
+    if (!limit.allowed) {
+      return rateLimitedJson(limit);
+    }
 
     if (!isValidEmail(email)) {
       return Response.json({ status: "error", message: "Please enter a valid email address." }, { status: 400 });

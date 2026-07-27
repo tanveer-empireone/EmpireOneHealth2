@@ -86,7 +86,8 @@ export default function Footer() {
                 <div className="single-wized">
                   <h6 className="title">Contact</h6>
                   <div className="body">
-                    <p className="location">Healthcare Operations Support For Providers And Payers.</p>
+                    <p className="location">250 Consumers Rd suite 810, Toronto, ON M2J 4V6
+</p>
                     <a href="mailto:info@empireonehealth.com">info@empireonehealth.com</a>
                   </div>
                 </div>
