@@ -15217,6 +15217,7 @@ header .rts-btn {
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
+    align-items: center;
   }
 }
 .button-wrapper .signature {
@@ -21583,16 +21584,10 @@ padding-bottom: 60px;
   padding-bottom: 0 !important;
 }
 /* Contact page: keep form visible directly below hero */
-.legacy-page.home:has(.empire-contact-breadcrumb) .book-your-consulting.rts-section-gap {
-  padding-top: 24px !important;
-  padding-bottom: 70px !important;
-}
 
-@media only screen and (max-width: 767px) {
-  .legacy-page.home:has(.empire-contact-breadcrumb) .book-your-consulting.rts-section-gap {
+
+@mehome:has(.empire-contact-breadcrumb) .book-your-consulting.rts-section-gap {
     padding-top: 18px !important;
-    padding-bottom: 52px !important;
-  }
 }
 
 /* Contact page split hero */
@@ -21664,14 +21659,12 @@ padding-bottom: 60px;
   object-fit: cover;
 }
 
-.legacy-page.home:has(.empire-contact-hero-split) .book-your-consulting.rts-section-gap {
-  padding-top: 60px !important;
-}
 
 @media only screen and (max-width: 991px) {
   .empire-contact-hero-split {
     padding-top: 46px !important;
     padding-bottom: 46px !important;
+    padding-left: 38px;
   }
 
   .empire-contact-hero-content {
@@ -21693,6 +21686,7 @@ padding-bottom: 60px;
   .empire-contact-hero-split {
     padding-top: 38px !important;
     padding-bottom: 38px !important;
+    padding-left: 38px;
   }
 
   .empire-contact-hero-image img {
@@ -22610,8 +22604,6 @@ padding-bottom: 60px;
 @media only screen and (max-width: 767px) {
   .book-your-consulting .container,
   .legacy-page.home:has(.empire-contact-breadcrumb) .book-your-consulting .container {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
   }
 
   .book-your-consulting .compact-lead-card,
@@ -22972,5 +22964,237 @@ padding-bottom: 60px;
 
   .footer-subscribe-status {
     text-align: center;
+  }
+}
+
+
+
+/* Contact page split form and office card */
+.contact-office-card {
+  display: none;
+}
+
+.contact-split-shell {
+  padding-top: 42px !important;
+  padding-bottom: 76px !important;
+}
+
+.contact-split-shell > .container {
+  max-width: 1600px !important;
+}
+
+.contact-split-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 65fr) minmax(320px, 35fr);
+  gap: 28px;
+  align-items: stretch;
+  grid-auto-rows: 1fr;
+}
+
+.contact-split-form .book-your-consulting {
+  padding: 0 !important;
+}
+
+.contact-split-form .book-your-consulting .container {
+  max-width: none !important;
+  padding: 0 !important;
+}
+
+.contact-split-form .book-your-consulting .row {
+  margin: 0 !important;
+}
+
+.contact-split-form .book-your-consulting .row > * {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+}
+
+.contact-split-form .compact-lead-card {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  height: 100%;
+}
+
+.contact-split-form {
+  min-height: 0;
+}
+
+.contact-split-shell .contact-office-card {
+  display: flex;
+  min-height: 0;
+  height: 100%;
+}
+
+
+  .contact-split-shell .contact-office-card {
+    height: auto;
+    min-height: 0;
+  }
+
+    .contact-split-shell .contact-office-card {
+    height: auto;
+    min-height: 0;
+  }
+
+  .contact-split-shell .contact-office-card__inner {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  background: #615EFC;
+  border-radius: 8px;
+  padding: 30px 42px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 22px 55px rgba(17, 16, 50, 0.14);
+}
+
+.contact-split-shell .contact-office-card__inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 85% 15%, rgba(255,255,255,0.20), transparent 32%), linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0));
+  pointer-events: none;
+}
+
+.contact-split-shell .contact-office-card__inner > * {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-split-shell .contact-office-card__eyebrow {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.contact-split-shell .contact-office-card h3 {
+  color: #fff;
+  font-size: 18px;
+  margin: 0 0 0px;
+}
+
+.contact-split-shell .contact-office-card__address {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 17px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.contact-split-shell .contact-office-card__divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.28);
+  margin: 30px 0 22px;
+}
+
+.contact-split-shell .contact-office-card__label {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.contact-split-shell .contact-office-card a {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contact-split-shell .contact-office-card a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 991px) {
+  .contact-split-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 22px;
+  }
+
+  .contact-split-shell .contact-office-card__inner {
+    height: min-content;
+    min-height: 0;
+    padding: 34px 28px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .contact-split-shell {
+    padding-top: 28px !important;
+    padding-bottom: 18px !important;
+  }
+
+  .contact-split-shell .contact-office-card__inner {
+    padding: 22px 20px;
+    justify-content: flex-start;
+  }
+
+  .contact-split-shell .contact-office-card__eyebrow {
+    margin-bottom: 10px;
+  }
+
+  .contact-split-shell .contact-office-card h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+  }
+
+  .contact-split-shell .contact-office-card__address,
+  .contact-split-shell .contact-office-card a {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .contact-split-shell .contact-office-card__divider {
+    margin: 18px 0 14px;
+  }
+
+  .contact-split-shell .contact-office-card__label {
+    margin-bottom: 5px;
+  }
+}
+
+
+/* Contact mobile office whitespace fix */
+@media only screen and (max-width: 991px) {
+  .contact-split-shell .contact-office-card {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .contact-split-shell .contact-office-card__inner {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+}
+
+
+/* Contact mobile equal widths */
+@media only screen and (max-width: 991px) {
+  .contact-split-grid,
+  .contact-split-form,
+  .contact-split-form .book-your-consulting,
+  .contact-split-form .book-your-consulting .container,
+  .contact-split-form .book-your-consulting .row,
+  .contact-split-form .book-your-consulting .row > *,
+  .contact-split-form .compact-lead-card,
+  .contact-split-shell .contact-office-card,
+  .contact-split-shell .contact-office-card__inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }

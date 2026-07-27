@@ -1,4 +1,5 @@
 import nodemailer from "nodemailer";
+import { checkRateLimit, rateLimitedJson } from "../../../lib/rate-limit";
 
 const leadToEmail = process.env.LEAD_TO_EMAIL || "info@empireonehealth.com";
 const smtpUser = process.env.SMTP_USER || "info@empireonehealth.com";
@@ -8,8 +9,16 @@ function createRequestId() {
   return `lead-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
 }
 
-function clean(value) {
-  return String(value ?? "").trim();
+function clean(value, maxLength = 500) {
+  return String(value ?? "").trim().slice(0, maxLength);
+}
+
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function isValidPhone(phone) {
+  return /^\+?[0-9() .-]{7,30}$/.test(phone);
 }
 
 function escapeHtml(value) {
@@ -201,15 +210,20 @@ export async function handleContactPost(request, options = {}) {
 
   try {
     const payload = await request.json();
-    const fullName = clean(payload.full_name);
-    const companyName = clean(payload.company_name);
-    const email = clean(payload.email).toLowerCase();
-    const verifyEmail = clean(payload.verify_email).toLowerCase();
-    const contactNumber = clean(payload.contact_number);
-    const source = clean(payload.source || options.defaultSource || "Web");
-    const workflow = clean(payload.workflow || options.defaultWorkflow || "Website Lead");
-    const message = clean(payload.message);
-    const pageUrl = clean(payload.page_url);
+
+    if (!payload || typeof payload !== "object") {
+      return Response.json({ status: "error", message: "Invalid form submission." }, { status: 400 });
+    }
+
+    const fullName = clean(payload.full_name, 120);
+    const companyName = clean(payload.company_name, 160);
+    const email = clean(payload.email, 254).toLowerCase();
+    const verifyEmail = clean(payload.verify_email, 254).toLowerCase();
+    const contactNumber = clean(payload.contact_number, 40);
+    const source = clean(payload.source || options.defaultSource || "Web", 80);
+    const workflow = clean(payload.workflow || options.defaultWorkflow || "Website Lead", 100);
+    const message = clean(payload.message, 1200);
+    const pageUrl = clean(payload.page_url, 500);
     const privacyConsent = Boolean(payload.privacy_consent);
     const honeypotValue = clean(payload.website || payload.hp_website);
 
@@ -217,12 +231,30 @@ export async function handleContactPost(request, options = {}) {
       return Response.json({ status: "success", message: "Thank you! We will contact you soon.", requestId });
     }
 
+    const limit = checkRateLimit(request, {
+      name: "contact",
+      windowMs: 15 * 60 * 1000,
+      max: Number(process.env.CONTACT_RATE_LIMIT || 8)
+    });
+
+    if (!limit.allowed) {
+      return rateLimitedJson(limit);
+    }
+
     if (!fullName || !email || !verifyEmail || !contactNumber) {
       return Response.json({ status: "error", message: "Please complete the required name, email, and contact number fields." }, { status: 400 });
     }
 
+    if (!isValidEmail(email) || !isValidEmail(verifyEmail)) {
+      return Response.json({ status: "error", message: "Please enter a valid email address." }, { status: 400 });
+    }
+
     if (email !== verifyEmail) {
       return Response.json({ status: "error", message: "Email and verify email must match." }, { status: 400 });
+    }
+
+    if (!isValidPhone(contactNumber)) {
+      return Response.json({ status: "error", message: "Please enter a valid contact number." }, { status: 400 });
     }
 
     if (!privacyConsent) {
@@ -237,8 +269,6 @@ export async function handleContactPost(request, options = {}) {
       leadToEmail,
       hasSmtpPassword: Boolean(getSmtpPassword()),
       smtpPasswordSource: getSmtpPasswordDetails().source,
-      smtpPasswordConfiguredKeys: getSmtpPasswordDetails().configuredKeys,
-      smtpPasswordLength: getSmtpPasswordDetails().length,
       hasSalesforceOid: Boolean(process.env.SALESFORCE_WEB_TO_LEAD_OID)
     });
 

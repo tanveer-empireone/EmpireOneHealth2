@@ -116,7 +116,7 @@ export default function BookCallForm() {
                 <label className="lead-consent">
                   <input type="checkbox" name="privacy_consent" required />
                   <span>
-                    By ticking this box I agree that I have read the <a href="#">privacy policy</a>.
+                    By ticking this box I agree that I have read the <a href="/privacy-policy">privacy policy</a>.
                   </span>
                 </label>
                 {status.message ? (

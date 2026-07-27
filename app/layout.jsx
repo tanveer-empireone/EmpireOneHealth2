@@ -1,9 +1,12 @@
 import Script from "next/script";
 
 export const metadata = {
-  title: "Medical & Health Care HTML Template",
+  title: {
+    default: "EmpireOne Health | Healthcare Operations Support",
+    template: "%s | EmpireOne Health"
+  },
   description:
-    "Your trusted source for expert healthcare services and medical information. Providing personalized care, advanced treatments, and reliable health resources to help you achieve better health."
+    "EmpireOne Health supports providers and payers with healthcare operations, revenue cycle workflows, member services, and HIPAA-conscious delivery."
 };
 
 export default function RootLayout({ children }) {
