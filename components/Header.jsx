@@ -13,8 +13,8 @@ export default function Header() {
               </div>
               <div className="right">
                 <div className="map-area">
-                  <i className="fas fa-user-graduate" aria-hidden="true" style={{ fontSize: '12px', marginRight: '6px', lineHeight: 1 }} />
-                  <a href="https://careers.empireonecx.com" target="_blank" rel="noopener noreferrer">Careers</a>
+                  <i className="far fa-phone fa-flip-horizontal" aria-hidden="true" style={{ fontSize: '12px', marginRight: '6px', lineHeight: 1 }} />
+                  <a href="tel:+18332006002">+1 (833) 200-6002</a>
                 </div>
               </div>
             </div>

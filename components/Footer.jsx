@@ -89,6 +89,7 @@ export default function Footer() {
                     <p className="location">250 Consumers Rd suite 810, Toronto, ON M2J 4V6
 </p>
                     <a href="mailto:info@empireonehealth.com">info@empireonehealth.com</a>
+                    <a href="tel:+18332006002">+1 (833) 200-6002</a>
                   </div>
                 </div>
                 <div className="single-wized">
