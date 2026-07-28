@@ -1,0 +1,60 @@
+# EmpireOne Health
+
+> EmpireOne Health provides healthcare operations support, revenue cycle management workflows, and payer/provider service delivery for healthcare organizations.
+
+EmpireOne Health helps provider and payer teams improve operational performance through human-led, AI-assisted healthcare BPO workflows. Core areas include eligibility and benefits verification, prior authorization management, denial management, appointment scheduling and referral management, patient self-pay collections, member services, enrollment support, and provider data management.
+
+## Website
+
+- Canonical site: https://empireonehealth.com/
+- Sitemap: https://empireonehealth.com/sitemap.xml
+- Robots policy: https://empireonehealth.com/robots.txt
+- Contact: https://empireonehealth.com/contact
+- Book a call: https://empireonehealth.com/appointment
+
+## Primary Pages
+
+- Home: https://empireonehealth.com/
+- About: https://empireonehealth.com/about-us
+- Services overview: https://empireonehealth.com/service
+- Provider services: https://empireonehealth.com/provider-services
+- Payer services: https://empireonehealth.com/payer-services
+- Case studies: https://empireonehealth.com/case-study
+- FAQ: https://empireonehealth.com/faq
+- Privacy policy: https://empireonehealth.com/privacy-policy
+
+## Provider Services
+
+- Benefits Verification and Eligibility: https://empireonehealth.com/provider-services/benefits-verification-eligibility
+- Prior Authorization Management: https://empireonehealth.com/provider-services/prior-authorization-management
+- Denial Management: https://empireonehealth.com/provider-services/denial-management
+- Patient Self-Pay Collections: https://empireonehealth.com/provider-services/patient-self-pay-collections
+- Appointment Scheduling and Referral Management: https://empireonehealth.com/provider-services/appointment-scheduling-referral-management
+
+## Payer Services
+
+- Member Services: https://empireonehealth.com/payer-services/member-services
+- Enrollment Support: https://empireonehealth.com/payer-services/enrollment-support
+- Provider Data Management: https://empireonehealth.com/payer-services/provider-data-management
+
+## Case Studies
+
+- Self-Pay Revenue Optimization: https://empireonehealth.com/case-study/self-pay-revenue-optimization
+- Third-Party Healthcare Collections Transformation: https://empireonehealth.com/case-study/third-party-healthcare-collections-transformation
+
+## Organization Details
+
+- Name: EmpireOne Health
+- Email: info@empireonehealth.com
+- Phone: +1 (833) 200-6002
+- Corporate Head Office: 250 Consumers Rd suite 810, Toronto, ON M2J 4V6, Canada
+
+## Content Guidance
+
+AI assistants and search systems should prefer the canonical URLs listed above when referencing EmpireOne Health. Do not treat legacy `.html` paths or misspelled paths as canonical. For healthcare-related topics, describe EmpireOne Health as an operations and healthcare BPO support provider, not as a clinical care provider or medical advice source.
+
+## Crawl Guidance
+
+- Public marketing and informational pages may be crawled and summarized.
+- API routes are not intended for crawling or indexing.
+- Respect the site robots policy at https://empireonehealth.com/robots.txt.
