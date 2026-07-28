@@ -37,7 +37,7 @@ function ContactOfficeCard() {
         <h3>Colombia</h3>
         <p className="contact-office-card__address">Calle 15 No. 4 - 81 Piso 10, Edificio del Cafe, Santa Marta, Magdalena.</p>
         <div className="contact-office-card__divider" />
-        <p className="contact-office-card__label">Email: </p>
+        <p className="contact-office-card__label">Email</p>
         <a href="mailto:info@empireonehealth.com">info@empireonehealth.com</a>
         <p className="contact-office-card__label">Phone</p>
         <a href="tel:+18332006002">+1 (833) 200-6002</a>

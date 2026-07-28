@@ -22985,7 +22985,7 @@ padding-bottom: 60px;
 
 .contact-split-grid {
   display: grid;
-  grid-template-columns: minmax(0, 65fr) minmax(320px, 35fr);
+  grid-template-columns: minmax(0, 60fr) minmax(320px, 40fr);
   gap: 28px;
   align-items: stretch;
   grid-auto-rows: 1fr;
