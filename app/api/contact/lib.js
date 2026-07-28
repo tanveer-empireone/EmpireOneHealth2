@@ -30,21 +30,6 @@ function escapeHtml(value) {
     .replace(/'/g, "&#039;");
 }
 
-function splitLeadName(fullName) {
-  const normalized = clean(fullName).replace(/\s+/g, " ");
-
-  if (!normalized) {
-    return { firstName: "", lastName: "Website Lead" };
-  }
-
-  const [firstName, ...rest] = normalized.split(" ");
-
-  return {
-    firstName: rest.length ? firstName : "",
-    lastName: rest.length ? rest.join(" ") : firstName
-  };
-}
-
 function formatLabel(value) {
   return clean(value)
     .replace(/-/g, " ")
@@ -77,10 +62,6 @@ function getSmtpPassword() {
   return getSmtpPasswordDetails().password;
 }
 
-function hasSalesforceLeadTarget() {
-  return Boolean(clean(process.env.SALESFORCE_WEB_TO_LEAD_OID, 80));
-}
-
 function createTransporter() {
   const smtpPassword = getSmtpPassword();
 
@@ -104,46 +85,6 @@ function createTransporter() {
       pass: smtpPassword
     }
   });
-}
-
-async function submitSalesforceLead({ fullName, companyName, email, contactNumber, workflow, source, message, pageUrl }) {
-  const oid = clean(process.env.SALESFORCE_WEB_TO_LEAD_OID, 80);
-
-  if (!oid) {
-    return false;
-  }
-
-  const { firstName, lastName } = splitLeadName(fullName);
-  const body = new URLSearchParams({
-    oid,
-    retURL: process.env.SALESFORCE_RET_URL || "https://empireonehealth.com/contact",
-    first_name: firstName,
-    last_name: lastName,
-    email,
-    company: companyName || "Not Provided",
-    phone: contactNumber,
-    lead_source: source ? `Web - ${formatLabel(source)}` : "Web",
-    description: [
-      `Workflow: ${formatLabel(workflow)}`,
-      `Source: ${formatLabel(source)}`,
-      `Message: ${message || "Not Provided"}`,
-      `Source Page: ${pageUrl || "Not Provided"}`
-    ].join("\n")
-  });
-
-  const response = await fetch("https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded"
-    },
-    body
-  });
-
-  if (!response.ok) {
-    throw new Error("Salesforce Web-to-Lead submission failed.");
-  }
-
-  return true;
 }
 
 function buildAdminEmail(data) {
@@ -274,76 +215,41 @@ export async function handleContactPost(request, options = {}) {
       smtpUser,
       leadToEmail,
       hasSmtpPassword: Boolean(getSmtpPassword()),
-      smtpPasswordSource: getSmtpPasswordDetails().source,
-      hasSalesforceOid: Boolean(process.env.SALESFORCE_WEB_TO_LEAD_OID)
+      smtpPasswordSource: getSmtpPasswordDetails().source
     });
 
     const data = { fullName, companyName, email, contactNumber, source, workflow, message, pageUrl };
-    let deliveredToSalesforce = false;
-    let deliveredByEmail = false;
+    const transporter = createTransporter();
+    const adminEmailInfo = await transporter.sendMail({
+      from: `"${fromName}" <${smtpUser}>`,
+      to: leadToEmail,
+      replyTo: `"${fullName}" <${email}>`,
+      subject: "New Inquiry from EmpireOne Health Website",
+      html: buildAdminEmail(data)
+    });
+
+    console.info("Lead admin email sent", {
+      requestId,
+      accepted: adminEmailInfo.accepted,
+      rejected: adminEmailInfo.rejected
+    });
 
     try {
-      deliveredToSalesforce = await submitSalesforceLead(data);
-      if (deliveredToSalesforce) {
-        console.info("Lead Salesforce submission completed", { requestId });
-      }
-    } catch (salesforceError) {
-      console.error("Lead Salesforce submission failed", { requestId, error: salesforceError });
-    }
-
-    try {
-      const transporter = createTransporter();
-      const adminEmailInfo = await transporter.sendMail({
+      const userEmailInfo = await transporter.sendMail({
         from: `"${fromName}" <${smtpUser}>`,
-        to: leadToEmail,
-        replyTo: `"${fullName}" <${email}>`,
-        subject: "New Inquiry from EmpireOne Health Website",
-        html: buildAdminEmail(data)
+        to: email,
+        replyTo: leadToEmail,
+        subject: "Thank You for Contacting EmpireOne Health",
+        html: buildUserEmail(fullName)
       });
 
-      deliveredByEmail = true;
-      console.info("Lead admin email sent", {
+      console.info("Lead confirmation email sent", {
         requestId,
-        accepted: adminEmailInfo.accepted,
-        rejected: adminEmailInfo.rejected
+        accepted: userEmailInfo.accepted,
+        rejected: userEmailInfo.rejected
       });
-
-      try {
-        const userEmailInfo = await transporter.sendMail({
-          from: `"${fromName}" <${smtpUser}>`,
-          to: email,
-          replyTo: leadToEmail,
-          subject: "Thank You for Contacting EmpireOne Health",
-          html: buildUserEmail(fullName)
-        });
-
-        console.info("Lead confirmation email sent", {
-          requestId,
-          accepted: userEmailInfo.accepted,
-          rejected: userEmailInfo.rejected
-        });
-      } catch (confirmationError) {
-        console.error("Lead confirmation email failed", { requestId, error: confirmationError });
-      }
-    } catch (emailError) {
-      console.error("Lead admin email failed", {
-        requestId,
-        hasFallbackSalesforce: deliveredToSalesforce,
-        error: emailError
-      });
-    }
-
-    if (!deliveredByEmail && !deliveredToSalesforce) {
-      const misconfigured = !getSmtpPassword() && !hasSalesforceLeadTarget();
-      return Response.json(
-        {
-          status: "error",
-          message: misconfigured
-            ? "The contact form is not configured yet. Please email info@empireonehealth.com directly."
-            : "We could not send your request right now. Please email info@empireonehealth.com directly."
-        },
-        { status: 503 }
-      );
+    } catch (confirmationError) {
+      console.error("Lead confirmation email failed", { requestId, error: confirmationError });
     }
 
     return Response.json({ status: "success", message: "Thank you! We will contact you soon.", requestId });
