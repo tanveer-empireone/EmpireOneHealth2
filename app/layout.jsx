@@ -13,6 +13,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Google tag (gtag.js) - keep this on main branch only. Do not remove. */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-69S13CLQFC"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-69S13CLQFC');
+`
+          }}
+        />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/webp" href="/assets/images/favicon.webp" />
         <link rel="stylesheet" href="/assets/css/plugins/plugins.css" />
