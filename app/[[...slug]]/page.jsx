@@ -43,7 +43,7 @@ function ContactOfficeCard() {
     <i
       className="far fa-envelope"
       aria-hidden="true"
-      style={{ fontSize: '12px', marginRight: '6px', lineHeight: 1 }}
+      style={{ fontSize: '16px', marginRight: '10px', lineHeight: 1 }}
     />
     <a href="mailto:info@empireonehealth.com">
       info@empireonehealth.com
@@ -55,7 +55,7 @@ function ContactOfficeCard() {
     <i
       className="far fa-phone fa-flip-horizontal"
       aria-hidden="true"
-      style={{ fontSize: '12px', marginRight: '6px', lineHeight: 1 }}
+      style={{ fontSize: '16px', marginRight: '10px', lineHeight: 1 }}
     />
     <a href="tel:+18332006002">
       +1 (833) 200-6002
