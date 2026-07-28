@@ -23042,7 +23042,7 @@ padding-bottom: 60px;
   width: 100%;
   height: 100%;
   min-height: 0;
-  background: #615EFC;
+  background: url("/assets/images/feature/02.webp") center center / cover no-repeat;
   border-radius: 8px;
   padding: 30px 42px;
   color: #fff;
@@ -23058,7 +23058,7 @@ padding-bottom: 60px;
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 85% 15%, rgba(255,255,255,0.20), transparent 32%), linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0));
+  background: none;
   pointer-events: none;
 }
 
