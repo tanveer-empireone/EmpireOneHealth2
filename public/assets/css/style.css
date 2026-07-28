@@ -23199,3 +23199,188 @@ padding-bottom: 60px;
     margin-right: 0 !important;
   }
 }
+
+/* EmpireOne Health 404 page */
+.empire-not-found {
+  background: #ffffff;
+}
+
+.empire-not-found__hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(83, 83, 255, 0.94), rgba(105, 93, 255, 0.88)), url("/assets/images/home-banner.jpeg") center/cover no-repeat;
+  color: #ffffff;
+}
+
+.empire-not-found__hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 120px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), #ffffff);
+  pointer-events: none;
+}
+
+.empire-not-found__content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  padding: 110px 0 130px;
+}
+
+.empire-not-found__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 18px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.empire-not-found__content h1 {
+  margin: 0 0 22px;
+  color: #ffffff;
+  font-size: 72px;
+  line-height: 1.02;
+  font-weight: 800;
+  letter-spacing: 0;
+  max-width: 700px;
+}
+
+.empire-not-found__content p {
+  margin: 0;
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.empire-not-found__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.empire-not-found__actions .rts-btn {
+  min-width: 160px;
+  justify-content: center;
+}
+
+.empire-not-found__secondary {
+  background: #ffffff !important;
+  color: #5353ff !important;
+}
+
+.empire-not-found__secondary:hover {
+  background: #111827 !important;
+  color: #ffffff !important;
+}
+
+.empire-not-found__links {
+  padding: 0 0 90px;
+  margin-top: -54px;
+  position: relative;
+  z-index: 2;
+}
+
+.empire-not-found__link-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.empire-not-found__link-card {
+  min-height: 112px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid rgba(83, 83, 255, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 18px 45px rgba(17, 24, 39, 0.08);
+  color: #111827;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.3;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.empire-not-found__link-card i {
+  color: #5353ff;
+  font-size: 18px;
+  flex: 0 0 auto;
+}
+
+.empire-not-found__link-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(83, 83, 255, 0.36);
+  box-shadow: 0 22px 55px rgba(17, 24, 39, 0.12);
+  color: #5353ff;
+}
+
+@media (max-width: 991px) {
+  .empire-not-found__hero {
+    min-height: 500px;
+  }
+
+  .empire-not-found__content {
+    padding: 90px 0 120px;
+  }
+
+  .empire-not-found__content h1 {
+    font-size: 54px;
+  }
+
+  .empire-not-found__link-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575px) {
+  .empire-not-found__hero {
+    min-height: auto;
+  }
+
+  .empire-not-found__content {
+    padding: 72px 0 108px;
+  }
+
+  .empire-not-found__content h1 {
+    font-size: 40px;
+  }
+
+  .empire-not-found__content p {
+    font-size: 16px;
+  }
+
+  .empire-not-found__actions {
+    flex-direction: column;
+  }
+
+  .empire-not-found__actions .rts-btn {
+    width: 100%;
+  }
+
+  .empire-not-found__links {
+    padding-bottom: 60px;
+  }
+
+  .empire-not-found__link-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .empire-not-found__link-card {
+    min-height: 92px;
+    padding: 22px;
+    font-size: 16px;
+  }
+}
