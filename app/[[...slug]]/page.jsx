@@ -22,11 +22,25 @@ function ContactOfficeCard() {
     <aside className="contact-office-card" aria-label="Corporate head office">
       <div className="contact-office-card__inner">
         <span className="contact-office-card__eyebrow">Contact Details</span>
-        <h3>Corporate Head Office</h3>
+        <h3 className="contact-office-card_location">Corporate Head Office</h3>
         <p className="contact-office-card__address">250 Consumers Rd suite 810, Toronto, ON M2J 4V6</p>
         <div className="contact-office-card__divider" />
-        <p className="contact-office-card__label">Email</p>
+        <h3>Philippines Site 1</h3>
+        <p className="contact-office-card__address">EmpireOne Bldg Gen. Luna St Poblacion II Carcar City, Cebu 6014</p>
+        <div className="contact-office-card__divider" />
+        <h3 className="contact-office-card_location">Philippines Site 2</h3>
+        <p className="contact-office-card__address">EmpireOne Bldg., S. Carmona St., Barangay 6, SanCarlos City, Negros Occidental, 6127</p>
+        <div className="contact-office-card__divider" />
+        <h3 className="contact-office-card_location">Philippines Site 3</h3>
+        <p className="contact-office-card__address">Unit 806 FLB Corporate Center Bohol Avenue Cebu Business Park, Cebu City, Cebu 6000</p>
+        <div className="contact-office-card__divider" />
+        <h3>Colombia</h3>
+        <p className="contact-office-card__address">Calle 15 No. 4 - 81 Piso 10, Edificio del Cafe, Santa Marta, Magdalena.</p>
+        <div className="contact-office-card__divider" />
+        <p className="contact-office-card__label">Email: </p>
         <a href="mailto:info@empireonehealth.com">info@empireonehealth.com</a>
+        <p className="contact-office-card__label">Phone</p>
+        <a href="tel:+18332006002">+1 (833) 200-6002</a>
       </div>
     </aside>
   );
