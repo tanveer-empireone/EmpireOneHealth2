@@ -37,10 +37,31 @@ function ContactOfficeCard() {
         <h3>Colombia</h3>
         <p className="contact-office-card__address">Calle 15 No. 4 - 81 Piso 10, Edificio del Cafe, Santa Marta, Magdalena.</p>
         <div className="contact-office-card__divider" />
-        <p className="contact-office-card__label">Email</p>
-        <a href="mailto:info@empireonehealth.com">info@empireonehealth.com</a>
-        <p className="contact-office-card__label">Phone</p>
-        <a href="tel:+18332006002">+1 (833) 200-6002</a>
+        <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
+  {/* Email Block */}
+  <div style={{ display: 'flex', alignItems: 'center' }}>
+    <i
+      className="far fa-envelope"
+      aria-hidden="true"
+      style={{ fontSize: '16px', marginRight: '10px', lineHeight: 1 }}
+    />
+    <a href="mailto:info@empireonehealth.com" style={{ textDecoration: 'none' }}>
+      info@empireonehealth.com
+    </a>
+  </div>
+
+  {/* Phone Block */}
+  <div style={{ display: 'flex', alignItems: 'center' }}>
+    <i
+      className="far fa-phone fa-flip-horizontal"
+      aria-hidden="true"
+      style={{ fontSize: '16px', marginRight: '10px', lineHeight: 1 }}
+    />
+    <a href="tel:+18332006002" style={{ textDecoration: 'none' }}>
+      +1 (833) 200-6002
+    </a>
+  </div>
+</div>
       </div>
     </aside>
   );
