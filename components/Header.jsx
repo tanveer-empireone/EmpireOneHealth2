@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Header() {
   return (
     <header className="header-one header--sticky">
@@ -26,7 +28,14 @@ export default function Header() {
             <div className="header-wrapper-1">
               <div className="logo-area-start">
                 <a href="/" className="logo">
-                  <img src="/assets/images/logo/empireone-health-logo.png" alt="EmpireOne Health" width="2127" height="590" decoding="async" />
+                  <Image
+                    src="/assets/images/logo/empireone-health-logo.png"
+                    alt="EmpireOne Health"
+                    width={2127}
+                    height={590}
+                    priority
+                    style={{ width: "auto", height: "auto" }}
+                  />
                 </a>
                 <div className="nav-area">
                   <ul>
