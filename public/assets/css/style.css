@@ -43,8 +43,6 @@
 
 ==============================================  */
 /* Default  */
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 :root {
   --color-primary: #082A96;
   --color-secondary: #1F1F25;
@@ -22072,5 +22070,25 @@ h5.title,
 
   .case-study-page .provider-process .title-wrapper-left .title {
     white-space: nowrap !important;
+  }
+}
+
+/* Performance and accessibility hardening */
+.menu-btn,
+.progress-wrap {
+  border: 0;
+  padding: 0;
+}
+
+.progress-wrap {
+  background: transparent;
+}
+
+@media (max-width: 767px) {
+  .wow,
+  .animated {
+    animation: none !important;
+    transition: none !important;
+    visibility: visible !important;
   }
 }

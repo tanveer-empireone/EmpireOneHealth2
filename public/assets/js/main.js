@@ -50,7 +50,9 @@
 
 
     metismenu: function () {
-      $('#mobile-menu-active').metisMenu();
+      if ($('#mobile-menu-active').length && $.fn.metisMenu) {
+        $('#mobile-menu-active').metisMenu();
+      }
     },
 
     afterBefore: function () {
@@ -136,6 +138,10 @@
     },
 
     swiperActive: function () {
+      if (typeof Swiper === 'undefined' || !document.querySelector('.swiper-container-h1, .team-swiper-container-h1, .swiper-container-h1-team, .swiper-container-h1-team-8, .swiper-container-h3, .swiper-container-h2, .mySwiper-banner-2, .mySwiper-banner-eight, .mySwiper-brand, .mySwiper-service-dental, .mySwiper-banner-seven, .mySwiper-portfolio, .mySwiper-testimonials-2')) {
+        return;
+      }
+
       $(document).ready(function () {
         var swiper = new Swiper(".swiper-container-h1", {
           spaceBetween: 30,
@@ -575,6 +581,9 @@
         "use strict";
 
         var progressPath = document.querySelector('.progress-wrap path');
+        if (!progressPath) {
+          return;
+        }
         var pathLength = progressPath.getTotalLength();
         progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
         progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
@@ -588,7 +597,18 @@
           progressPath.style.strokeDashoffset = progress;
         }
         updateProgress();
-        $(window).scroll(updateProgress);
+        var progressTicking = false;
+        window.addEventListener('scroll', function () {
+          if (progressTicking) {
+            return;
+          }
+
+          progressTicking = true;
+          window.requestAnimationFrame(function () {
+            updateProgress();
+            progressTicking = false;
+          });
+        }, { passive: true });
         var offset = 50;
         var duration = 550;
         jQuery(window).on('scroll', function () {
@@ -822,13 +842,19 @@
       /* Initialize */
 
       $(document).ready(function () {
-        $('select').niceSelect();
+        if (window.innerWidth >= 768) {
+          $('select').niceSelect();
+        }
       });
 
     },
 
     vedioActivation: function () {
       $(document).ready(function () {
+        if (!$.fn.magnificPopup || !$('.popup-youtube, .popup-video').length) {
+          return;
+        }
+
         $('.popup-youtube, .popup-video').magnificPopup({
           type: 'iframe',
           mainClass: 'mfp-fade',
@@ -860,6 +886,10 @@
 
     datePicker: function () {
       $(function () {
+        if (!$.fn.datepicker || !$('#datepicker').length) {
+          return;
+        }
+
         $("#datepicker").datepicker({
           dateFormat: "dd-mm-yy"
           , duration: "fast"

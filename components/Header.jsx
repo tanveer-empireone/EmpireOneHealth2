@@ -26,7 +26,7 @@ export default function Header() {
             <div className="header-wrapper-1">
               <div className="logo-area-start">
                 <a href="/" className="logo">
-                  <img src="/assets/images/logo/empireone-health-logo.png" alt="EmpireOne Health" />
+                  <img src="/assets/images/logo/empireone-health-logo.png" alt="EmpireOne Health" width="2127" height="590" decoding="async" />
                 </a>
                 <div className="nav-area">
                   <ul>
@@ -63,15 +63,15 @@ export default function Header() {
                 </div>
                 <a href="/appointment" className="rts-btn btn-primary">
                   Book a Call
-                  <img src="/assets/images/banner/icons/arrow--up-right.svg" alt="" />
+                  <img src="/assets/images/banner/icons/arrow--up-right.svg" alt="" width="18" height="18" decoding="async" />
                 </a>
-                <div className="menu-btn" id="menu-btn">
+                <button type="button" className="menu-btn" id="menu-btn" aria-label="Open menu">
                   <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect y="14" width="20" height="2" fill="#1F1F25" />
                     <rect y="7" width="20" height="2" fill="#1F1F25" />
                     <rect width="20" height="2" fill="#1F1F25" />
                   </svg>
-                </div>
+                </button>
               </div>
             </div>
           </div>
