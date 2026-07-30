@@ -8,6 +8,7 @@ import PopupForm from "../../components/PopupForm";
 import { listLegacyHtmlPages, readLegacyFullPage, readLegacyPage, resolveLegacyPage } from "../../lib/legacy-pages";
 
 const siteUrl = "https://empireonehealth.com";
+const siteHomeUrl = `${siteUrl}/`;
 
 function getCanonicalPath(fileName) {
   if (fileName === "index.html") {
@@ -151,7 +152,7 @@ function buildBreadcrumbList(fileName, page, canonicalPath) {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: siteUrl
+      item: siteHomeUrl
     }
   ];
 
@@ -185,7 +186,7 @@ function buildStructuredData(fileName, page) {
       "@id": organizationId,
       name: "EmpireOne Health",
       legalName: "EmpireOne Health",
-      url: siteUrl,
+      url: siteHomeUrl,
       logo: `${siteUrl}/assets/images/logo/empireone-health-logo.png`,
       image: `${siteUrl}/assets/images/home-banner.jpeg`,
       email: "info@empireonehealth.com",
@@ -214,7 +215,7 @@ function buildStructuredData(fileName, page) {
       "@type": "WebSite",
       "@id": websiteId,
       name: "EmpireOne Health",
-      url: siteUrl,
+      url: siteHomeUrl,
       publisher: {
         "@id": organizationId
       },
@@ -410,7 +411,7 @@ export async function generateMetadata({ params }) {
   }
 
   const canonicalUrl = `${siteUrl}${getCanonicalPath(fileName)}`;
-  const title = page.title || "EmpireOne Health";
+  const title = fileName === "index.html" ? "EmpireOne Health | Healthcare BPO & RCM Services" : page.title || "EmpireOne Health";
   const description = page.description || "EmpireOne Health supports healthcare operations, revenue cycle workflows, and payer/provider service delivery.";
   const socialImageUrl = `${siteUrl}${getSocialImagePath(fileName)}`;
   const openGraphType = fileName.startsWith("case-study/") && fileName !== "case-study/index.html" ? "article" : "website";

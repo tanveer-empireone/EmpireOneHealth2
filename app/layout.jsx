@@ -1,12 +1,52 @@
 import Script from "next/script";
 
+const siteUrl = "https://empireonehealth.com/";
+const siteName = "EmpireOne Health";
+const defaultTitle = "EmpireOne Health | Healthcare BPO & RCM Services";
+const defaultDescription =
+  "EmpireOne Health supports providers and payers with healthcare BPO, RCM workflows, member services, and HIPAA-conscious delivery.";
+const websiteStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteUrl}#website`,
+  name: siteName,
+  url: siteUrl
+};
+
 export const metadata = {
+  metadataBase: new URL(siteUrl),
+  applicationName: siteName,
   title: {
-    default: "EmpireOne Health | Healthcare Operations Support",
-    template: "%s | EmpireOne Health"
+    default: defaultTitle,
+    template: "%s"
   },
-  description:
-    "EmpireOne Health supports providers and payers with healthcare operations, revenue cycle workflows, member services, and HIPAA-conscious delivery."
+  description: defaultDescription,
+  icons: {
+    icon: [{ url: "/favicon.ico", sizes: "any" }],
+    shortcut: [{ url: "/favicon.ico" }]
+  },
+  openGraph: {
+    title: defaultTitle,
+    description: defaultDescription,
+    url: siteUrl,
+    siteName,
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "/assets/images/home-banner.jpeg",
+        width: 1200,
+        height: 630,
+        alt: siteName
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: defaultTitle,
+    description: defaultDescription,
+    images: ["/assets/images/home-banner.jpeg"]
+  }
 };
 
 export default function RootLayout({ children }) {
@@ -26,8 +66,12 @@ export default function RootLayout({ children }) {
 `
           }}
         />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/webp" href="/assets/images/favicon.webp" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteStructuredData)
+          }}
+        />
         <link rel="stylesheet" href="/assets/css/plugins/plugins.css" />
         <link rel="stylesheet" href="/assets/css/plugins/magnifying-popup.css" />
         <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css" />
