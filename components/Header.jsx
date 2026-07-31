@@ -51,7 +51,7 @@ export default function Header() {
                       <a href="/case-study">Case Study</a>
                     </li>
                     <li className="main-nav">
-                      <a href="/contact">Contact</a>
+                      <a href="/contact">Contactss</a>
                     </li>
                   </ul>
                 </div>
