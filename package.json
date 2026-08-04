@@ -5,20 +5,16 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "node server.js"
+    "start": "next start -H 0.0.0.0"
   },
   "dependencies": {
     "next": "15.5.20",
     "nodemailer": "^9.0.3",
     "react": "19.2.7",
-    "react-dom": "19.2.7"
+    "react-dom": "19.2.7",
+    "react-icons": "^5.7.0"
   },
   "engines": {
     "node": ">=20.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "^26.1.2",
-    "@types/react": "^19.2.18",
-    "typescript": "5.8.2"
   }
 }

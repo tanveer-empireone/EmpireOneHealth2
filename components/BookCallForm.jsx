@@ -57,7 +57,7 @@ export default function BookCallForm() {
                 <input type="text" name="website" tabIndex="-1" autoComplete="off" className="lead-hidden-field" aria-hidden="true" />
                 <div className="lead-form-grid">
                   <div className="form-field">
-                    <label htmlFor="lead-full-name">Full Name</label>
+                    <label htmlFor="lead-full-name">Full Name <span className="required-mark">*</span></label>
                     <input id="lead-full-name" name="full_name" type="text" placeholder="Your Name" required />
                   </div>
                   <div className="form-field">
@@ -65,21 +65,21 @@ export default function BookCallForm() {
                     <input id="lead-company-name" name="company_name" type="text" placeholder="Enter company name" />
                   </div>
                   <div className="form-field">
-                    <label htmlFor="lead-email">Email Address</label>
+                    <label htmlFor="lead-email">Email Address <span className="required-mark">*</span></label>
                     <input id="lead-email" name="email" type="email" placeholder="name@company.com" required />
                   </div>
                   <div className="form-field">
-                    <label htmlFor="lead-contact-number">Contact Number</label>
-                    <input id="lead-contact-number" name="contact_number" type="tel" placeholder="800-233-1234" />
+                    <label htmlFor="lead-contact-number">Contact Number <span className="required-mark">*</span></label>
+                    <input id="lead-contact-number" name="contact_number" type="tel" placeholder="800-233-1234" required />
                   </div>
                   <div className="form-field">
-                    <label htmlFor="lead-verify-email">Verify Email</label>
+                    <label htmlFor="lead-verify-email">Verify Email <span className="required-mark">*</span></label>
                     <input id="lead-verify-email" name="verify_email" type="email" placeholder="Confirm email address" required />
                   </div>
                   <div className="form-field">
                     <label htmlFor="lead-source">Source</label>
                     <select id="lead-source" name="source" defaultValue="">
-                      <option value="">Where did you find us?</option>
+                      <option value="">How did you hear about us?</option>
                       <option value="google">Google</option>
                       <option value="chatgpt">ChatGPT</option>
                       <option value="referral">Referral</option>
@@ -91,7 +91,8 @@ export default function BookCallForm() {
                 </div>
                 <div className="form-field full-width">
                   <label htmlFor="lead-workflow">What are you looking to build?</label>
-                  <select id="lead-workflow" name="workflow" defaultValue="benefits-verification">
+                  <select id="lead-workflow" name="workflow" defaultValue="">
+                    <option value="">Need Help With?</option>
                     <option value="benefits-verification">Benefits Verification & Eligibility</option>
                     <option value="prior-authorization">Prior Authorization Management</option>
                     <option value="appointment-scheduling">Appointment Scheduling & Referral Management</option>
@@ -100,6 +101,7 @@ export default function BookCallForm() {
                     <option value="member-services">Member Services</option>
                     <option value="enrollment-support">Enrollment Support</option>
                     <option value="provider-data">Provider Data Management</option>
+                    <option value="other">Other</option>
                   </select>
                 </div>
                 <div className="form-field full-width">
@@ -114,7 +116,7 @@ export default function BookCallForm() {
                 <label className="lead-consent">
                   <input type="checkbox" name="privacy_consent" required />
                   <span>
-                    By ticking this box I agree that I have read the <a href="#">privacy policy</a>.
+                    By ticking this box I agree that I have read the <a href="/privacy-policy">privacy policy</a>.
                   </span>
                 </label>
                 {status.message ? (
@@ -123,7 +125,7 @@ export default function BookCallForm() {
                   </div>
                 ) : null}
                 <button type="submit" className="rts-btn btn-primary lead-submit" disabled={isSubmitting}>
-                  {isSubmitting ? "Sending..." : "Get My Healthcare Operations Plan"}
+                  {isSubmitting ? "Sending..." : "Send"}
                 </button>
               </form>
             </div>

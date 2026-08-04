@@ -1,38 +1,85 @@
-import LegacyScripts from "../components/LegacyScripts";
-import ServiceWorkerRegistration from "../components/ServiceWorkerRegistration";
+import Script from "next/script";
+
+const siteUrl = "https://empireonehealth.com/";
+const siteName = "EmpireOne Health";
+const defaultTitle = "EmpireOne Health | Healthcare BPO & RCM Services";
+const defaultDescription =
+  "EmpireOne Health supports providers and payers with healthcare BPO, RCM workflows, member services, and HIPAA-conscious delivery.";
+const websiteStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteUrl}#website`,
+  name: siteName,
+  url: siteUrl
+};
 
 export const metadata = {
-  title: "Medical & Health Care HTML Template",
-  description:
-    "Your trusted source for expert healthcare services and medical information. Providing personalized care, advanced treatments, and reliable health resources to help you achieve better health."
+  metadataBase: new URL(siteUrl),
+  applicationName: siteName,
+  title: {
+    default: defaultTitle,
+    template: "%s"
+  },
+  description: defaultDescription,
+  icons: {
+    icon: [{ url: "/favicon.ico", sizes: "any" }],
+    shortcut: [{ url: "/favicon.ico" }]
+  },
+  openGraph: {
+    title: defaultTitle,
+    description: defaultDescription,
+    url: siteUrl,
+    siteName,
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "/assets/images/home-banner.jpeg",
+        width: 1200,
+        height: 630,
+        alt: siteName
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: defaultTitle,
+    description: defaultDescription,
+    images: ["/assets/images/home-banner.jpeg"]
+  }
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta name="application-name" content="EmpireOne Health" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-title" content="EmpireOne Health" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="theme-color" content="#5353ff" />
-        <link rel="manifest" href="/manifest.webmanifest" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/pwa/apple-touch-icon.png" />
-        <link rel="icon" type="image/webp" href="/assets/images/favicon.webp" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preload" as="image" href="/assets/images/main-hero-background.jpg" fetchPriority="high" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" />
-        <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteStructuredData)
+          }}
+        />
         <link rel="stylesheet" href="/assets/css/plugins/plugins.css" />
+        <link rel="stylesheet" href="/assets/css/plugins/magnifying-popup.css" />
+        <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css" />
         <link rel="stylesheet" href="/assets/css/style.css" />
       </head>
       <body suppressHydrationWarning>
-        <ServiceWorkerRegistration />
         {children}
-        <LegacyScripts />
+        <Script src="/assets/js/plugins/jquery.js" strategy="beforeInteractive" />
+
+        <Script src="/assets/js/plugins/jquery-ui.js" strategy="afterInteractive" />
+        <Script src="/assets/js/vendor/waw.js" strategy="afterInteractive" />
+        <Script src="/assets/js/plugins/swiper.js" strategy="afterInteractive" />
+        <Script src="/assets/js/plugins/metismenu.js" strategy="afterInteractive" />
+        <Script src="/assets/js/plugins/jarallax.js" strategy="afterInteractive" />
+        <Script src="/assets/js/plugins/smooth-scroll.js" strategy="afterInteractive" />
+        <Script src="/assets/js/plugins/magnifying-popup.js" strategy="afterInteractive" />
+        <Script src="/assets/js/vendor/bootstrap.min.js" strategy="afterInteractive" />
+        <Script src="/assets/js/main.js" strategy="afterInteractive" />
       </body>
     </html>
   );
 }
+
+

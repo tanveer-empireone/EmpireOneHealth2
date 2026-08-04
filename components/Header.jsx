@@ -1,3 +1,5 @@
+import { FaEnvelope, FaPhone, FaSearch } from "react-icons/fa";
+
 export default function Header() {
   return (
     <header className="header-one header--sticky">
@@ -7,13 +9,30 @@ export default function Header() {
             <div className="header-top">
               <div className="left">
                 <div className="map-area">
-                  <a href="/">EmpireOne Health BPO &amp; RCM Support</a>
+                  <FaEnvelope
+                    style={{
+                      fontSize: "12px",
+                      marginRight: "6px",
+                      lineHeight: 1,
+                      color: "#ffffff",
+                    }}
+                  />
+                  <a href="mailto:info@empireonehealth.com">
+                    info@empireonehealth.com
+                  </a>
                 </div>
               </div>
               <div className="right">
                 <div className="map-area">
-                  <i className="fa-regular fa-e-mail" />
-                  <a href="mailto:info@empireonehealth.com">info@empireonehealth.com</a>
+                  <FaPhone
+                    style={{
+                      fontSize: "12px",
+                      marginRight: "6px",
+                      lineHeight: 1,
+                      color: "#ffffff",
+                    }}
+                  />
+                  <a href="tel:+18332006002">+1 (833) 200-6002</a>
                 </div>
               </div>
             </div>
@@ -26,7 +45,13 @@ export default function Header() {
             <div className="header-wrapper-1">
               <div className="logo-area-start">
                 <a href="/" className="logo">
-                  <img src="/assets/images/logo/empireone-health-logo.png" alt="EmpireOne Health" width="2127" height="590" decoding="async" />
+                  <img
+                    src="/assets/images/logo/empireone-health-logo.png"
+                    alt="EmpireOne Health"
+                    width="220"
+                    height="60"
+                    fetchPriority="high"
+                  />
                 </a>
                 <div className="nav-area">
                   <ul>
@@ -34,10 +59,10 @@ export default function Header() {
                       <a href="/">Home</a>
                     </li>
                     <li className="main-nav">
-                      <a href="/about">About</a>
+                      <a href="/about-us">About Us</a>
                     </li>
                     <li className="main-nav has-dropdown">
-                      <a href="#">Service</a>
+                      <a href="/provider-services">Service</a>
                       <ul className="submenu parent-nav">
                         <li>
                           <a href="/provider-services">Provider</a>
@@ -51,27 +76,40 @@ export default function Header() {
                       <a href="/case-study">Case Study</a>
                     </li>
                     <li className="main-nav">
-                      <a href="/contact">Contactss</a>
+                      <a href="/contact">Contact</a>
                     </li>
                   </ul>
                 </div>
               </div>
               <div className="header-right">
-                <div className="input-area">
+                {/* <div className="input-area">
                   <input id="myInput" type="text" placeholder="Search..." />
                   <i className="fa-light fa-magnifying-glass" />
-                </div>
-                <a href="/appointment" className="rts-btn btn-primary">
-                  Book a Call
-                  <img src="/assets/images/banner/icons/arrow--up-right.svg" alt="" width="18" height="18" decoding="async" />
+                </div> */}
+                <a
+                  href="#"
+                  className="rts-btn btn-primary book-call-popup-trigger"
+                  data-popup-form-trigger="book-call"
+                >
+                  Get in touch
+                  <img
+                    src="/assets/images/banner/icons/arrow--up-right.svg"
+                    alt=""
+                  />
                 </a>
-                <button type="button" className="menu-btn" id="menu-btn" aria-label="Open menu">
-                  <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div className="menu-btn" id="menu-btn">
+                  <svg
+                    width="20"
+                    height="16"
+                    viewBox="0 0 20 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <rect y="14" width="20" height="2" fill="#1F1F25" />
                     <rect y="7" width="20" height="2" fill="#1F1F25" />
                     <rect width="20" height="2" fill="#1F1F25" />
                   </svg>
-                </button>
+                </div>
               </div>
             </div>
           </div>

@@ -1,4 +1,50 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Footer() {
+  const [subscriberEmail, setSubscriberEmail] = useState("");
+  const [subscribeStatus, setSubscribeStatus] = useState({ type: "", message: "" });
+  const [isSubmittingSubscribe, setIsSubmittingSubscribe] = useState(false);
+
+  async function handleSubscribeSubmit(event) {
+    event.preventDefault();
+
+    if (!subscriberEmail.trim()) {
+      setSubscribeStatus({ type: "error", message: "Please enter your email address." });
+      return;
+    }
+
+    setIsSubmittingSubscribe(true);
+    setSubscribeStatus({ type: "", message: "" });
+
+    try {
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email: subscriberEmail,
+          page_url: typeof window !== "undefined" ? window.location.href : ""
+        })
+      });
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok || result.status !== "success") {
+        throw new Error(result.message || "Subscribe failed.");
+      }
+
+      setSubscriberEmail("");
+      setSubscribeStatus({ type: "success", message: "Thank you for subscribing." });
+    } catch (error) {
+      console.error("Footer subscribe failed", error);
+      setSubscribeStatus({ type: "error", message: "We could not subscribe you right now." });
+    } finally {
+      setIsSubmittingSubscribe(false);
+    }
+  }
+
   return (
     <>
       <div className="rts-footer-area footer-bg pt--105 pt_sm--50">
@@ -6,12 +52,32 @@ export default function Footer() {
           <div className="row">
             <div className="col-lg-12">
               <div className="subscribe-area-start pb--30">
-                <a href="/" className="logo">
-                  <img src="/assets/images/logo/empireone-health-logo.png" alt="EmpireOne Health" width="2127" height="590" loading="lazy" decoding="async" />
-                </a>
-                <div className="subscribe-area">
-                  <input type="text" placeholder="Enter your email" />
-                  <button className="rts-btn btn-primary">Stay Updated</button>
+                <div className="footer-compliance-logos footer-compliance-logos-main" aria-label="Compliance and trust badges">
+                  <img src="/assets/images/footerlogo1.png" alt="SOC 2 Type 2" />
+                  <img src="/assets/images/footerlogo2.webp" alt="PCI DSS" />
+                  <img src="/assets/images/footerlogo3.webp" alt="HIPAA Compliant" />
+                  <img src="/assets/images/footerlogo4.webp" alt="GDPR" />
+                  <img src="/assets/images/footerlogo5.webp" alt="ISO 27001" />
+                  <img src="/assets/images/footerlogo6.webp" alt="BBB Accredited Business" />
+                </div>
+                <div className="footer-subscribe-form-wrap">
+                  <form className="subscribe-area" onSubmit={handleSubscribeSubmit}>
+                    <input
+                      type="email"
+                      placeholder="Enter your email"
+                      value={subscriberEmail}
+                      onChange={(event) => setSubscriberEmail(event.target.value)}
+                      required
+                      disabled={isSubmittingSubscribe}
+                      aria-label="Email address"
+                    />
+                    <button className="rts-btn btn-primary" type="submit" disabled={isSubmittingSubscribe}>
+                      {isSubmittingSubscribe ? "Sending..." : "Stay Updated"}
+                    </button>
+                  </form>
+                  {subscribeStatus.message ? (
+                    <p className={`footer-subscribe-status ${subscribeStatus.type}`}>{subscribeStatus.message}</p>
+                  ) : null}
                 </div>
               </div>
             </div>
@@ -20,8 +86,10 @@ export default function Footer() {
                 <div className="single-wized">
                   <h6 className="title">Contact</h6>
                   <div className="body">
-                    <p className="location">Healthcare operations support for providers and payers.</p>
+                    <p className="location">250 Consumers Rd suite 810, Toronto, ON M2J 4V6
+</p>
                     <a href="mailto:info@empireonehealth.com">info@empireonehealth.com</a>
+                    <a href="tel:+18332006002">+1 (833) 200-6002</a>
                   </div>
                 </div>
                 <div className="single-wized">
@@ -29,19 +97,19 @@ export default function Footer() {
                   <div className="body">
                     <ul className="nav-bottom">
                       <li>
-                        <a href="/about">About</a>
+                        <a href="/about-us">About Us</a>
                       </li>
                       <li>
-                        <a href="/appointment">Book a Call</a>
+                        <a href="/appointment">Book A Call</a>
                       </li>
                       <li>
-                        <a href="/contact">Contact</a>
+                        <a href="https://careers.empireonecx.com/" target="_blank" rel="noopener noreferrer">Career</a>
                       </li>
                     </ul>
                   </div>
                 </div>
                 <div className="single-wized">
-                  <h6 className="title">Foundation Services</h6>
+                  <h6 className="title">Services</h6>
                   <div className="body">
                     <ul className="nav-bottom">
                       <li>
@@ -56,9 +124,9 @@ export default function Footer() {
                 <div className="single-wized">
                   <h6 className="title">Delivery Model</h6>
                   <div className="body">
-                    <p className="location">Human-led, AI-assisted delivery</p>
-                    <p className="location">HIPAA-conscious workflows</p>
-                    <p className="location">BAA-ready engagement</p>
+                    <p className="location">Human-Led, AI-Assisted Delivery</p>
+                    <p className="location">HIPAA-Conscious Workflows</p>
+                    <p className="location">BAA-Ready Engagement</p>
                   </div>
                 </div>
               </div>
@@ -78,7 +146,7 @@ export default function Footer() {
         </div>
       </div>
       <div id="side-bar" className="side-bar header-two">
-        <button type="button" className="close-icon-menu" aria-label="Close menu">
+        <button className="close-icon-menu">
           <i className="far fa-times" />
         </button>
         <div className="mobile-menu-main">
@@ -88,7 +156,7 @@ export default function Footer() {
                 <a href="/" className="main mobile-menu-link">Home</a>
               </li>
               <li>
-                <a className="main mobile-menu-link" href="/about">About</a>
+                <a className="main mobile-menu-link" href="/about-us">About Us</a>
               </li>
               <li className="has-droupdown">
                 <a href="#" className="main">Service</a>
@@ -109,32 +177,15 @@ export default function Footer() {
               </li>
             </ul>
           </nav>
-          <div className="rts-social-style-one pl--20 mt--50">
-            <ul>
-              <li>
-                <a href="#" aria-label="Facebook"><i className="fa-brands fa-facebook-f" /></a>
-              </li>
-              <li>
-                <a href="#" aria-label="Twitter"><i className="fa-brands fa-twitter" /></a>
-              </li>
-              <li>
-                <a href="#" aria-label="YouTube"><i className="fa-brands fa-youtube" /></a>
-              </li>
-              <li>
-                <a href="#" aria-label="LinkedIn"><i className="fa-brands fa-linkedin-in" /></a>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
 
       <div id="anywhere-home" />
-      <button type="button" className="progress-wrap" aria-label="Back to top">
+      <div className="progress-wrap">
         <svg className="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
           <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
-      </button>
+      </div>
     </>
   );
 }
-

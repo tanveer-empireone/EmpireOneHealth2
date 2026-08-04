@@ -1,32 +1,24 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "standalone",
   reactStrictMode: true,
   async headers() {
     return [
       {
-        source: "/_next/static/:path*",
+        source: "/api/:path*",
         headers: [
           {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable"
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow"
           }
         ]
       },
       {
-        source: "/assets/:path*",
+        source: "/:path((?!api/).*)",
         headers: [
           {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable"
-          }
-        ]
-      },
-      {
-        source: "/:path*.ico",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=2592000"
+            key: "X-Robots-Tag",
+            value: "index, follow"
           }
         ]
       }

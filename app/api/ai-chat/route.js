@@ -1,11 +1,13 @@
 ﻿import { mkdir, readFile, appendFile } from "fs/promises";
 import path from "path";
 import crypto from "crypto";
+import { checkRateLimit, rateLimitedJson } from "../../../lib/rate-limit";
 
 export const runtime = "nodejs";
 
 const DATA_ROOT = path.join(process.cwd(), "data");
 const DEFAULT_MODEL = "llama-3.3-70b-versatile";
+const AI_CHAT_LOGS_ENABLED = process.env.AI_CHAT_LOGS_ENABLED === "true" || process.env.NODE_ENV !== "production";
 
 const knowledgeBase = [
   {
@@ -117,12 +119,23 @@ export async function GET(request) {
     provider: "groq",
     api_key_present: Boolean(getAiApiKey()),
     model: getGroqModel(process.env.AI_CHAT_MODEL),
-    logs_writable: await canWriteLogs(),
+    logs_enabled: AI_CHAT_LOGS_ENABLED,
+    logs_writable: AI_CHAT_LOGS_ENABLED ? await canWriteLogs() : false,
     last_ai_error: await getLastAiError()
   });
 }
 
 export async function POST(request) {
+  const limit = checkRateLimit(request, {
+    name: "ai-chat",
+    windowMs: 60 * 1000,
+    max: Number(process.env.AI_CHAT_RATE_LIMIT || 20)
+  });
+
+  if (!limit.allowed) {
+    return rateLimitedJson(limit);
+  }
+
   let payload;
   try {
     payload = await request.json();
@@ -374,6 +387,10 @@ async function askGroq(apiKey, message, history, matches, page) {
 }
 
 async function appendLog(folder, filePrefix, entry) {
+  if (!AI_CHAT_LOGS_ENABLED) {
+    return;
+  }
+
   try {
     const dir = path.join(DATA_ROOT, folder);
     await mkdir(dir, { recursive: true });

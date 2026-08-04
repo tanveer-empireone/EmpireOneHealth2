@@ -1,5 +1,6 @@
-# EmpireOne Health Next.js Project
+# Mediweb Next.js Project
 
+This project wraps the original Mediweb static HTML template in a React/Next.js app while preserving the existing design, CSS, fonts, text, scripts, and image assets.
 
 ## Run Locally
 
