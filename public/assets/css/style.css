@@ -23384,3 +23384,44 @@ padding-bottom: 60px;
     font-size: 16px;
   }
 }
+
+/* Homepage hero compliance badge strip */
+.hero-compliance-logos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 38px;
+}
+
+.hero-compliance-logos img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+@media only screen and (max-width: 991px) {
+  .hero-compliance-logos {
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .hero-compliance-logos img {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .hero-compliance-logos {
+    gap: 10px;
+    margin-top: 24px;
+    max-width: 330px;
+  }
+
+  .hero-compliance-logos img {
+    width: 44px;
+    height: 44px;
+  }
+}
