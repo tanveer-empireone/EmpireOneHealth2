@@ -22,8 +22,9 @@ export const metadata = {
   },
   description: defaultDescription,
   icons: {
-    icon: [{ url: "/favicon.ico", sizes: "any" }],
-    shortcut: [{ url: "/favicon.ico" }]
+    icon: [{ url: "/favicon.png", type: "image/png", sizes: "512x512" }],
+    shortcut: [{ url: "/favicon.png", type: "image/png" }],
+    apple: [{ url: "/favicon.png", type: "image/png", sizes: "512x512" }]
   },
   openGraph: {
     title: defaultTitle,
