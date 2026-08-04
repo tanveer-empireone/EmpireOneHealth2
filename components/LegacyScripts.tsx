@@ -32,8 +32,8 @@ function loadScript(src: string) {
     }
 
     const script = document.createElement("script");
-    script.src = src;
     script.async = false;
+    script.src = src;
     script.onload = () => {
       script.dataset.loaded = "true";
       resolve();
