@@ -1,4 +1,4 @@
-import Script from "next/script";
+import LegacyScripts from "../components/LegacyScripts";
 import ServiceWorkerRegistration from "../components/ServiceWorkerRegistration";
 
 export const metadata = {
@@ -31,11 +31,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning>
         <ServiceWorkerRegistration />
         {children}
-        <Script src="/assets/js/plugins/jquery.js" strategy="lazyOnload" />
-        <Script src="/assets/js/vendor/waw.js" strategy="lazyOnload" />
-        <Script src="/assets/js/plugins/metismenu.js" strategy="lazyOnload" />
-        <Script src="/assets/js/vendor/bootstrap.min.js" strategy="lazyOnload" />
-        <Script src="/assets/js/main.js" strategy="lazyOnload" />
+        <LegacyScripts />
       </body>
     </html>
   );
